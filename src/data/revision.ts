@@ -3,149 +3,170 @@ import { Lesson, UnitSection } from '../types';
 export const revisionSection: UnitSection = {
   id: 'revision',
   order: 1,
-  titleFr: 'Révision Générale',
-  titleAr: 'المراجعة العامة التأسيسية',
-  descriptionAr: 'مراجعة شاملة لأساسيات وقواعد ومنهج اللغة الفرنسية المقررة: تكوين الجملة، زمن المضارع، زمن الماضي المركب، الأعداد، وصيغة النفي.',
+  titleFr: 'Module 0 : Révision Générale & Atelier Grammaire',
+  titleAr: 'الوحدة 0 : المراجعة العامة وورشة القواعد التأسيسية',
+  descriptionAr: 'مراجعة منهج Bienvenu 2 (الصف الثاني الإعدادي - الصفحات 84-88 و 4-6): تكوين الجملة، تصريف المضارع في المجموعات الثلاث، أدوات المكان المدغمة، وقواعد النفي والاستثناءات.',
   badgeIcon: '📚',
-  vocabulary: [],
+  vocabulary: [
+    { id: 'rev_v1', french: 'le sujet', arabic: 'الفاعل', category: 'masculin', exampleFr: 'Le sujet commence la phrase.', exampleAr: 'الفاعل يبدأ الجملة.' },
+    { id: 'rev_v2', french: 'le verbe', arabic: 'الفعل', category: 'masculin', exampleFr: 'Le verbe exprime l\'action.', exampleAr: 'الفعل يعبر عن الحدث.' },
+    { id: 'rev_v3', french: 'le complément', arabic: 'المفعول / التكملة', category: 'masculin', exampleFr: 'Le complément termine la phrase.', exampleAr: 'المفعول يكمل الجملة.' },
+    { id: 'rev_v4', french: 'aujourd\'hui', arabic: 'اليوم', category: 'expression', exampleFr: 'Aujourd\'hui, nous révisons.', exampleAr: 'اليوم نراجع.' },
+    { id: 'rev_v5', french: 'maintenant', arabic: 'الآن', category: 'expression', exampleFr: 'Maintenant, je comprends.', exampleAr: 'الآن أنا أفهم.' },
+    { id: 'rev_v6', french: 'chaque jour', arabic: 'كل يوم', category: 'expression', exampleFr: 'Chaque jour, il va au club.', exampleAr: 'كل يوم يذهب للنادي.' },
+  ],
   lessons: [
     {
       id: 'rev-phrase',
       unitId: 'revision',
-      unitTitle: 'Révision',
-      unitTitleAr: 'المراجعة العامة',
+      unitTitle: 'Révision Générale',
+      unitTitleAr: 'المراجعة العامة (Bienvenu 2)',
       order: 1,
-      title: 'La Phrase',
-      titleAr: 'تكوين الجملة في اللغة الفرنسية',
-      subtitleFr: 'Sujet + Verbe + Complément',
-      estimatedMinutes: 10,
-      bookletPages: 'صفحة 65',
+      title: 'La Phrase & Le Sujet',
+      titleAr: 'تكوين الجملة الفرنسية وأنواع الفاعل',
+      subtitleFr: 'Sujet + Verbe + Complément (p. 4 - 6 & 84)',
+      estimatedMinutes: 12,
+      bookletPages: 'صفحة 4 - 6 و 84',
       stages: {
         comprendre: {
-          titleAr: 'افهم تكوين الجملة الفرنسية',
-          summaryAr: 'تتكون الجملة في اللغة الفرنسية من ثلاثة عناصر أساسية: الفاعل (Sujet)، الفعل (Verbe)، والمفعول أو التكملة (Complément).',
+          titleAr: 'أركان الجملة الفرنسية الثلاثة',
+          summaryAr: 'تتكون الجملة الفرنسية البسيطة من: فاعل (Sujet) + فعل مصرف (Verbe) + مفعول أو جار ومجرور (Complément).',
           grammarPoints: [
             {
               title: '1. الفاعل (Le Sujet)',
-              ruleAr: 'قد يكون اسماً علماً (Ahmed, Mona, Sara) أو اسماً عاماً (le sac, la table) أو ضمير فاعل (Je, Tu, Il, Elle, Nous, Vous, Ils, Elles).',
-              details: ['Je (أنا)', 'Tu (أنتَ / أنتِ)', 'Il (هو)', 'Elle (هي)', 'Nous (نحن)', 'Vous (أنتم / حضرتك)', 'Ils (هم)', 'Elles (هن)']
+              ruleAr: 'الفاعل قد يكون اسماً خاصاً/علماً (Gamal, Suzanne, Moustafa)، أو اسماً عاماً مسبوقاً بأداة (le garçon, la classe, les amis)، أو ضمير فاعل شخصي.',
+              details: [
+                'ضمائر المتكلم: Je (أنا) - Nous (نحن)',
+                'ضمائر المخاطب: Tu (أنتَ/أنتِ) - Vous (أنتم/حضرتك للاحترام)',
+                'ضمائر الغائب المفرد: Il (هو / يحل محل مفرد مذكر) - Elle (هي / يحل محل مفرد مؤنث)',
+                'ضمائر الغائب الجمع: Ils (هم / جمع مذكر أو مختلط) - Elles (هن / جمع مؤنث فقط)',
+                'الضمير On: يعامل في التصريف دائماً مثل (Il / Elle) ويعني في المعنى (نحن أو الناس)'
+              ]
             },
             {
-              title: '2. الفعل (Le Verbe)',
-              ruleAr: 'ينقسم الفعل إلى 3 مجموعات رئيسية بحسب نهايته في المصدر:',
+              title: '2. الفعل (Le Verbe) والتكملة (Le Complément)',
+              ruleAr: 'الفعل هو المحرك الأساسي للجملة ويصرف حسب ضمير الفاعل. والتكملة قد تكون مفعولاً به مباشراً (COD) أو غير مباشر بحرف جر (COI).',
               table: {
-                headers: ['المجموعة', 'النهاية في المصدر', 'أمثلة'],
+                headers: ['الفاعل (Sujet)', 'الفعل المصرف (Verbe)', 'المفعول والتكملة (Complément)'],
                 rows: [
-                  ['1ère groupe', '-er', 'Marcher, Parler, Regarder, Manger'],
-                  ['2ème groupe', '-ir', 'Finir, Choisir, Obéir, Réussir'],
-                  ['3ème groupe (Irréguliers)', '-re / -oir / -ir', 'Être, Avoir, Faire, Aller, Prendre']
+                  ['Gamal', 'invite', 'ses amis chez lui.'],
+                  ['Nous', 'allons', 'au restaurant ce soir.'],
+                  ['Suzanne', 'mange', 'une glace à la vanille.'],
+                  ['Moustafa et Ali (Ils)', 'prennent', 'le taxi pour l\'hôpital.']
                 ]
               }
-            },
-            {
-              title: '3. المفعول (Le Complément)',
-              ruleAr: 'يكمل معنى الجملة وقد يكون مفعولاً مباشراً أو جاراً ومجروراً (à l\'école, une pomme).',
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة توضيحية من الكتاب',
-          descriptionAr: 'لاحظ ترتيب الكلمات في الجملة الفرنسية:',
+          titleAr: 'نماذج توضيحية لتركيب الجملة',
+          descriptionAr: 'لاحظ كيف يتطابق الفاعل مع تصريف الفعل:',
           examples: [
-            {
-              french: 'Je vais à l\'école.',
-              arabic: 'أنا أذهب إلى المدرسة.',
-              note: 'Sujet: Je | Verbe: vais | Complément: à l\'école'
-            },
-            {
-              french: 'Sara mange une pomme.',
-              arabic: 'سارة تأكل تفاحة.',
-              note: 'Sujet: Sara (nom) | Verbe: mange | Complément: une pomme'
-            },
-            {
-              french: 'Ahmed écoute la chanson.',
-              arabic: 'أحمد يستمع إلى الأغنية.',
-              note: 'Sujet: Ahmed | Verbe: écoute | Complément: la chanson'
-            }
+            { french: 'Gamal habite à Alexandrie.', arabic: 'جمال يسكن في الإسكندرية.', note: 'Sujet (Nom propre) + Verbe habiter + Lieu' },
+            { french: 'Les élèves écoutent le professeur.', arabic: 'التلاميذ يستمعون إلى المعلم.', note: 'Les élèves = Ils -> verbe au pluriel (-ent)' },
+            { french: 'On visite le musée aujourd\'hui.', arabic: 'نحن نزور المتحف اليوم.', note: 'On يعامل مثل Il/Elle في التصريف' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريب تفاعلي',
-          descriptionAr: 'حدد أركان الجملة أو اختر الإجابة الصحيحة:',
+          titleAr: 'تدريبات تكوين الجملة واختيار الضمائر (6 أسئلة)',
+          descriptionAr: 'اختر الضمير أو الكلمة المناسبة لإكمال الجملة:',
           questions: [
             {
-              id: 'q_phrase_1',
+              id: 'rev_q1',
               type: 'multiple-choice',
-              instruction: 'حدد الفاعل في الجملة التالية:',
-              prompt: '"Sara mange une pomme"',
-              options: ['Sara', 'mange', 'une pomme'],
-              correctAnswer: 'Sara',
-              explanation: 'Sara هي الفاعل (Sujet) وهو اسم علم مفرد مؤنث.'
+              instruction: 'Choisis le bon pronom sujet :',
+              prompt: '1. .......... parlons français en classe.',
+              options: ['Je', 'Nous', 'Vous', 'Ils'],
+              correctAnswer: 'Nous',
+              explanation: 'نهاية الفعل المصرف هي (-ons) الدالة على ضمير المتكلم الجمع Nous.'
             },
             {
-              id: 'q_phrase_2',
+              id: 'rev_q2',
               type: 'multiple-choice',
-              instruction: 'حدد الفعل في الجملة التالية:',
-              prompt: '"Je vais à l\'école"',
-              options: ['Je', 'vais', 'à l\'école'],
-              correctAnswer: 'vais',
-              explanation: 'vais هو فعل الجملة (Verbe aller).'
+              instruction: 'Choisis le bon pronom sujet :',
+              prompt: '2. Gamal et son frère, .......... vont au club.',
+              options: ['Il', 'Ils', 'Elles', 'Nous'],
+              correctAnswer: 'Ils',
+              explanation: 'جمال وأخوه يمثلان جمع مذكر غائب، فيعوض عنهما بالضمير Ils.'
             },
             {
-              id: 'q_phrase_3',
+              id: 'rev_q3',
               type: 'multiple-choice',
-              instruction: 'إلى أي مجموعة ينتمي الفعل "Parler"؟',
-              prompt: 'Le verbe "Parler" appartient au :',
-              options: ['1er groupe (-er)', '2ème groupe (-ir)', '3ème groupe (irrégulier)'],
-              correctAnswer: '1er groupe (-er)',
-              explanation: 'الأفعال المنتهية بـ -er تنتمي للمجموعة الأولى.'
+              instruction: 'Choisis le bon pronom sujet :',
+              prompt: '3. Mona et Salma, .......... aiment le français.',
+              options: ['Ils', 'Elles', 'Elle', 'Vous'],
+              correctAnswer: 'Elles',
+              explanation: 'منى وسلمى اسمان لمؤنث في صيغة الجمع، الضمير المناسب هو Elles.'
+            },
+            {
+              id: 'rev_q4',
+              type: 'multiple-choice',
+              instruction: 'Choisis le bon sujet :',
+              prompt: '4. .......... va au cinéma ce soir avec Suzanne.',
+              options: ['On', 'Nous', 'Ils', 'Tu'],
+              correctAnswer: 'On',
+              explanation: 'فعل va هو تصريف aller مع ضمائر المفرد الغائب (Il / Elle / On).'
+            },
+            {
+              id: 'rev_q5',
+              type: 'multiple-choice',
+              instruction: 'Choisis le bon pronom sujet :',
+              prompt: '5. Mona et moi, .......... préparons une fête.',
+              options: ['Ils', 'Vous', 'Nous', 'Elles'],
+              correctAnswer: 'Nous',
+              explanation: 'أي اسم + moi يساوي ضمير المتكلم الجمع (Nous).'
+            },
+            {
+              id: 'rev_q6',
+              type: 'multiple-choice',
+              instruction: 'Choisis le bon pronom sujet :',
+              prompt: '6. Ali et toi, .......... regardez le match.',
+              options: ['Ils', 'Vous', 'Nous', 'Tu'],
+              correctAnswer: 'Vous',
+              explanation: 'أي اسم + toi يساوي ضمير المخاطب الجمع (Vous).'
             }
           ]
         },
         corriger: {
-          titleAr: 'صحح أخطاءك ومراجعة النقاط الصعبة',
-          descriptionAr: 'أخطاء شائعة يقع فيها الطلاب:',
+          titleAr: 'تنبيهات وأخطاء شائعة في تحديد الفاعل',
+          descriptionAr: 'انتبه للفروق الدقيقة التالية أثناء الحل:',
           commonMistakes: [
             {
-              mistake: 'وضع الفعل قبل الفاعل كما في العربية: Vais je à l\'école.',
-              correction: 'Je vais à l\'école.',
-              why: 'في اللغة الفرنسية، تبدأ الجملة الخبرية بالفاعل دائماً ثم الفعل.'
+              mistake: 'On allons au restaurant.',
+              correction: 'On va au restaurant.',
+              why: 'الضمير On معناه نحن، ولكن فعله يُصرّف دائماً مع المفرد مثل Il / Elle.'
+            },
+            {
+              mistake: 'Ahmed et Mona sont (Elles).',
+              correction: 'Ahmed et Mona sont (Ils).',
+              why: 'في اللغة الفرنسية، الجمع المشترك بين المذكر والمؤنث يعامل معاملة جمع المذكر (Ils).'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_phrase_rem_1',
+              id: 'rev_rem1',
               type: 'multiple-choice',
-              instruction: 'اختر الترتيب الصحيح للجملة الفرنسية:',
-              prompt: 'أي جملة صحيحة التركيب؟',
-              options: ['Ali regarde la télé.', 'Regarde Ali la télé.', 'La télé Ali regarde.'],
-              correctAnswer: 'Ali regarde la télé.',
-              explanation: 'الترتيب القياسي هو: فاعل (Ali) + فعل (regarde) + مفعول (la télé).'
+              instruction: 'Corrige la faute :',
+              prompt: 'Tout le monde .......... la fête.',
+              options: ['aiment', 'aime', 'aimons', 'aimes'],
+              correctAnswer: 'aime',
+              explanation: 'كلمة Tout le monde (كل الناس/الجميع) تعامل كاسم مفرد مذكر (Il) ويأخذ الفعل تصريف المفرد.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي إتقان تكوين الجملة',
-          descriptionAr: 'أجب عن التحدي في أسرع وقت لإحراز 3 نجوم!',
-          timeLimitSeconds: 60,
+          titleAr: 'تحدي السرعة: تركيب أجزاء الجملة',
+          descriptionAr: 'اختبر سرعتك في تصنيف الفاعل والمفعول في 30 ثانية:',
+          timeLimitSeconds: 30,
           challengeQuestions: [
             {
-              id: 'def_phrase_1',
+              id: 'rev_def1',
               type: 'multiple-choice',
-              instruction: 'اختر الضمير المناسب لتعويض (Ali et moi):',
-              prompt: 'Ali et moi = ..........',
-              options: ['Nous', 'Vous', 'Ils'],
-              correctAnswer: 'Nous',
-              explanation: 'اسم + moi = الضمير Nous (نحن).'
-            },
-            {
-              id: 'def_phrase_2',
-              type: 'multiple-choice',
-              instruction: 'اختر الضمير المناسب لتعويض (Ali et toi):',
-              prompt: 'Ali et toi = ..........',
-              options: ['Vous', 'Nous', 'Ils'],
-              correctAnswer: 'Vous',
-              explanation: 'اسم + toi = الضمير Vous (أنتم).'
+              instruction: 'Quelle est la fonction du mot souligné ?',
+              prompt: 'Suzanne écrit [une invitation] à ses amis.',
+              options: ['Sujet', 'Verbe', 'Complément d\'objet direct (C.O.D)', 'Complément de lieu'],
+              correctAnswer: 'Complément d\'objet direct (C.O.D)',
+              explanation: 'une invitation هو مفعول به مباشر تم بعد الفعل مباشرة بدون حرف جر.'
             }
           ]
         }
@@ -154,529 +175,423 @@ export const revisionSection: UnitSection = {
     {
       id: 'rev-present',
       unitId: 'revision',
-      unitTitle: 'Révision',
-      unitTitleAr: 'المراجعة العامة',
+      unitTitle: 'Révision Générale',
+      unitTitleAr: 'المراجعة العامة (Bienvenu 2)',
       order: 2,
       title: 'Le Présent de l\'indicatif',
-      titleAr: 'زمن المضارع للمجموعات الثلاث والأفعال الشاذة',
-      subtitleFr: '1er, 2ème et 3ème groupes',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 5، 6، 55، 66',
+      titleAr: 'زمن المضارع: المجموعات الأولى والثانية والثالثة الشاذة',
+      subtitleFr: '1er, 2ème et 3ème groupes + Verbes irréguliers (p. 84 - 86)',
+      estimatedMinutes: 18,
+      bookletPages: 'صفحة 84 - 86',
       stages: {
         comprendre: {
-          titleAr: 'تصريف الأفعال في زمن المضارع',
-          summaryAr: 'المضارع يعبر عن حدث يقع الآن في الحاضر أو عادة متكررة (Maintenant, Aujourd\'hui, Chaque jour).',
+          titleAr: 'قواعد تصريف الأفعال في المضارع',
+          summaryAr: 'ينقسم الفعل في الفرنسية إلى ثلاث مجموعات. تتطلب كل مجموعة نهايات محددة، مع حفظ تصاريف الأفعال الشاذة الرئيسية المقررة في Bienvenu 2.',
           grammarPoints: [
             {
-              title: '1. المجموعة الأولى (تنتهي بـ -er مثل Marcher, Parler, Regarder)',
-              ruleAr: 'نحذف -er ونضيف النهايات: Je (-e), Tu (-es), Il/Elle (-e), Nous (-ons), Vous (-ez), Ils/Elles (-ent).',
+              title: '1. أفعال المجموعة الأولى (1er groupe: -er)',
+              ruleAr: 'نحذف النهاية (-er) ونضيف نهايات المضارع: (e, es, e, ons, ez, ent).',
               table: {
-                headers: ['الضمير', 'النهاية', 'تصريف verbe Marcher'],
+                headers: ['الضمير', 'النهاية', 'مثال: Parler (يتحدث)', 'مثال: Inviter (يدعو)'],
                 rows: [
-                  ['Je', '-e', 'marche'],
-                  ['Tu', '-es', 'marches'],
-                  ['Il / Elle', '-e', 'marche'],
-                  ['Nous', '-ons', 'marchons'],
-                  ['Vous', '-ez', 'marchez'],
-                  ['Ils / Elles', '-ent', 'marchent']
+                  ['Je / J\'', '-e', 'Je parle', 'J\'invite'],
+                  ['Tu', '-es', 'Tu parles', 'Tu invites'],
+                  ['Il / Elle / On', '-e', 'Il parle', 'Elle invite'],
+                  ['Nous', '-ons', 'Nous parlons', 'Nous invitons'],
+                  ['Vous', '-ez', 'Vous parlez', 'Vous invitez'],
+                  ['Ils / Elles', '-ent', 'Ils parlent', 'Elles invitent']
                 ]
               }
             },
             {
-              title: '2. المجموعة الثانية (تنتهي بـ -ir مثل Finir, Choisir)',
-              ruleAr: 'نحذف -ir ونضيف النهايات: -is, -is, -it, -issons, -issez, -issent.',
+              title: '2. أفعال المجموعة الثانية (2ème groupe: -ir)',
+              ruleAr: 'نحذف (-ir) ونضيف: (is, is, it, issons, issez, issent) مثل: Finir (ينهي), Choisir (يختار), Réussir (ينجح).',
               table: {
-                headers: ['الضمير', 'النهاية', 'تصريف verbe Finir'],
+                headers: ['الضمير', 'Finir (ينهي)', 'Choisir (يختار)'],
                 rows: [
-                  ['Je', '-is', 'finis'],
-                  ['Tu', '-is', 'finis'],
-                  ['Il / Elle', '-it', 'finit'],
-                  ['Nous', '-issons', 'finissons'],
-                  ['Vous', '-issez', 'finissez'],
-                  ['Ils / Elles', '-issent', 'finissent']
+                  ['Je / Tu', 'Je finis / Tu finis', 'Je choisis / Tu choisis'],
+                  ['Il / Elle / On', 'Il finit', 'Elle choisit'],
+                  ['Nous', 'Nous finissons', 'Nous choisissons'],
+                  ['Vous', 'Vous finissez', 'Vous choisissez'],
+                  ['Ils / Elles', 'Ils finissent', 'Elles choisissent']
                 ]
               }
             },
             {
-              title: '3. أفعال المجموعة الثالثة الشاذة الأساسية (Aller, Avoir, Faire, Être)',
-              ruleAr: 'أفعال تحفظ كما هي:',
+              title: '3. أفعال المجموعة الثالثة الشاذة المقررة أساسياً في Bienvenu 2',
+              ruleAr: 'أفعال لا غنى عنها في منهج الصف الثاني الإعدادي:',
               table: {
-                headers: ['الضمير', 'Aller (يذهب)', 'Avoir (يملك)', 'Faire (يعمل)', 'Être (يكون)'],
+                headers: ['الفعل', 'معناه', 'التصريف مع الضمائر (Je / Tu / Il / Nous / Vous / Ils)'],
                 rows: [
-                  ['Je / J\'', 'vais', 'ai', 'fais', 'suis'],
-                  ['Tu', 'vas', 'as', 'fais', 'es'],
-                  ['Il / Elle', 'va', 'a', 'fait', 'est'],
-                  ['Nous', 'allons', 'avons', 'faisons', 'sommes'],
-                  ['Vous', 'allez', 'avez', 'faites', 'êtes'],
-                  ['Ils / Elles', 'vont', 'ont', 'font', 'sont']
+                  ['Être', 'يكون', 'suis, es, est, sommes, êtes, sont'],
+                  ['Avoir', 'يملك / لديه', 'ai, as, a, avons, avez, ont'],
+                  ['Aller', 'يذهب', 'vais, vas, va, allons, allez, vont'],
+                  ['Faire', 'يعمل / يمارس', 'fais, fais, fait, faisons, faites, font'],
+                  ['Prendre', 'يتناول / يركب', 'prends, prends, prend, prenons, prenez, prennent'],
+                  ['Vouloir', 'يريد', 'veux, veux, veut, voulons, voulez, veulent'],
+                  ['Pouvoir', 'يستطيع', 'peux, peux, peut, pouvons, pouvez, peuvent']
                 ]
               }
+            },
+            {
+              title: '4. الكلمات الدالة على المضارع (Mots clés)',
+              ruleAr: 'Aujourd\'hui (اليوم) - Maintenant (الآن) - Chaque jour / Chaque matin (كل يوم/صباح) - Toujours (دائماً) - Tous les vendredis (كل جمعة).'
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة عملية من تدريبات الكتاب (صفحة 5 و 6)',
-          descriptionAr: 'أمثلة الجمل في زمن المضارع مع الكلمات الدالة:',
+          titleAr: 'أمثلة عملية على المضارع من مواقف الكتاب',
+          descriptionAr: 'لاحظ تصريف الفعل حسب الفاعل والسياق:',
           examples: [
-            {
-              french: 'Maintenant, le professeur explique la leçon.',
-              arabic: 'الآن، المعلم يشرح الدرس.',
-              note: 'le professeur = Il -> verbe expliquer -> explique'
-            },
-            {
-              french: 'Aujourd\'hui, nous allons au stade.',
-              arabic: 'اليوم، نحن نذهب إلى الاستاد.',
-              note: 'Nous + verbe aller -> allons'
-            },
-            {
-              french: 'Chaque jour, ils finissent leurs devoirs.',
-              arabic: 'كل يوم، هم ينهون واجباتهم.',
-              note: 'ils + verbe finir -> finissent'
-            },
-            {
-              french: 'J\'ai un livre. / Tu es content.',
-              arabic: 'أنا أملك كتاباً. / أنت سعيد.',
-              note: 'avoir / être'
-            }
+            { french: 'Nous faisons les devoirs maintenant.', arabic: 'نحن نقوم بعمل الواجبات الآن.', note: 'Faire مع Nous = faisons' },
+            { french: 'Vous faites du sport ?', arabic: 'هل تمارسون الرياضة؟', note: 'انتبه: Vous faites (نهاية شاذة -tes)' },
+            { french: 'Samir et Gamal prennent le train.', arabic: 'سمير وجمال يركبان القطار.', note: 'Prendre مع جمع الغائب = prennent مع مضاعفة n' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 5 و 6 و 55 من الكتاب',
-          descriptionAr: 'اختر التصريف الصحيح للفعل:',
+          titleAr: 'بنك أسئلة تصريف المضارع (12 سؤال تفاعلي)',
+          descriptionAr: 'اختر التصريف الصحيح للفعل في زمن المضارع:',
           questions: [
             {
-              id: 'q_pres_1',
+              id: 'rev_prs1',
               type: 'multiple-choice',
-              instruction: 'صفحة 6 (سؤال 1): اختر الإجابة الصحيحة:',
-              prompt: 'Maintenant, le professeur .................... la leçon.',
-              options: ['expliquez', 'explique', 'expliques'],
-              correctAnswer: 'explique',
-              explanation: 'le professeur مفرد مذكر يعادل الضمير Il، ويأخذ النهاية -e في المجموعة الأولى.'
+              instruction: 'Mets au présent :',
+              prompt: '1. Moustafa et Suzanne .......... une invitation à Gamal.',
+              options: ['envoie', 'envoyez', 'envoient', 'envoyons'],
+              correctAnswer: 'envoient',
+              explanation: 'الفاعل Moustafa et Suzanne = Ils/Elles، لذلك يأخذ الفعل نهاية -ent.'
             },
             {
-              id: 'q_pres_2',
+              id: 'rev_prs2',
               type: 'multiple-choice',
-              instruction: 'صفحة 6 (سؤال 2): اختر الإجابة الصحيحة:',
-              prompt: 'Aujourd\'hui, Nous .................... au stade.',
-              options: ['aller', 'allez', 'allons'],
-              correctAnswer: 'allons',
-              explanation: 'مع الضمير Nous يصرف فعل aller إلى allons.'
+              instruction: 'Choisis le verbe convenable :',
+              prompt: '2. Vous .......... une table au restaurant ?',
+              options: ['réserve', 'réservez', 'réservent', 'réservons'],
+              correctAnswer: 'réservez',
+              explanation: 'مع الضمير Vous تأخذ أفعال المجموعة الأولى النهاية -ez.'
             },
             {
-              id: 'q_pres_3',
+              id: 'rev_prs3',
               type: 'multiple-choice',
-              instruction: 'صفحة 6 (سؤال 3): اختر الإجابة الصحيحة:',
-              prompt: 'Chaque jour, ils .................... leurs devoirs.',
-              options: ['finis', 'finissent', 'finissons'],
-              correctAnswer: 'finissent',
-              explanation: 'مع الضمير ils في المجموعة الثانية نضع النهاية -issent -> finissent.'
+              instruction: 'Choisis le verbe convenable :',
+              prompt: '3. Nous .......... de la salade verte.',
+              options: ['choisissons', 'choisit', 'choisissent', 'choisis'],
+              correctAnswer: 'choisissons',
+              explanation: 'فعل Choisir (مجموعة ثانية) يأخذ النهاية -issons مع الضمير Nous.'
             },
             {
-              id: 'q_pres_4',
+              id: 'rev_prs4',
               type: 'multiple-choice',
-              instruction: 'صفحة 6 (سؤال 4): اختر الإجابة الصحيحة:',
-              prompt: 'Chaque matin, je .................... prendre le petit déjeuner tôt.',
-              options: ['préfère', 'préfères', 'préférez'],
-              correctAnswer: 'préfère',
-              explanation: 'مع الضمير Je نأخذ النهاية -e -> préfère.'
+              instruction: 'Choisis le verbe Être au présent :',
+              prompt: '4. Les amis .......... très contents de la fête.',
+              options: ['sommes', 'êtes', 'sont', 'est'],
+              correctAnswer: 'sont',
+              explanation: 'Les amis = Ils، وتصريف être مع Ils هو sont.'
             },
             {
-              id: 'q_pres_5',
+              id: 'rev_prs5',
               type: 'multiple-choice',
-              instruction: 'صفحة 5 (سؤال 4): Mets au présent:',
-              prompt: 'Nous .................... des gâteaux. (manger)',
-              options: ['mangeons', 'mangons', 'mangez'],
-              correctAnswer: 'mangeons',
-              explanation: 'مع أفعال -ger نضع حرف e قبل ons للمحافظة على نطق الجيم مع Nous: mangeons.'
+              instruction: 'Choisis le verbe Avoir au présent :',
+              prompt: '5. J\'.......... 14 ans cette année.',
+              options: ['ai', 'as', 'a', 'avons'],
+              correctAnswer: 'ai',
+              explanation: 'تصريف avoir مع Je هو ai (J\'ai 14 ans).'
             },
             {
-              id: 'q_pres_6',
+              id: 'rev_prs6',
               type: 'multiple-choice',
-              instruction: 'صفحة 5 (سؤال 8): Mets au présent:',
-              prompt: 'ils .................... 16 ans. (avoir)',
-              options: ['ont', 'sont', 'avons'],
-              correctAnswer: 'ont',
-              explanation: 'تصريف verbe avoir مع ils هو ont.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'أخطاء شائعة في تصريف المضارع',
-          descriptionAr: 'تجنب هذه الأخطاء المتكررة:',
-          commonMistakes: [
-            {
-              mistake: 'الخلط بين vous faites و vous faisez.',
-              correction: 'Vous faites (فعل faire شاذ مع vous).',
-              why: 'فعل faire مع vous يأخذ faites، ومثله dire -> dites.'
+              instruction: 'Choisis le verbe Aller au présent :',
+              prompt: '6. Où .......... -tu le vendredi ?',
+              options: ['va', 'vas', 'vais', 'allez'],
+              correctAnswer: 'vas',
+              explanation: 'تصريف aller مع Tu هو vas.'
             },
             {
-              mistake: 'الخلط بين ils ont (avoir) و ils sont (être).',
-              correction: 'Ils ont 16 ans (للعمر نستخدم avoir).',
-              why: 'للتعبير عن السن نستخدم verbe avoir وليس être.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_pres_rem_1',
+              id: 'rev_prs7',
               type: 'multiple-choice',
-              instruction: 'صفحة 55 (سؤال 7): اختر التصريف الصحيح:',
-              prompt: 'Chaque jour, vous .................... le devoir. (faire)',
-              options: ['faites', 'faisez', 'faisons'],
+              instruction: 'Choisis le verbe Faire au présent :',
+              prompt: '7. Vous .......... quoi pour le dîner ?',
+              options: ['faisez', 'faites', 'font', 'faisons'],
               correctAnswer: 'faites',
-              explanation: 'تصريف فعل faire مع vous هو vous faites.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي سرعة تصريف المضارع',
-          descriptionAr: 'أجب بدقة وسرعة خلال 60 ثانية:',
-          timeLimitSeconds: 60,
-          challengeQuestions: [
+              explanation: 'تصريف فعل faire مع Vous شاذ وينتهي بـ -tes (Vous faites).'
+            },
             {
-              id: 'def_pres_1',
+              id: 'rev_prs8',
               type: 'multiple-choice',
-              instruction: 'صفحة 6 (سؤال 7): اختر الإجابة:',
-              prompt: 'Elle .................... 15 ans.',
-              options: ['a', 'as', 'ai'],
-              correctAnswer: 'a',
-              explanation: 'Elle a 15 ans.'
+              instruction: 'Choisis le verbe Prendre au présent :',
+              prompt: '8. Gamal et son père .......... l\'autobus.',
+              options: ['prend', 'prenons', 'prennent', 'prenez'],
+              correctAnswer: 'prennent',
+              explanation: 'تصريف Prendre مع جمع الغائب (Ils) هو prennent بمضاعفة حرف n.'
             },
             {
-              id: 'def_pres_2',
+              id: 'rev_prs9',
               type: 'multiple-choice',
-              instruction: 'اختر تصريف verbe être مع Nous:',
-              prompt: 'Nous .................... des filles.',
-              options: ['sommes', 'êtes', 'sont'],
-              correctAnswer: 'sommes',
-              explanation: 'Nous sommes des filles.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'rev-passe-compose',
-      unitId: 'revision',
-      unitTitle: 'Révision',
-      unitTitleAr: 'المراجعة العامة',
-      order: 3,
-      title: 'Le Passé Composé',
-      titleAr: 'الماضي المركب وقواعد المساعد وتبعية اسم المفعول',
-      subtitleFr: 'Avoir / Être + Participe Passé',
-      estimatedMinutes: 20,
-      bookletPages: 'صفحات 7، 8، 53، 54، 67، 68، 69',
-      stages: {
-        comprendre: {
-          titleAr: 'قاعدة زمن الماضي المركب بالتفصيل',
-          summaryAr: 'يتكون الماضي المركب من: تصريف فعل Avoir أو فعل Être في المضارع + اسم المفعول من الفعل الأساسي (Participe Passé).',
-          grammarPoints: [
-            {
-              title: '1. الكلمات الدالة على الماضي المركب (Les mots clés - صفحة 67)',
-              ruleAr: 'Hier (أمس)، Avant-hier (أول أمس)، passé(e) (الماضي مثل le mois passé)، dernier(e) (الأخير مثل la semaine dernière)، Il y a + مدة (منذ مثل il y a un mois).',
+              instruction: 'Choisis le verbe Vouloir au présent :',
+              prompt: '9. Je .......... commander du poulet rôti.',
+              options: ['veux', 'veut', 'voulons', 'veulent'],
+              correctAnswer: 'veux',
+              explanation: 'تصريف vouloir مع Je هو veux.'
             },
             {
-              title: '2. الأفعال الـ 14 التي تأخذ المساعد Être (صفحة 69)',
-              ruleAr: 'أفعال الحركة والحالة الـ 14 وعكسها تأخذ المساعد être:',
-              details: [
-                'aller (ذهب) ⟷ venir (أتى)',
-                'arriver (وصل) ⟷ partir (رحل)',
-                'entrer (دخل) ⟷ sortir (خرج)',
-                'naître (وُلد) ⟷ mourir (مات)',
-                'monter (صعد) ⟷ descendre (نزل)',
-                'tomber (سقط) ⟷ rester (بقي)',
-                'passer (مرّ) ⟷ retourner (عاد)'
-              ]
-            },
-            {
-              title: '3. تبعية اسم المفعول مع المساعد Être (L\'accord - صفحة 69)',
-              ruleAr: 'اسم المفعول مع المساعد être يتبع الفاعل في النوع والعدد:',
-              details: [
-                'Elle (مفرد مؤنث) ⟵ نضيف (e) مثل: Elle est allée au cinéma.',
-                'Nous / Vous / Ils (جمع مذكر) ⟵ نضيف (s) مثل: Ils sont montés.',
-                'Elles (جمع مؤنث) ⟵ نضيف (es) مثل: Elles sont parties.'
-              ]
-            },
-            {
-              title: '4. صياغة اسم المفعول (Le Participe Passé - صفحة 68)',
-              ruleAr: 'كيف نشتق اسم المفعول من المصدر:',
-              details: [
-                'المجموعة الأولى (-er): نحذف r ونضع é (arriver -> arrivé, monter -> monté)',
-                'المجموعة الثانية (-ir): نحذف r فقط (finir -> fini, sortir -> sorti)',
-                'المجموعة الثالثة الشاذة: être -> été, avoir -> eu, faire -> fait, voir -> vu, écrire -> écrit, boire -> bu, prendre -> pris, lire -> lu, mettre -> mis, venir -> venu, naître -> né, mourir -> mort, descendre -> descendu.'
-              ]
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'أمثلة محلولة من الكتاب (صفحة 7 و 8 و 69)',
-          descriptionAr: 'تطبيق مباشر على المساعد والتبعية:',
-          examples: [
-            {
-              french: 'Avant-hier, nous sommes allés chez notre tante.',
-              arabic: 'أول أمس، ذهبنا عند عمتنا.',
-              note: 'Verbe aller يأخذ être + تبعية s مع nous.'
-            },
-            {
-              french: 'Hier, Sami est arrivé à 8 heures.',
-              arabic: 'أمس، وصل سامي في الساعة الثامنة.',
-              note: 'Verbe arriver يأخذ être (Sami = Il).'
-            },
-            {
-              french: 'Hier, il a fait son travail.',
-              arabic: 'أمس، هو عمل واجبه.',
-              note: 'Verbe faire يأخذ المساعد avoir (participe passé: fait).'
-            },
-            {
-              french: 'Ce matin, ma chatte est tombée par terre.',
-              arabic: 'هذا الصباح، سقطت قطتي أرضاً.',
-              note: 'tomber يأخذ être + تبعية e للمؤنث (ma chatte).'
-            }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 7 و 8 و 53 من الكتاب',
-          descriptionAr: 'اختر الإجابة الصحيحة في الماضي المركب:',
-          questions: [
-            {
-              id: 'q_pc_1',
+              id: 'rev_prs10',
               type: 'multiple-choice',
-              instruction: 'صفحة 7 (سؤال 1): اختر الإجابة الصحيحة:',
-              prompt: 'Ali .................... le devoir hier.',
-              options: ['a fait', 'vais faire', 'fait'],
-              correctAnswer: 'a fait',
-              explanation: 'hier دالة على الماضي المركب، وفعل faire يأخذ المساعد avoir -> a fait.'
+              instruction: 'Choisis le verbe Pouvoir au présent :',
+              prompt: '10. Est-ce que tu .......... venir à mon anniversaire ?',
+              options: ['peux', 'peut', 'pouvons', 'peuvent'],
+              correctAnswer: 'peux',
+              explanation: 'تصريف pouvoir مع Tu هو peux بالـ x.'
             },
             {
-              id: 'q_pc_2',
+              id: 'rev_prs11',
               type: 'multiple-choice',
-              instruction: 'صفحة 7 (سؤال 2): اختر الإجابة الصحيحة:',
-              prompt: 'Hier, nous .................... le petit déjeuner.',
-              options: ['avons pris', 'allons prendre', 'a pris'],
-              correctAnswer: 'avons pris',
-              explanation: 'مع nous نضع avons + اسم المفعول pris.'
+              instruction: 'Mets au présent :',
+              prompt: '11. Les médecins .......... les malades à l\'hôpital.',
+              options: ['soigne', 'soignent', 'soignons', 'soignez'],
+              correctAnswer: 'soignent',
+              explanation: 'Les médecins = جمع غائب (Ils)، فيأخذ الفعل -ent.'
             },
             {
-              id: 'q_pc_3',
+              id: 'rev_prs12',
               type: 'multiple-choice',
-              instruction: 'صفحة 8 (سؤال 4): اختر الإجابة الصحيحة:',
-              prompt: 'Le mois dernier, j\' .................... à Alexandrie.',
-              options: ['ai voyagé', 'a voyagé', 'voyager'],
-              correctAnswer: 'ai voyagé',
-              explanation: 'j\'ai voyagé (المساعد avoir مع Je).'
-            },
-            {
-              id: 'q_pc_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 8 (سؤال 7): اختر الإجابة الصحيحة:',
-              prompt: 'Tu .................... à Kédzénia hier.',
-              options: ['es allé', 'est allé', 'suis allé'],
-              correctAnswer: 'es allé',
-              explanation: 'مع Tu في الماضي المركب مع être: Tu es allé.'
-            },
-            {
-              id: 'q_pc_5',
-              type: 'multiple-choice',
-              instruction: 'صفحة 8 (سؤال 8): اختر الإجابة الصحيحة:',
-              prompt: 'Nous .................... à Alexandrie.',
-              options: ['sommes partis', 'êtes partis', 'avons partis'],
-              correctAnswer: 'sommes partis',
-              explanation: 'verbe partir من أفعال être ويأخذ تبعية s مع nous: sommes partis.'
-            },
-            {
-              id: 'q_pc_6',
-              type: 'multiple-choice',
-              instruction: 'صفحة 8 (سؤال 10): اختر الإجابة الصحيحة:',
-              prompt: 'Ils .................... en mai.',
-              options: ['sont nés', 'suis nés', 'êtes nés'],
-              correctAnswer: 'sont nés',
-              explanation: 'naître يأخذ être -> ils sont nés.'
+              instruction: 'Mets au présent :',
+              prompt: '12. On .......... le déjeuner à 15 heures.',
+              options: ['prennent', 'prend', 'prenons', 'prends'],
+              correctAnswer: 'prend',
+              explanation: 'On يعامل مثل Il/Elle في التصريف ويأخذ prend بالـ d.'
             }
           ]
         },
         corriger: {
-          titleAr: 'أبرز أخطاء الماضي المركب',
-          descriptionAr: 'انتبه لهذه القواعد الذهبية:',
+          titleAr: 'تصحيح الأخطاء الشائعة في المضارع',
+          descriptionAr: 'انتبه للنهايات الاستثنائية:',
           commonMistakes: [
             {
-              mistake: 'نسيان إضافة التبعية (e/s/es) مع المساعد être.',
-              correction: 'Elle est allée (إضافة e لأن الفاعل مفرد مؤنث).',
-              why: 'المساعد être يفرض مطابقة اسم المفعول مع الفاعل دائماً.'
+              mistake: 'Vous faisez les gâteaux.',
+              correction: 'Vous faites les gâteaux.',
+              why: 'فعل Faire مع Vous شاذ: faites وليس faisez.'
             },
             {
-              mistake: 'وضع تبعية مع المساعد avoir في الحالات العادية.',
-              correction: 'Elle a mangé (بدون إضافة e إضافية).',
-              why: 'مع المساعد avoir لا توجد تبعية للفاعل.'
+              mistake: 'Ils ont aller.',
+              correction: 'Ils vont.',
+              why: 'تصريف Aller مع Ils هو vont، ولا نخلط بينه وبين فعل avoir (ont).'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_pc_rem_1',
+              id: 'rev_rem2',
               type: 'multiple-choice',
-              instruction: 'صفحة 53 (سؤال 5): اختر الإجابة الصحيحة:',
-              prompt: 'Le samedi passé, elles .................... au basket.',
-              options: ['ont joué', 'a joué', 'avons joué'],
-              correctAnswer: 'ont joué',
-              explanation: 'jouer يأخذ المساعد avoir -> elles ont joué.'
+              instruction: 'Corrige le verbe :',
+              prompt: 'Suzanne et sa mère .......... au marché.',
+              options: ['vont', 'ont', 'font', 'viennent'],
+              correctAnswer: 'vont',
+              explanation: 'Suzanne et sa mère = Elles، وتصريف فعل يذهب (Aller) معهن هو vont.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي الماضي المركب والتبعية',
-          descriptionAr: 'اختبر دقتك وسرعتك في 60 ثانية:',
-          timeLimitSeconds: 60,
+          titleAr: 'تحدي تصريف الشواذ السريع',
+          descriptionAr: 'حدد تصريف الفعل في 25 ثانية:',
+          timeLimitSeconds: 25,
           challengeQuestions: [
             {
-              id: 'def_pc_1',
+              id: 'rev_def2',
               type: 'multiple-choice',
-              instruction: 'صفحة 54 (سؤال 1): ضع الفعل في الماضي المركب:',
-              prompt: 'Avant-hier, nous (aller) .................... chez notre tante.',
-              options: ['sommes allés', 'avons allé', 'sommes allé'],
-              correctAnswer: 'sommes allés',
-              explanation: 'aller يأخذ être + s للجمع -> sommes allés.'
-            },
-            {
-              id: 'def_pc_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 54 (سؤال 3): ضع الفعل في الماضي المركب:',
-              prompt: 'Avant-hier, elle (venir) .................... à 9 heures.',
-              options: ['est venue', 'a venu', 'est venu'],
-              correctAnswer: 'est venue',
-              explanation: 'venir يأخذ être + e للتأنيث -> est venue.'
+              instruction: 'Complète au présent :',
+              prompt: 'Que .......... -vous faire pour le mariage ?',
+              options: ['voulez', 'veulent', 'veux', 'voulons'],
+              correctAnswer: 'voulez',
+              explanation: 'مع الضمير Vous، تصريف vouloir هو voulez.'
             }
           ]
         }
       }
     },
     {
-      id: 'rev-nombres',
+      id: 'rev-lieux',
       unitId: 'revision',
-      unitTitle: 'Révision',
-      unitTitleAr: 'المراجعة العامة',
-      order: 4,
-      title: 'Les Nombres',
-      titleAr: 'الأعداد والأرقام من 1 إلى 3000 وكتابتها بالحروف',
-      subtitleFr: 'Lecture et écriture des nombres',
-      estimatedMinutes: 10,
-      bookletPages: 'صفحة 70',
+      unitTitle: 'Révision Générale',
+      unitTitleAr: 'المراجعة العامة (Bienvenu 2)',
+      order: 3,
+      title: 'Les Articles Contractés de Lieu',
+      titleAr: 'أدوات المكان المدغمة وحروف الجر (au, à la, à l\', aux)',
+      subtitleFr: 'Prépositions de lieu + Exceptions (Le Caire, Le Fayoum, Le Sinaï)',
+      estimatedMinutes: 14,
+      bookletPages: 'صفحة 86 - 87',
       stages: {
         comprendre: {
-          titleAr: 'قراءة وكتابة الأعداد بالفرنسية',
-          summaryAr: 'جدول الأرقام والأعداد المقررة بصفحة 70 في الكتاب المدرسي وكيفية تركيب الأعداد المركبة.',
+          titleAr: 'قاعدة حروف جر الأماكن والمدن',
+          summaryAr: 'عند الذهاب أو التواجد في مكان، يُستخدم حرف الجر (à) مدمجاً مع أداة التعريف حسب نوع المكان واسم المدينة أو الدولة.',
           grammarPoints: [
             {
-              title: '1. الأعداد من 1 إلى 20 (صفحة 70)',
-              ruleAr: 'الأعداد الأساسية:',
+              title: '1. أدوات الإدغام مع الأماكن (Articles Contractés)',
+              ruleAr: 'يتم دمج حرف الجر à مع أداة التعريف على النحو التالي:',
               table: {
-                headers: ['الرقم', 'الكتابة', 'الرقم', 'الكتابة'],
+                headers: ['الأداة المدغمة', 'الاستخدام', 'أمثلة من منهج Bienvenu 2'],
                 rows: [
-                  ['1', 'un', '11', 'onze'],
-                  ['2', 'deux', '12', 'douze'],
-                  ['3', 'trois', '13', 'treize'],
-                  ['4', 'quatre', '14', 'quatorze'],
-                  ['5', 'cinq', '15', 'quinze'],
-                  ['6', 'six', '16', 'seize'],
-                  ['7', 'sept', '17', 'dix-sept'],
-                  ['8', 'huit', '18', 'dix-huit'],
-                  ['9', 'neuf', '19', 'dix-neuf'],
-                  ['10', 'dix', '20', 'vingt']
+                  ['au (à + le)', 'أمام اسم مفرد مذكر يبدأ بساكن', 'au restaurant, au club, au cinéma, au zoo, au marché, au musée'],
+                  ['à la (à + la)', 'أمام اسم مفرد مؤنث يبدأ بساكن', 'à la gare, à la maison, à la piscine, à la fête, à la pharmacie'],
+                  ['à l\' (à + l\')', 'أمام اسم مفرد بنوعيه يبدأ بمتحرك أو h صامتة', 'à l\'hôpital, à l\'école, à l\'hôtel, à l\'aéroport'],
+                  ['aux (à + les)', 'أمام اسم جمع بنوعيه', 'aux pyramides, aux magasins, aux toilettes']
                 ]
               }
             },
             {
-              title: '2. العشرات والمئات والآلاف (صفحة 70)',
-              ruleAr: 'vingt (20), trente (30), quarante (40), cinquante (50), soixante (60), soixante-dix (70), quatre-vingts (80), quatre-vingt-dix (90), cent (100), deux cents (200), trois cents (300), mille (1000), deux mille (2000), trois mille (3000).'
+              title: '2. الاستثناءات الذهبية للمدن المصرية (Important)',
+              ruleAr: 'كل المدن تأخذ حرف الجر (à) البسيط (مثل: à Paris, à Alexandrie, à Louxor, à Tanta, à Assouan)، ما عدا ثلاث مدن مصرية مذكر تأخذ (au):',
+              details: [
+                'au Caire (في القاهرة)',
+                'au Fayoum (في الفيوم)',
+                'au Sinaï (في سيناء)'
+              ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة على الأعداد المركبة',
-          descriptionAr: 'لاحظ إضافة "et" مع العدد 1 في 21، 31، 41، 51، 61، 71:',
+          titleAr: 'أمثلة نموذجية من نصوص الصف الثاني',
+          descriptionAr: 'لاحظ اختيار أداة المكان بدقة:',
           examples: [
-            { french: '21 = vingt et un', arabic: 'واحد وعشرون' },
-            { french: '22 = vingt-deux', arabic: 'اثنان وعشرون' },
-            { french: '71 = soixante et onze', arabic: 'واحد وسبعون' },
-            { french: '80 = quatre-vingts (مع s الجمع)', arabic: 'ثمانون' },
-            { french: '81 = quatre-vingt-un (بدون s وبدون et)', arabic: 'واحد وثمانون' },
-            { french: '100 000 = cent mille objets', arabic: 'مائة ألف قطعة (متحف القاهرة)' }
+            { french: 'Gamal habite au Caire.', arabic: 'جمال يسكن في القاهرة.', note: 'القاهرة تأخذ دائماً au' },
+            { french: 'Ali va à l\'hôpital pour visiter Samir.', arabic: 'علي يذهب إلى المستشفى لزيارة سمير.', note: 'hôpital مفرد يبدأ بمتحرك h muet فيأخذ à l\'' },
+            { french: 'Le soir, nous allons au restaurant.', arabic: 'في المساء، نحن نذهب إلى المطعم.', note: 'restaurant مفرد مذكر فيأخذ au' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريب على كتابة الأرقام',
-          descriptionAr: 'اختر الكتابة الصحيحة للعدد:',
+          titleAr: 'تدريبات أدوات المكان والمدن (10 أسئلة تفاعلية)',
+          descriptionAr: 'اختر حرف الجر أو الأداة المدغمة المناسبة:',
           questions: [
             {
-              id: 'q_num_1',
+              id: 'rev_loc1',
               type: 'multiple-choice',
-              instruction: 'كيف يكتب الرقم 15 بالحروف الفرنسية؟',
-              prompt: '15 = ..........',
-              options: ['quinze', 'seize', 'quatorze'],
-              correctAnswer: 'quinze',
-              explanation: '15 = quinze.'
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '1. Mon oncle habite .......... Caire.',
+              options: ['à', 'au', 'en', 'aux'],
+              correctAnswer: 'au',
+              explanation: 'القاهرة (Le Caire) من المدن المذكرة الاستثنائية التي تأخذ au.'
             },
             {
-              id: 'q_num_2',
+              id: 'rev_loc2',
               type: 'multiple-choice',
-              instruction: 'كيف يكتب الرقم 70 بالحروف الفرنسية؟',
-              prompt: '70 = ..........',
-              options: ['soixante-dix', 'soixante', 'septante'],
-              correctAnswer: 'soixante-dix',
-              explanation: '70 = soixante-dix (60 + 10).'
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '2. Suzanne va .......... Alexandrie pendant les vacances.',
+              options: ['au', 'à', 'en', 'aux'],
+              correctAnswer: 'à',
+              explanation: 'جميع المدن العادية تأخذ حرف الجر à بدون أداة (à Alexandrie).'
             },
             {
-              id: 'q_num_3',
+              id: 'rev_loc3',
               type: 'multiple-choice',
-              instruction: 'كيف يكتب الرقم 80 بالحروف الفرنسية؟',
-              prompt: '80 = ..........',
-              options: ['quatre-vingts', 'quatre-vingt', 'huitante'],
-              correctAnswer: 'quatre-vingts',
-              explanation: '80 = quatre-vingts تأخذ حرف s عند تمامها.'
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '3. Les touristes admirent les statues .......... musée.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'au',
+              explanation: 'كلمة musée مفرد مذكر مبدوء بساكن فتأخذ au.'
+            },
+            {
+              id: 'rev_loc4',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '4. Samir a mal, il est transporté .......... hôpital.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'à l\'',
+              explanation: 'كلمة hôpital تبدأ بحرف h صامت فيعامل كمتحرك ويأخذ à l\'.'
+            },
+            {
+              id: 'rev_loc5',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '5. La maman achète des légumes .......... marché.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'au',
+              explanation: 'كلمة marché مفرد مذكر فتأخذ au.'
+            },
+            {
+              id: 'rev_loc6',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '6. Les amis mangent un bon repas .......... restaurant.',
+              options: ['à la', 'au', 'à l\'', 'aux'],
+              correctAnswer: 'au',
+              explanation: 'كلمة restaurant مفرد مذكر فتأخذ au.'
+            },
+            {
+              id: 'rev_loc7',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '7. Nous passons la soirée .......... maison.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'à la',
+              explanation: 'كلمة maison مفرد مؤنث فتأخذ à la.'
+            },
+            {
+              id: 'rev_loc8',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '8. En été, les jeunes vont .......... Sinaï.',
+              options: ['au', 'à', 'en', 'aux'],
+              correctAnswer: 'au',
+              explanation: 'سيناء من الأسماء المذكرة الاستثنائية التي تأخذ au Sinaï.'
+            },
+            {
+              id: 'rev_loc9',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '9. Le train arrive .......... gare de Louxor.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'à la',
+              explanation: 'كلمة gare (محطة القطار) مفرد مؤنث فتأخذ à la.'
+            },
+            {
+              id: 'rev_loc10',
+              type: 'multiple-choice',
+              instruction: 'Choisis la bonne préposition :',
+              prompt: '10. Les élèves vont .......... pyramides de Guizèh.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'aux',
+              explanation: 'كلمة pyramides اسم جمع فيأخذ aux.'
             }
           ]
         },
         corriger: {
-          titleAr: 'أخطاء كتابة الأرقام',
-          descriptionAr: 'لاحظ الفرق بين 21 و 81:',
+          titleAr: 'تنبيه الامتحان في حروف الجر',
+          descriptionAr: 'لا تخلط بين المدن والأماكن العامة:',
           commonMistakes: [
             {
-              mistake: 'كتابة quatre-vingt et un.',
-              correction: 'quatre-vingt-un (بدون et).',
-              why: 'العدد 81 و 91 لا يأخذان حرف العطف et على عكس 21 و 31 و 41.'
+              mistake: 'J\'habite à Caire.',
+              correction: 'J\'habite au Caire.',
+              why: 'القاهرة والفيوم وسيناء تأخذ دائماً au وليس à.'
+            },
+            {
+              mistake: 'Il va à le club.',
+              correction: 'Il va au club.',
+              why: 'في اللغة الفرنسية، à + le تدغم إجبارياً إلى au.'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_num_rem_1',
+              id: 'rev_rem3',
               type: 'multiple-choice',
-              instruction: 'اختر الكتابة الصحيحة للعدد 21:',
-              prompt: '21 = ..........',
-              options: ['vingt et un', 'vingt-un', 'vingt et une'],
-              correctAnswer: 'vingt et un',
-              explanation: '21 = vingt et un.'
+              instruction: 'Complète correctement :',
+              prompt: 'Les enfants jouent .......... jardin.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'au',
+              explanation: 'jardin اسم مفرد مذكر يأخذ au.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي الأرقام السريع',
-          descriptionAr: 'حدد الأرقام التالية في 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي الأماكن السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_num_1',
+              id: 'rev_def3',
               type: 'multiple-choice',
-              instruction: 'ما هو العدد: soixante-douze؟',
-              prompt: 'soixante-douze = ..........',
-              options: ['72', '62', '82'],
-              correctAnswer: '72',
-              explanation: '60 + 12 = 72.'
-            },
-            {
-              id: 'def_num_2',
-              type: 'multiple-choice',
-              instruction: 'ما هو العدد: quatre-vingt-onze؟',
-              prompt: 'quatre-vingt-onze = ..........',
-              options: ['91', '81', '71'],
-              correctAnswer: '91',
-              explanation: '80 + 11 = 91.'
+              instruction: 'Choisis vite :',
+              prompt: 'Suzanne achète des médicaments .......... pharmacie.',
+              options: ['au', 'à la', 'à l\'', 'aux'],
+              correctAnswer: 'à la',
+              explanation: 'pharmacie اسم مفرد مؤنث يأخذ à la.'
             }
           ]
         }
@@ -685,148 +600,189 @@ export const revisionSection: UnitSection = {
     {
       id: 'rev-negation',
       unitId: 'revision',
-      unitTitle: 'Révision',
-      unitTitleAr: 'المراجعة العامة',
-      order: 5,
-      title: 'La Forme Négative',
-      titleAr: 'صيغة النفي وتحويل أدوات النكرة والتجزئة',
-      subtitleFr: 'Ne ... pas & transformation en de/d\'',
-      estimatedMinutes: 10,
-      bookletPages: 'صفحات 50، 41، 42',
+      unitTitle: 'Révision Générale',
+      unitTitleAr: 'المراجعة العامة (Bienvenu 2)',
+      order: 4,
+      title: 'La Négation & Transformation',
+      titleAr: 'صيغة النفي وقاعدة تحويل أدوات النكرة والتجزئة',
+      subtitleFr: 'ne ... pas / n\' ... pas + de/d\' et l\'exception de ÊTRE (p. 87 - 88)',
+      estimatedMinutes: 15,
+      bookletPages: 'صفحة 87 - 88',
       stages: {
         comprendre: {
-          titleAr: 'قواعد النفي في اللغة الفرنسية (صفحة 50)',
-          summaryAr: 'لنفي الجملة نضع الفعل بين طرفي النفي ne ... pas (أو n\' ... pas إذا بدأ الفعل بحرف متحرك).',
+          titleAr: 'قواعد النفي الأساسية والاستثناء الهام',
+          summaryAr: 'لنفي الجملة نضع الفعل المصرف بين شقي النفي (ne ... pas) أو (n\' ... pas) قبل حرف متحرك، مع الانتباه لتحويل الأدوات.',
           grammarPoints: [
             {
-              title: '1. القاعدة الأساسية',
-              ruleAr: 'Sujet + ne (n\') + Verbe + pas + Complément',
+              title: '1. التكوين الأساسي للنفي',
+              ruleAr: 'Sujet + ne / n\' + Verbe + pas + Complément.',
               details: [
-                'Il regarde la télé. ⟶ Il ne regarde pas la télé.',
-                'J\'écris la leçon. ⟶ Je n\'écris pas la leçon.'
+                'Je regarde la télé. -> Je ne regarde pas la télé.',
+                'Il aime le chocolat. -> Il n\'aime pas le chocolat. (لأن فعل aimer يبدأ بحرف متحرك)'
               ]
             },
             {
-              title: '2. تحويل أدوات النكرة والتجزئة (صفحة 41 و 50)',
-              ruleAr: 'تتحول أدوات التجزئة (du, de la, de l\', des) وأدوات النكرة (un, une, des) عند النفي إلى (de) أو (d\') أمام الحرف المتحرك، ما عدا إذا كان فعل الجملة هو verbe Être.',
+              title: '2. القاعدة الذهبية لتحويل الأدوات عند النفي',
+              ruleAr: 'تتحول أدوات النكرة (un, une, des) وأدوات التجزئة (du, de la, de l\', des) إلى (de) أو (d\') في النفي:',
               details: [
-                'Elle boit du café. ⟶ Elle ne boit pas de café.',
-                'Nous mangeons des fruits. ⟶ Nous ne mangeons pas de fruits.',
-                'استثناء مع être: Tu es un élève. ⟶ Tu n\'es pas un élève (تبقى un كما هي).',
-                'استثناء مع être: C\'est mon frère. ⟶ Ce n\'est pas mon frère.'
+                'J\'ai un stylo. -> Je n\'ai pas de stylo.',
+                'Il mange de la viande. -> Il ne mange pas de viande.',
+                'Nous buvons de l\'eau. -> Nous ne buvons pas d\'eau.'
+              ]
+            },
+            {
+              title: '3. الاستثناء الخطير: وجود فعل Être (يكون)',
+              ruleAr: 'إذا كان فعل الجملة هو فعل (Être)، تظل أدوات النكرة كما هي بدون أي تحويل إلى de:',
+              details: [
+                'C\'est un restaurant. -> Ce n\'est pas un restaurant. (لا تحويل مع être)',
+                'Ce sont des gâteaux. -> Ce ne sont pas des gâteaux. (لا تحويل مع être)'
+              ]
+            },
+            {
+              title: '4. أدوات المعرفة لا تتغير في النفي',
+              ruleAr: 'أدوات المعرفة (le, la, l\', les) تبقى كما هي دون تغيير عند النفي مع أفعال الميول (aimer, adorer, préférer, détester):',
+              details: [
+                'J\'aime le café. -> Je n\'aime pas le café.'
               ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة من تدريبات صفحة 50 بالكتاب',
-          descriptionAr: 'قارن بين الجمل المثبتة والمنفية:',
+          titleAr: 'أمثلة توضيحية لجميع حالات النفي',
+          descriptionAr: 'قارن بين الجمل الإيجابية والمنفية:',
           examples: [
-            {
-              french: 'Elle boit du café. ⟶ Elle ne boit pas de café.',
-              arabic: 'هي تشرب قهوة. ⟶ هي لا تشرب قهوة.',
-              note: 'تحولت du إلى de عند النفي.'
-            },
-            {
-              french: 'Elle a une nouvelle voiture. ⟶ Elle n\'a pas de nouvelle voiture.',
-              arabic: 'هي لديها سيارة جديدة. ⟶ ليس لديها سيارة جديدة.',
-              note: 'تحولت une إلى de.'
-            },
-            {
-              french: 'Tu es un élève. ⟶ Tu n\'es pas un élève.',
-              arabic: 'أنت تلميذ. ⟶ لست تلميذاً.',
-              note: 'مع verbe être لا تتغير un إلى de.'
-            }
+            { french: 'Il a des amis. -> Il n\'a pas d\'amis.', arabic: 'تحولت des إلى d\' لأن amis تبدأ بمتحرك.', note: 'Transformation en d\'' },
+            { french: 'C\'est une invitation. -> Ce n\'est pas une invitation.', arabic: 'لم تتغير une لوجود فعل être.', note: 'Exception avec le verbe Être' },
+            { french: 'Moustafa boit du thé. -> Moustafa ne boit pas de thé.', arabic: 'تحولت أداة التجزئة du إلى de في النفي.', note: 'Partitif -> de' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 50 بالكتاب',
-          descriptionAr: 'حول إلى صيغة النفي الصحيحة:',
+          titleAr: 'تمارين النفي وتغيير الأدوات (9 أسئلة تفاعلية)',
+          descriptionAr: 'اختر الإجابة الصحيحة لإكمال الجملة المنفية:',
           questions: [
             {
-              id: 'q_neg_1',
+              id: 'rev_neg1',
               type: 'multiple-choice',
-              instruction: 'صفحة 50 (سؤال 1): انفي الجملة التالية:',
-              prompt: '"Elle boit du café."',
-              options: [
-                'Elle ne boit pas de café.',
-                'Elle ne boit pas du café.',
-                'Elle boit pas café.'
-              ],
-              correctAnswer: 'Elle ne boit pas de café.',
-              explanation: 'تتحول أداة التجزئة du إلى de عند النفي.'
+              instruction: 'Complète à la forme négative :',
+              prompt: '1. Gamal ne prend pas .......... sucre dans son café.',
+              options: ['du', 'de', 'de la', 'le'],
+              correctAnswer: 'de',
+              explanation: 'في النفي تتحول أداة التجزئة du إلى de.'
             },
             {
-              id: 'q_neg_2',
+              id: 'rev_neg2',
               type: 'multiple-choice',
-              instruction: 'صفحة 50 (سؤال 3): انفي الجملة مع verbe être:',
-              prompt: '"Tu es un élève."',
-              options: [
-                'Tu n\'es pas un élève.',
-                'Tu n\'es pas d\'élève.',
-                'Tu es pas un élève.'
-              ],
-              correctAnswer: 'Tu n\'es pas un élève.',
-              explanation: 'مع فعل Être تبقى أداة النكرة un كما هي دون تحويل.'
+              instruction: 'Complète à la forme négative :',
+              prompt: '2. Suzanne n\'achète pas .......... robes ce soir.',
+              options: ['des', 'de', 'les', 'une'],
+              correctAnswer: 'de',
+              explanation: 'أداة النكرة الجمع des تتحول في النفي إلى de أمام الاسم المسبوق بنفي.'
             },
             {
-              id: 'q_neg_3',
+              id: 'rev_neg3',
               type: 'multiple-choice',
-              instruction: 'صفحة 50 (سؤال 6): انفي الجملة التالية:',
-              prompt: '"Nous mangeons des fruits."',
-              options: [
-                'Nous ne mangeons pas de fruits.',
-                'Nous ne mangeons pas des fruits.',
-                'Nous mangeons pas fruits.'
-              ],
-              correctAnswer: 'Nous ne mangeons pas de fruits.',
-              explanation: 'أداة التجزئة des تتحول إلى de في النفي.'
+              instruction: 'Attention au verbe Être :',
+              prompt: '3. Ce n\'est pas .......... hôpital privé.',
+              options: ['de', 'un', 'd\'', 'du'],
+              correctAnswer: 'un',
+              explanation: 'مع وجود فعل être لا تحول أداة النكرة، وكلمة hôpital مذكر فتأخذ un.'
+            },
+            {
+              id: 'rev_neg4',
+              type: 'multiple-choice',
+              instruction: 'Complète à la forme négative :',
+              prompt: '4. Nous n\'avons pas .......... argent.',
+              options: ['d\'', 'de', 'de l\'', 'l\''],
+              correctAnswer: 'd\'',
+              explanation: 'تتحول الأداة إلى d\' لأن كلمة argent (نقود) تبدأ بحرف متحرك.'
+            },
+            {
+              id: 'rev_neg5',
+              type: 'multiple-choice',
+              instruction: 'Complète avec un verbe de goût :',
+              prompt: '5. Ali n\'aime pas .......... poisson.',
+              options: ['de', 'du', 'le', 'd\''],
+              correctAnswer: 'le',
+              explanation: 'أفعال الميول والحب مثل aimer تأخذ أداة معرفة le ولا تتغير عند النفي.'
+            },
+            {
+              id: 'rev_neg6',
+              type: 'multiple-choice',
+              instruction: 'Complète la négation :',
+              prompt: '6. Samir .......... va pas à l\'école aujourd\'hui.',
+              options: ['ne', 'n\'', 'pas', 'de'],
+              correctAnswer: 'ne',
+              explanation: 'فعل va يبدأ بساكن فنضع قبله ne.'
+            },
+            {
+              id: 'rev_neg7',
+              type: 'multiple-choice',
+              instruction: 'Complète la négation :',
+              prompt: '7. Mon père .......... écoute pas la radio le matin.',
+              options: ['ne', 'n\'', 'sans', 'pas'],
+              correctAnswer: 'n\'',
+              explanation: 'فعل écoute يبدأ بحرف متحرك é فنضع n\'.'
+            },
+            {
+              id: 'rev_neg8',
+              type: 'multiple-choice',
+              instruction: 'Attention au pluriel avec Être :',
+              prompt: '8. Ce ne sont pas .......... amis de classe.',
+              options: ['de', 'des', 'd\'', 'les'],
+              correctAnswer: 'des',
+              explanation: 'مع فعل être في الجمع تظل des كما هي ولا تتحول.'
+            },
+            {
+              id: 'rev_neg9',
+              type: 'multiple-choice',
+              instruction: 'Mets à la forme négative :',
+              prompt: '9. Tu bois du jus d\'orange ? - Non, je ne bois pas .......... jus.',
+              options: ['du', 'de', 'un', 'le'],
+              correctAnswer: 'de',
+              explanation: 'في الإجابة المنفية تتحول أداة التجزئة du إلى de.'
             }
           ]
         },
         corriger: {
-          titleAr: 'تجنب خطأ النفي مع verbe Être',
-          descriptionAr: 'قاعدة هامة جداً للامتحان:',
+          titleAr: 'فخاخ امتحانات النفي',
+          descriptionAr: 'لا تقع في خطأ تحويل الأداة مع فعل être:',
           commonMistakes: [
             {
-              mistake: 'تحويل un/une إلى de عند وجود verbe être (مثل: Ce n\'est pas de livre).',
-              correction: 'Ce n\'est pas un livre.',
-              why: 'مع فعل être لا يتم تحويل أدوات النكرة أبداً.'
+              mistake: 'Ce n\'est pas d\'école.',
+              correction: 'Ce n\'est pas une école.',
+              why: 'مع فعل Être لا نغير أداة النكرة إلى de.'
+            },
+            {
+              mistake: 'Je ne bois pas du lait.',
+              correction: 'Je ne bois pas de lait.',
+              why: 'مع أفعال الأكل والشرب المنفية، du تتحول إجبارياً إلى de.'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_neg_rem_1',
+              id: 'rev_rem4',
               type: 'multiple-choice',
-              instruction: 'صفحة 50 (سؤال 10): اختر نفي الجملة:',
-              prompt: '"Ils sont des amis."',
-              options: [
-                'Ils ne sont pas des amis.',
-                'Ils ne sont pas d\'amis.',
-                'Ils sont pas amis.'
-              ],
-              correctAnswer: 'Ils ne sont pas des amis.',
-              explanation: 'مع فعل être تبقى des كما هي.'
+              instruction: 'Choisis :',
+              prompt: 'Il n\'y a pas .......... voiture dans la rue.',
+              options: ['de', 'une', 'la', 'des'],
+              correctAnswer: 'de',
+              explanation: 'التعبير Il n\'y a pas يأخذ دائماً de أو d\'.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي صيغة النفي',
-          descriptionAr: 'أجب خلال 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي النفي السريع',
+          descriptionAr: 'حل في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_neg_1',
+              id: 'rev_def4',
               type: 'multiple-choice',
-              instruction: 'صفحة 50 (سؤال 8): انفي الجملة:',
-              prompt: '"Il y a des élèves en classe."',
-              options: [
-                'Il n\'y a pas d\'élèves en classe.',
-                'Il n\'y a pas des élèves en classe.',
-                'Il y a pas d\'élèves en classe.'
-              ],
-              correctAnswer: 'Il n\'y a pas d\'élèves en classe.',
-              explanation: 'تحولت des إلى d\' لأن élèves تبدأ بحرف متحرك.'
+              instruction: 'Complète vite :',
+              prompt: 'Gamal ne mange pas .......... viande le soir.',
+              options: ['de', 'de la', 'la', 'une'],
+              correctAnswer: 'de',
+              explanation: 'تتحول de la إلى de في النفي مع فعل manger.'
             }
           ]
         }

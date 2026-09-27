@@ -18,7 +18,8 @@ export const ExamViewer: React.FC<ExamViewerProps> = ({
   onBackToDashboard,
 }) => {
   const allExams = getAllExams();
-  const currentExam = allExams.find(e => e.id === examId) || allExams[0];
+  const [activeExamId, setActiveExamId] = useState(examId || allExams[0]?.id);
+  const currentExam = allExams.find(e => e.id === activeExamId) || allExams[0];
 
   const [examStarted, setExamStarted] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState(currentExam.timeLimitMinutes * 60);
@@ -26,6 +27,15 @@ export const ExamViewer: React.FC<ExamViewerProps> = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<{ score: number; maxScore: number; percentage: number } | null>(null);
+
+  // Reset state when activeExamId changes
+  useEffect(() => {
+    setExamStarted(false);
+    setTimeRemaining(currentExam.timeLimitMinutes * 60);
+    setAnswers({});
+    setIsSubmitted(false);
+    setResult(null);
+  }, [activeExamId]);
 
   // Check if exam was already taken
   const existingResult = student.examResults?.[currentExam.id];
@@ -126,6 +136,31 @@ export const ExamViewer: React.FC<ExamViewerProps> = ({
             <span>رجوع للرئيسية</span>
           </button>
         </div>
+      </div>
+
+      {/* Exam Selection Pills */}
+      <div className="flex flex-wrap gap-2 pb-2">
+        {allExams.map((e, idx) => {
+          const isSelected = e.id === currentExam.id;
+          const isDone = Boolean(student.examResults?.[e.id]);
+
+          return (
+            <button
+              key={e.id}
+              onClick={() => setActiveExamId(e.id)}
+              className={`px-3 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 border ${
+                isSelected
+                  ? 'bg-[#0055A4] text-white border-[#0055A4] shadow-xs'
+                  : 'bg-white hover:bg-[#FAF8F5] text-slate-700 border-slate-200'
+              }`}
+            >
+              <span>{e.titleAr.split('(')[0].trim()}</span>
+              {isDone && (
+                <span className="w-2 h-2 rounded-full bg-emerald-400" title="تم الحل سابقاً" />
+              )}
+            </button>
+          );
+        })}
       </div>
 
       {/* Main Content Area */}

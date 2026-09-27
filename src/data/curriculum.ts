@@ -1,12 +1,22 @@
 import { revisionSection } from './revision';
 import { unite1Section } from './unite1';
 import { unite2Section } from './unite2';
+import { unite3Section } from './unite3';
+import { examOfficielMiAnneeBienvenu2 } from './examenMiAnnee';
 import { Lesson, OfficialExam, UnitSection, VocabularyWord } from '../types';
 
 export const curriculum: UnitSection[] = [
   revisionSection,
   unite1Section,
-  unite2Section
+  unite2Section,
+  unite3Section
+];
+
+export const allOfficialExams: OfficialExam[] = [
+  examOfficielMiAnneeBienvenu2,
+  ...(unite1Section.exam ? [unite1Section.exam] : []),
+  ...(unite2Section.exam ? [unite2Section.exam] : []),
+  ...(unite3Section.exam ? [unite3Section.exam] : [])
 ];
 
 export function getAllLessons(): Lesson[] {
@@ -18,7 +28,7 @@ export function getLessonById(id: string): Lesson | undefined {
 }
 
 export function getAllExams(): OfficialExam[] {
-  return curriculum.map(u => u.exam).filter((e): e is OfficialExam => Boolean(e));
+  return allOfficialExams;
 }
 
 export function getExamById(id: string): OfficialExam | undefined {

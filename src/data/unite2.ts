@@ -1,360 +1,165 @@
 import { Lesson, OfficialExam, UnitSection, VocabularyWord } from '../types';
 
 export const unite2Vocabulary: VocabularyWord[] = [
-  { id: 'u2_w1', french: 'un rouget grondin', arabic: 'نوع من السمك (جروندان)', category: 'aliment', exampleFr: 'Pour préparer le grondin au four.', exampleAr: 'لإعداد سمك الجروندان في الفرن.' },
-  { id: 'u2_w2', french: 'du bamia', arabic: 'بامية', category: 'aliment', exampleFr: '1 kg de bamia.', exampleAr: '1 كيلو بامية.' },
-  { id: 'u2_w3', french: 'de la viande de mouton', arabic: 'لحم ضأن', category: 'aliment', exampleFr: 'de la viande de mouton en morceaux.', exampleAr: 'لحم ضأن مقطع مكعبات.' },
-  { id: 'u2_w4', french: 'un plat', arabic: 'طبق / وجبة', category: 'masculin', exampleFr: 'C\'est une recette d\'un plat.', exampleAr: 'هذه وصفة طبق شهي.' },
-  { id: 'u2_w5', french: 'une recette', arabic: 'وصفة طعام', category: 'feminin', exampleFr: 'La recette du taguine.', exampleAr: 'وصفة الطاجن.' },
-  { id: 'u2_w6', french: 'le thym', arabic: 'زعتر (توابل)', category: 'aliment', exampleFr: 'Ajoutez le thym et arrosez d\'huile.', exampleAr: 'أضف الزعتر ورش الزيت.' },
-  { id: 'u2_w7', french: 'de l\'huile d\'olive', arabic: 'زيت زيتون', category: 'aliment', exampleFr: 'deux cuillères d\'huile d\'olive.', exampleAr: 'ملعقتان من زيت الزيتون.' },
-  { id: 'u2_w8', french: 'le sel et le poivre', arabic: 'الملح والفلفل', category: 'aliment', exampleFr: 'Salez et poivrez le poisson.', exampleAr: 'تبل السمك بالملح والفلفل.' },
-  { id: 'u2_w9', french: 'l\'ail', arabic: 'الثوم', category: 'aliment', exampleFr: '5 gousses d\'ail.', exampleAr: '5 فصوص ثوم.' },
-  { id: 'u2_w10', french: 'l\'oignon', arabic: 'البصل', category: 'aliment', exampleFr: 'deux oignons coupés.', exampleAr: 'بصلتان مقطعتان.' },
-  { id: 'u2_w11', french: 'du beurre', arabic: 'زبدة', category: 'aliment', exampleFr: '100 grammes de beurre.', exampleAr: '100 جرام زبدة.' },
-  { id: 'u2_w12', french: 'des fruits', arabic: 'فواكه', category: 'aliment', exampleFr: 'Comme fruits, elle prend des pommes.', exampleAr: 'كفاكهة، هي تأخذ تفاحاً.' },
-  { id: 'u2_w13', french: 'des frites', arabic: 'بطاطس مقلية محمرة', category: 'aliment', exampleFr: 'des biftecks et des frites.', exampleAr: 'شرائح لحم وبطاطس مقلية.' },
-  { id: 'u2_w14', french: 'du riz', arabic: 'أرز', category: 'aliment', exampleFr: 'du poulet et du riz.', exampleAr: 'دجاج وأرز.' },
-  { id: 'u2_w15', french: 'faire cuire', arabic: 'يسوي / يطهو', category: 'verbe', exampleFr: 'Faites cuire au four 15 minutes.', exampleAr: 'اتركه ينضج في الفرن 15 دقيقة.' },
-  { id: 'u2_w16', french: 'ajouter', arabic: 'يضيف', category: 'verbe', exampleFr: 'Ajoutez les tomates écrasées.', exampleAr: 'أضف الطماطم المعصورة.' },
-  { id: 'u2_w17', french: 'verser', arabic: 'يسكب / يصب', category: 'verbe', exampleFr: 'Versez le tout dans un plat.', exampleAr: 'اسكب الخليط كاملاً في طبق.' },
-  { id: 'u2_w18', french: 'servir', arabic: 'يقدم الطعام', category: 'verbe', exampleFr: 'Servez-le chaud.', exampleAr: 'قدمه ساخناً.' }
+  { id: 'u2_v1', french: 'un restaurant', arabic: 'مطعم', category: 'masculin', exampleFr: 'Nous dînons au restaurant ce soir.', exampleAr: 'نتناول العشاء في المطعم هذا المساء.' },
+  { id: 'u2_v2', french: 'un repas', arabic: 'وجبة', category: 'masculin', exampleFr: 'Il y a trois repas par jour.', exampleAr: 'توجد ثلاث وجبات يومياً.' },
+  { id: 'u2_v3', french: 'le petit déjeuner', arabic: 'وجبة الإفطار', category: 'masculin', exampleFr: 'Au petit déjeuner, je bois du lait.', exampleAr: 'في الإفطار، أشرب حليباً.' },
+  { id: 'u2_v4', french: 'le déjeuner', arabic: 'وجبة الغداء', category: 'masculin', exampleFr: 'À 14 heures, nous prenons le déjeuner.', exampleAr: 'في الثانية ظهراً نتناول الغداء.' },
+  { id: 'u2_v5', french: 'le dîner', arabic: 'وجبة العشاء', category: 'masculin', exampleFr: 'Le dîner est un repas léger.', exampleAr: 'العشاء وجبة خفيفة.' },
+  { id: 'u2_v6', french: 'le menu', arabic: 'قائمة الطعام', category: 'masculin', exampleFr: 'Le garçon apporte le menu.', exampleAr: 'الجرسون يحضر قائمة الطعام.' },
+  { id: 'u2_v7', french: 'une boisson', arabic: 'مشروب', category: 'feminin', exampleFr: 'Quelle boisson désirez-vous ?', exampleAr: 'أي مشروب ترغبون به؟' },
+  { id: 'u2_v8', french: 'le poulet rôti', arabic: 'دجاج محمر / مشوي', category: 'aliment', exampleFr: 'Je commande du poulet rôti.', exampleAr: 'أطلب دجاجاً محمر.' },
+  { id: 'u2_v9', french: 'la viande', arabic: 'لحم', category: 'aliment', exampleFr: 'Il mange de la viande avec du riz.', exampleAr: 'يأكل لحماً مع الأرز.' },
+  { id: 'u2_v10', french: 'le poisson', arabic: 'سمك', category: 'aliment', exampleFr: 'Le poisson est frais aujourd\'hui.', exampleAr: 'السمك طازج اليوم.' },
+  { id: 'u2_v11', french: 'le riz', arabic: 'أرز', category: 'aliment', exampleFr: 'Un plat de riz blanc.', exampleAr: 'طبق أرز أبيض.' },
+  { id: 'u2_v12', french: 'la salade verte', arabic: 'سلطة خضراء', category: 'aliment', exampleFr: 'Une salade verte bien fraîche.', exampleAr: 'سلطة خضراء طازجة.' },
+  { id: 'u2_v13', french: 'le fromage', arabic: 'جبن', category: 'aliment', exampleFr: 'Du pain avec du fromage.', exampleAr: 'خبز مع جبن.' },
+  { id: 'u2_v14', french: 'un dessert', arabic: 'حلوى بعد الأكل', category: 'masculin', exampleFr: 'Comme dessert, une glace.', exampleAr: 'كتحلية، آيس كريم.' },
+  { id: 'u2_v15', french: 'une glace', arabic: 'آيس كريم / مثلجات', category: 'aliment', exampleFr: 'Une glace à la vanille.', exampleAr: 'آيس كريم بالفانيليا.' },
+  { id: 'u2_v16', french: 'commander', arabic: 'يطلب (أوردر)', category: 'verbe', exampleFr: 'Je commande un jus d\'orange.', exampleAr: 'أطلب عصير برتقال.' },
+  { id: 'u2_v17', french: 'réserver', arabic: 'يحجز (طاولة)', category: 'verbe', exampleFr: 'Jean réserve une table de vingt personnes.', exampleAr: 'جان يحجز طاولة لعشرين شخصاً.' },
+  { id: 'u2_v18', french: 'goûter', arabic: 'يتذوق', category: 'verbe', exampleFr: 'Le chef fait goûter le plat.', exampleAr: 'الشيف يجعلنا نتذوق الطبق.' }
 ];
 
-export const examMiAnnee2019: OfficialExam = {
-  id: 'exam_miannee_2019',
-  title: 'Examen de Mi-année 2018 - 2019',
-  titleAr: 'امتحان نصف العام الدراسي الشامل 2018 - 2019 (الرسمي)',
-  academicYear: '2018-2019 - 3ème Préparatoire',
+export const examMiTermeU2: OfficialExam = {
+  id: 'exam_unite2_bienvenu2',
+  title: 'Examen de l\'Unité 2 - Repas & Restaurant',
+  titleAr: 'امتحان الوحدة الثانية - الوجبات والمطعم (20 درجة)',
+  academicYear: 'Bienvenu 2 - 2ème Préparatoire',
   totalMarks: 20,
   timeLimitMinutes: 30,
-  bookletPages: 'صفحات 58، 59، 60',
+  bookletPages: 'صفحات 56 - 58 من كتاب Bienvenu 2',
   questions: [
     {
-      id: 'ex2_q1',
+      id: 'u2_ex_q1',
       section: 'comprehension',
       sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب (10 درجات)',
-      passage: `Restaurant "Bon appétit"\n15, rue de la Gare, le Caire\nTél: 022763548\n\nLe garçon : Bonjour monsieur, vous désirez?\nLe client : Je voudrais dîner.\nLe garçon : Que prenez-vous comme entrée?\nLe client : Des tomates et des concombres.\nLe garçon : Et comme plat principal?\nLe client : Du poulet et du riz.\nLe garçon : Et comme dessert ?\nLe client : Des gâteaux au chocolat.`,
+      sectionTitleAr: 'أولاً: فهم النص (6 درجات)',
+      passage: `Samedi soir, à l'occasion du mariage de Jean avec sa femme Monique, la famille et les amis se réunissent au restaurant "Le Bon Goût". Jean a réservé une grande table de 20 personnes. Le garçon apporte la carte du menu. Comme plat principal, les invités choisissent du poulet rôti avec du riz et de la salade verte. Pour le dessert, le garçon sert des fruits et de la glace au chocolat. Tout le monde est joyeux et félicite les mariés.`,
       instructionFr: 'A) Choisis la bonne réponse :',
       instructionAr: 'اختر الإجابة الصحيحة:',
       type: 'mcq',
-      prompt: '1. Ce document est ....................',
-      options: ['un dialogue', 'une lettre', 'un article'],
-      correctAnswer: 'un dialogue',
-      points: 1
+      prompt: '1. Ce repas a lieu à l\'occasion ....................',
+      options: ['d\'un mariage', 'd\'un voyage', 'd\'un match de football'],
+      correctAnswer: 'd\'un mariage',
+      points: 2
     },
     {
-      id: 'ex2_q2',
+      id: 'u2_ex_q2',
       section: 'comprehension',
       sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
+      sectionTitleAr: 'أولاً: فهم النص',
       instructionFr: 'A) Choisis la bonne réponse :',
       instructionAr: 'اختر الإجابة الصحيحة:',
       type: 'mcq',
-      prompt: '2. Ce restaurant se trouve ....................',
-      options: ['au Caire', 'à Mansourah', 'à Tanta'],
-      correctAnswer: 'au Caire',
-      points: 1
+      prompt: '2. Jean a réservé une table de .................... personnes.',
+      options: ['vingt', 'dix', 'quinze'],
+      correctAnswer: 'vingt',
+      points: 2
     },
     {
-      id: 'ex2_q3',
+      id: 'u2_ex_q3',
       section: 'comprehension',
       sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'A) Choisis la bonne réponse :',
-      instructionAr: 'اختر الإجابة الصحيحة:',
-      type: 'mcq',
-      prompt: '3. Ce client voudrait prendre ....................',
-      options: ['le dîner', 'le déjeuner', 'le petit-déjeuner'],
-      correctAnswer: 'le dîner',
-      points: 1
-    },
-    {
-      id: 'ex2_q4',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
+      sectionTitleAr: 'أولاً: فهم النص',
+      instructionFr: 'B) Mets Vrai (✓) ou Faux (✗) :',
+      instructionAr: 'ضع صح أو خطأ:',
       type: 'true_false',
-      prompt: '1. Le client prend des fruits frais comme dessert.',
-      options: ['Faux (خطأ)', 'Vrai (صح)'],
-      correctAnswer: 'Faux (خطأ)',
-      points: 1
-    },
-    {
-      id: 'ex2_q5',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
-      type: 'true_false',
-      prompt: '2. "Ali Baba" est le nom de ce restaurant.',
-      options: ['Faux (خطأ)', 'Vrai (صح)'],
-      correctAnswer: 'Faux (خطأ)',
-      points: 1
-    },
-    {
-      id: 'ex2_q6',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
-      type: 'true_false',
-      prompt: '3. Le client prend du poulet et du riz comme plat principal.',
+      prompt: '3. Comme dessert, les invités prennent de la glace et des fruits.',
       options: ['Vrai (صح)', 'Faux (خطأ)'],
       correctAnswer: 'Vrai (صح)',
-      points: 1
+      points: 2
     },
     {
-      id: 'ex2_q7',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
-      type: 'true_false',
-      prompt: '4. Dans ce restaurant, il y a un téléphone.',
-      options: ['Vrai (صح)', 'Faux (خطأ)'],
-      correctAnswer: 'Vrai (صح)',
-      points: 1
-    },
-    {
-      id: 'ex2_q8',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'C) Complète par un mot pris du texte :',
-      instructionAr: 'أكمل بكلمة من النص:',
+      id: 'u2_ex_q4',
+      section: 'situations',
+      sectionTitleFr: '2) Situations',
+      sectionTitleAr: 'ثانياً: مواقف التواصل (4 درجات)',
+      instructionFr: 'Choisis la bonne réponse :',
+      instructionAr: 'اختر الإجابة المناسبة:',
       type: 'mcq',
-      prompt: '1. Comme entrée, le client prend des tomates et ....................',
-      options: ['des concombres', 'des carottes', 'des pommes'],
-      correctAnswer: 'des concombres',
-      points: 1
+      prompt: '4. Au restaurant, tu demandes l\'addition au garçon, tu dis :',
+      options: ['L\'addition, s\'il vous plaît !', 'Le menu, s\'il vous plaît !', 'Bonjour monsieur.'],
+      correctAnswer: 'L\'addition, s\'il vous plaît !',
+      points: 2
     },
     {
-      id: 'ex2_q9',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'C) Complète par un mot pris du texte :',
-      instructionAr: 'أكمل بكلمة من النص:',
+      id: 'u2_ex_q5',
+      section: 'situations',
+      sectionTitleFr: '2) Situations',
+      sectionTitleAr: 'ثانياً: مواقف التواصل',
+      instructionFr: 'Choisis la bonne réponse :',
+      instructionAr: 'اختر الموقف المناسب:',
       type: 'mcq',
-      prompt: '2. Comme dessert, le client prend des .................... au chocolat.',
-      options: ['gâteaux', 'glaces', 'crêpes'],
-      correctAnswer: 'gâteaux',
-      points: 1
+      prompt: '5. Tu demandes à ton ami sa boisson préférée, tu dis :',
+      options: ['Qu\'est-ce que tu aimes boire ?', 'Quel est ton plat préféré ?', 'Où vas-tu ?'],
+      correctAnswer: 'Qu\'est-ce que tu aimes boire ?',
+      points: 2
     },
     {
-      id: 'ex2_q10',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'C) Complète par un mot pris du texte :',
-      instructionAr: 'أكمل بكلمة من النص:',
-      type: 'mcq',
-      prompt: '3. Ce restaurant est 15 rue de la ....................',
-      options: ['Gare', 'Paix', 'Place'],
-      correctAnswer: 'Gare',
-      points: 1
-    },
-    {
-      id: 'ex2_q11',
+      id: 'u2_ex_q6',
       section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية (5 درجات)',
-      instructionFr: 'Fais comme indiqué entre parenthèses :',
-      instructionAr: 'أجب كما هو مطلوب بين القوسين:',
+      sectionTitleFr: '3) Grammaire',
+      sectionTitleAr: 'ثالثاً: القواعد وأدوات التجزئة (6 درجات)',
+      instructionFr: 'Choisis le bon article partitif :',
+      instructionAr: 'اختر أداة التجزئة المناسبة:',
       type: 'mcq',
-      prompt: '1- Je (jouer) .................... au tennis. [Corrige le verbe]',
-      options: ['joue', 'joues', 'jouent'],
-      correctAnswer: 'joue',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q12',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Fais comme indiqué entre parenthèses :',
-      instructionAr: 'انفِ الجملة:',
-      type: 'mcq',
-      prompt: '2- Mona regarde un film. [Mets à la forme négative]',
-      options: ['Mona ne regarde pas de film.', 'Mona ne regarde pas un film.', 'Mona regarde pas film.'],
-      correctAnswer: 'Mona ne regarde pas de film.',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q13',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Fais comme indiqué entre parenthèses :',
-      instructionAr: 'صحح الفعل في الماضي المركب:',
-      type: 'mcq',
-      prompt: '3- Hier, nous (acheter) .................... une nouvelle voiture.',
-      options: ['avons acheté', 'sommes achetés', 'avons achète'],
-      correctAnswer: 'avons acheté',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q14',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Choisis :',
-      instructionAr: 'اختر أداة التجزئة:',
-      type: 'mcq',
-      prompt: '4- Elle boit .................... café.',
-      options: ['du', 'de la', 'de l\''],
+      prompt: '6. Au déjeuner, je mange .......... poulet.',
+      options: ['du', 'de la', 'de l\'', 'des'],
       correctAnswer: 'du',
-      points: 0.5
+      points: 2
     },
     {
-      id: 'ex2_q15',
+      id: 'u2_ex_q7',
       section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Remplace les mots soulignés par un pronom personnel :',
-      instructionAr: 'استبدل (ces leçons) بضمير شخصي:',
+      sectionTitleFr: '3) Grammaire',
+      sectionTitleAr: 'ثالثاً: القواعد وأدوات التجزئة',
+      instructionFr: 'Attention à la négation :',
+      instructionAr: 'انتبه للنفي:',
       type: 'mcq',
-      prompt: '5- Nous lisons ces leçons. ⟶ Nous .................... lisons.',
-      options: ['les', 'leur', 'en'],
-      correctAnswer: 'les',
-      points: 0.5
+      prompt: '7. Je ne prends pas .......... salade.',
+      options: ['de', 'de la', 'du', 'la'],
+      correctAnswer: 'de',
+      points: 2
     },
     {
-      id: 'ex2_q16',
+      id: 'u2_ex_q8',
       section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Remplace les mots soulignés par un pronom personnel :',
-      instructionAr: 'استبدل (à Ali) بضمير شخصي:',
+      sectionTitleFr: '3) Grammaire',
+      sectionTitleAr: 'ثالثاً: أدوات الاستفهام',
+      instructionFr: 'Choisis le mot interrogatif convenable :',
+      instructionAr: 'اختر أداة الاستفهام المناسبة:',
       type: 'mcq',
-      prompt: '6- Je parle à Ali. ⟶ Je .................... parle.',
-      options: ['lui', 'le', 'y'],
-      correctAnswer: 'lui',
-      points: 0.5
+      prompt: '8. .......... vas-tu pour déjeuner ? - Au restaurant.',
+      options: ['Où', 'Quand', 'Comment', 'Pourquoi'],
+      correctAnswer: 'Où',
+      points: 2
     },
     {
-      id: 'ex2_q17',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Choisis :',
-      instructionAr: 'اختر صفة الملكية:',
-      type: 'mcq',
-      prompt: '7- Vous écoutez bien .................... leçon.',
-      options: ['votre', 'notre', 'vos'],
-      correctAnswer: 'votre',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q18',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Relie par (Qui - Que - Où) :',
-      instructionAr: 'اربط بضمير وصل مناسب:',
-      type: 'mcq',
-      prompt: '8- C\'est la voiture. Mon père achète cette voiture. ⟶ C\'est la voiture .......... mon père achète.',
-      options: ['que', 'qui', 'où'],
-      correctAnswer: 'que',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q19',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Relie par (Qui - Que - Où) :',
-      instructionAr: 'اربط بضمير وصل مناسب:',
-      type: 'mcq',
-      prompt: '9- C\'est le film. Il est intéressant. ⟶ C\'est le film .......... est intéressant.',
-      options: ['qui', 'que', 'où'],
-      correctAnswer: 'qui',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q20',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Choisis :',
-      instructionAr: 'اختر التصريف الصحيح في المستقبل القريب:',
-      type: 'mcq',
-      prompt: '10- Demain, elle (faire) .................... du ski.',
-      options: ['va faire', 'fait', 'vais faire'],
-      correctAnswer: 'va faire',
-      points: 0.5
-    },
-    {
-      id: 'ex2_q21',
+      id: 'u2_ex_q9',
       section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف (5 درجات)',
-      instructionFr: 'Où vas-tu pour ...... ?',
-      instructionAr: 'أين تذهب لـ :',
-      type: 'mcq',
-      prompt: '1. Voir un film.',
-      options: ['Au cinéma', 'Au stade', 'À l\'hôpital'],
-      correctAnswer: 'Au cinéma',
-      points: 1
+      sectionTitleFr: '4) Production',
+      sectionTitleAr: 'رابعاً: التعبير وتكوين الجمل (4 درجات)',
+      instructionFr: 'Où vas-tu pour... ?',
+      instructionAr: 'أين تذهب لـ...؟',
+      type: 'fill',
+      prompt: '9. Pour prendre un bon repas, je vais au ..........',
+      options: ['restaurant', 'stade', 'cinéma'],
+      correctAnswer: 'restaurant',
+      points: 2
     },
     {
-      id: 'ex2_q22',
+      id: 'u2_ex_q10',
       section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'Où vas-tu pour ...... ?',
-      instructionAr: 'أين تذهب لـ :',
+      sectionTitleFr: '4) Production',
+      sectionTitleAr: 'رابعاً: التعبير وتكوين الجمل',
+      instructionFr: 'Complète la phrase :',
+      instructionAr: 'أكمل الجملة:',
       type: 'mcq',
-      prompt: '2. Voir un match.',
-      options: ['Au stade', 'Au restaurant', 'Au cinéma'],
-      correctAnswer: 'Au stade',
-      points: 1
-    },
-    {
-      id: 'ex2_q23',
-      section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'Où vas-tu pour ...... ?',
-      instructionAr: 'أين تذهب لـ :',
-      type: 'mcq',
-      prompt: '3. Consulter le médecin.',
-      options: ['À l\'hôpital', 'Au garage', 'Au musée'],
-      correctAnswer: 'À l\'hôpital',
-      points: 1
-    },
-    {
-      id: 'ex2_q24',
-      section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'Choisis la bonne réponse :',
-      instructionAr: 'اختر الموقف المناسب:',
-      type: 'mcq',
-      prompt: '4- Tu es chez le fruitier, tu dis :',
-      options: ['Donnez-moi un kilo de bananes !', 'Combien coûte un kilo de tomates?', 'Je voudrais de la salade verte.'],
-      correctAnswer: 'Donnez-moi un kilo de bananes !',
-      points: 1
-    },
-    {
-      id: 'ex2_q25',
-      section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'Choisis la bonne réponse :',
-      instructionAr: 'اختر الموقف المناسب:',
-      type: 'mcq',
-      prompt: '5- Ton ami te demande combien de repas tu prends par jour, tu dis :',
-      options: ['Je prends trois repas.', 'Combien coûte ce repas?', 'J\'aime les fruits.'],
-      correctAnswer: 'Je prends trois repas.',
-      points: 1
+      prompt: '10. Au petit déjeuner, les Égyptiens mangent ..........',
+      options: ['du foul et des falafels', 'du poisson grillé', 'de la viande rôtie'],
+      correctAnswer: 'du foul et des falafels',
+      points: 2
     }
   ]
 };
@@ -362,679 +167,525 @@ export const examMiAnnee2019: OfficialExam = {
 export const unite2Section: UnitSection = {
   id: 'unite2',
   order: 3,
-  titleFr: 'Unité (2) : Préparer un repas',
-  titleAr: 'الوحدة الثانية: إعداد وجبة طعام',
-  descriptionAr: 'وصفات الطهي (سمك الجروندان وطاجن البامية)، أدوات التجزئة (du, de la, de l\', des)، ضمائر الوصل (qui, que, où)، ومواقف التسوق والمطاعم.',
-  badgeIcon: '🍳',
+  titleFr: 'Module 2 : Unité (2) - Repas & Restaurant',
+  titleAr: 'الوحدة الثانية : الوجبات والمطعم (Repas & Restaurant)',
+  descriptionAr: 'منهج Bienvenu 2 (الصفحات 35 - 58): حفل زواج جان والمطعم، وجبات اليوم (الإفطار والغداء والعشاء)، الأطعمة والمشروبات، أدوات التجزئة (du, de la, de l\', des)، وأدوات الاستفهام.',
+  badgeIcon: '🍽️',
   vocabulary: unite2Vocabulary,
-  exam: examMiAnnee2019,
+  exam: examMiTermeU2,
   lessons: [
     {
-      id: 'u2-grondin',
+      id: 'u2-texte',
       unitId: 'unite2',
-      unitTitle: 'Unité 2',
-      unitTitleAr: 'الوحدة الثانية',
+      unitTitle: 'Unité (2) - Repas & Restaurant',
+      unitTitleAr: 'الوحدة الثانية (الوجبات والمطعم)',
       order: 1,
-      title: 'Texte: Grondin au four',
-      titleAr: 'نص الفهم والاستيعاب: سمك الجروندان بالفرن',
-      subtitleFr: 'Recette & Ingrédients du poisson',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 37 و 38',
+      title: 'Texte : Au restaurant "Le Bon Goût"',
+      titleAr: 'نص القراءة : في مطعم "المذاق الطيب" (حفل زواج جان)',
+      subtitleFr: 'Fête de mariage de Jean & Réservation d\'une table de 20 personnes (p. 35 - 37)',
+      estimatedMinutes: 16,
+      bookletPages: 'صفحة 35 - 37',
       readingPassage: {
-        imageSrc: '0037.jpg',
-        imagePageNumber: 37,
-        imageCaptionFr: 'Unité (2) - Préparer un repas : Grondin au four',
-        imageCaptionAr: 'صورة الصفحة 37 الأصلية من الكتاب المدرسي: وصفة ومكونات سمك الجروندان بالفرن',
-        fullFrenchText: "Grondin au four. Ingrédients : un gros rouget grondin, deux oignons, une grosse tomate, deux carottes, sel, poivre, thym, deux cuillères à soupe d'huile d'olive. Recette : Lavez le poisson. Mettez-le dans un plat, et tout autour mettez la tomate et les oignons coupés. Salez, poivrez, ajoutez le thym et arrosez l'huile d'olive. Faites cuire dans un four à 400 degrés pendant 15 minutes. Servez-le chaud.",
-        fullArabicTranslation: "سمك جروندان بالفرن. المقادير: سمكة روجيه جروندان كبيرة، بصلتان، ثمرة طماطم كبيرة، جزرتان، ملح، فلفل، زعتر، ملعقتان كبيرتان من زيت الزيتون. الوصفة: اغسل السمك. ضعه في طبق، وحوله ضع الطماطم والبصل المقطع. تبل بالملح والفلفل، أضف الزعتر ورش زيت الزيتون. اطهه في الفرن على درجة 400 لمدة 15 دقيقة. قدمه ساخناً.",
+        imageSrc: '',
+        imagePageNumber: 35,
+        imageCaptionFr: 'Le banquet de mariage de Jean et Monique au restaurant.',
+        imageCaptionAr: 'مأدبة زفاف جان ومونيك في المطعم.',
+        fullFrenchText: `Samedi soir, c'est la fête de mariage de Jean Morelle et de sa femme Monique. Pour cette belle occasion, Jean a réservé une grande table de vingt personnes au restaurant "Le Bon Goût". Vers 20 heures, les invités arrivent vêtus de leurs beaux habits. Le garçon présente la carte du menu. On commence par un potage chaud et des hors-d'œuvre variés. Ensuite, comme plat principal, la plupart choisissent du poulet rôti avec du riz et de la salade verte. D'autres préfèrent du poisson frais avec des frites. Pour le dessert, le serveur apporte des glaces à la vanille et des corbeilles de fruits. Tout le monde lève son verre et félicite les mariés en chantant.`,
+        fullArabicTranslation: `مساء السبت، إنه حفل زواج جان موريل وزوجته مونيك. ولهذه المناسبة الجميلة، حجز جان طاولة كبيرة تتسع لعشرين شخصاً في مطعم "المذاق الطيب". حوالي الساعة الثامنة مساءً، وصل المدعوون مرتدين أجمل ثيابهم. قدّم الجرسون قائمة الطعام. بدأ الجميع بحساء ساخن ومقبلات متنوعة. بعد ذلك، كطبق رئيسي، اختار معظمهم الدجاج المحمر مع الأرز والسلطة الخضراء، وفضّل آخرون السمك الطازج مع البطاطس المقلية. وفي التحلية، أحضر الجرسون آيس كريم بالفانيليا وسلالاً من الفواكه. رفع الجميع كؤوسهم مهنئين العروسين بالغناء والبهجة.`,
         sentences: [
-          {
-            id: 'u2_s1',
-            french: "Grondin au four : un gros rouget grondin, deux oignons, une grosse tomate, deux carottes, sel, poivre, thym, deux cuillères à soupe d'huile d'olive.",
-            arabic: "سمك جروندان بالفرن: سمكة جروندان كبيرة، بصلتان، طماطم كبيرة، جزرتان، ملح، فلفل، زعتر، ملعقتان زيت زيتون."
-          },
-          {
-            id: 'u2_s2',
-            french: "Lavez le poisson.",
-            arabic: "اغسل السمك."
-          },
-          {
-            id: 'u2_s3',
-            french: "Mettez-le dans un plat, et tout autour mettez la tomate et les oignons coupés.",
-            arabic: "ضعه في صينية أو طبق، وحوله ضع الطماطم والبصل المقطع."
-          },
-          {
-            id: 'u2_s4',
-            french: "Salez, poivrez, ajoutez le thym et arrosez l'huile d'olive.",
-            arabic: "تبل بالملح والفلفل، وأضف الزعتر ورش زيت الزيتون."
-          },
-          {
-            id: 'u2_s5',
-            french: "Faites cuire dans un four à 400 degrés pendant 15 minutes. Servez-le chaud.",
-            arabic: "اطهه في الفرن على درجة حرارة 400 لمدة 15 دقيقة. قدمه ساخناً."
-          }
+          { id: 'u2_s1', french: 'C\'est la fête de mariage de Jean et Monique.', arabic: 'إنه حفل زواج جان ومونيك.' },
+          { id: 'u2_s2', french: 'Jean a réservé une table de vingt personnes au restaurant.', arabic: 'حجز جان طاولة لعشرين شخصاً في المطعم.' },
+          { id: 'u2_s3', french: 'Le garçon présente la carte du menu.', arabic: 'يقدم الجرسون قائمة الطعام.' },
+          { id: 'u2_s4', french: 'Comme plat principal, on choisit du poulet rôti avec du riz.', arabic: 'كطبق رئيسي نختار دجاجاً محمراً مع الأرز.' },
+          { id: 'u2_s5', french: 'Pour le dessert, le serveur apporte des glaces et des fruits.', arabic: 'للتحلية، يحضر الجرسون آيس كريم وفواكه.' }
         ],
         keyVocabulary: [
-          { french: 'un rouget grondin', arabic: 'نوع من السمك', partOfSpeech: 'n.m.' },
-          { french: 'un oignon', arabic: 'بصل', partOfSpeech: 'n.m.' },
-          { french: 'de l\'huile d\'olive', arabic: 'زيت زيتون', partOfSpeech: 'loc.' },
-          { french: 'le thym', arabic: 'زعتر', partOfSpeech: 'n.m.' },
-          { french: 'un plat', arabic: 'طبق / صينية', partOfSpeech: 'n.m.' },
-          { french: 'faire cuire', arabic: 'يسوي / يطهو', partOfSpeech: 'v.' },
-          { french: 'servir chaud', arabic: 'يقدم ساخناً', partOfSpeech: 'loc.' }
+          { french: 'la fête de mariage', arabic: 'حفل الزفاف', partOfSpeech: 'n.f.' },
+          { french: 'le plat principal', arabic: 'الطبق الرئيسي', partOfSpeech: 'n.m.' },
+          { french: 'le serveur / le garçon', arabic: 'الجرسون / النادل', partOfSpeech: 'n.m.' },
+          { french: 'l\'addition', arabic: 'فاتورة الحساب', partOfSpeech: 'n.f.' }
         ]
       },
       stages: {
         comprendre: {
-          titleAr: 'نص وصفة سمك الجروندان (صفحة 37)',
-          summaryAr: 'وصفة تحضير طبق سمك الجروندان بالفرن مع الخضراوات وزيت الزيتون وطريقة طهيه.',
+          titleAr: 'تحليل نص المطعم وحفل الزفاف',
+          summaryAr: 'يتناول النص الذهاب للمطعم، حجز الطاولة، قراءة قائمة الطعام، واختيار الأطباق والمشروبات والحلويات.',
           grammarPoints: [
             {
-              title: 'المكونات وطريقة الإعداد (صفحة 37)',
-              ruleAr: 'Grondin au four :\n• Ingrédients : un gros rouget grondin, deux oignons, une grosse tomate, 2 carottes, sel, poivre, thym, deux cuillères à soupe d\'huile d\'olive.\n• Recette : Lavez le poisson. Mettez-le dans un plat, et tout autour mettez la tomate et les oignons coupés. Salez, poivrez, ajoutez le thym et arrosez l\'huile d\'olive. Faites cuire dans un four à 400 degrés pendant 15 minutes. Servez-le chaud.',
+              title: 'مفردات ومراحل الوجبة في المطعم (Le Menu)',
+              ruleAr: 'تتكون وجبة المطعم الفرنسية الكاملة من ثلاثة أقسام:',
               details: [
-                'نوع الوثيقة: وصفة طبق (une recette d\'un plat).',
-                'المكونات: سمك جروندان، بصل، طماطم، جزر، ملح، فلفل، زعتر، ملعقتين زيت زيتون.',
-                'مدة الطهي: 15 دقيقة في فرن على 400 درجة.',
-                'التقديم: يُقدم ساخناً (Servez-le chaud).'
+                '1. Entrée / Hors-d\'œuvre (المقبلات): salade verte, potage (شوربة).',
+                '2. Plat principal (الطبق الرئيسي): poulet rôti, viande, poisson, riz, frites.',
+                '3. Dessert (التحلية): glace à la vanille/chocolat, fruits, gâteau.'
               ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أسئلة الفهم على النص (صفحة 38)',
-          descriptionAr: 'نماذج إجابات الأسئلة المباشرة:',
+          titleAr: 'حوار واقعي بين الزبون والجرسون',
+          descriptionAr: 'استمع إلى العبارات المستخدمة في المطعم:',
           examples: [
-            { french: 'Combien de cuillères d\'huile d\'olive faut-il ? ⟶ Il faut deux cuillères à soupe.', arabic: 'كم ملعقة زيت زيتون نحتاج؟ ⟶ نحتاج ملعقتين كبيرتين.' },
-            { french: 'Comment on sert le Grondin au four ? ⟶ On le sert chaud.', arabic: 'كيف يُقدم السمك؟ ⟶ يُقدم ساخناً.' },
-            { french: 'Est-ce qu\'on ajoute des tomates ? ⟶ Oui, on ajoute une grosse tomate coupée.', arabic: 'هل نضيف طماطم؟ ⟶ نعم، طماطم كبيرة مقطعة.' }
+            { french: 'Le garçon : Vous désirez, monsieur ?', arabic: 'الجرسون: ماذا ترغب يا سيدي؟', note: 'صيغة طلب بأدب' },
+            { french: 'Le client : Je voudrais du poulet rôti, s\'il vous plaît.', arabic: 'الزبون: أود دجاجاً محمراً من فضلك.', note: 'Je voudrais = أود (للطب المهذب)' },
+            { french: 'Le client : L\'addition, s\'il vous plaît.', arabic: 'الزبون: الحساب من فضلك.', note: 'طلب الفاتورة' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 38 بالكتاب',
-          descriptionAr: 'أجب عن أسئلة صح وخطأ:',
+          titleAr: 'تمارين الفهم والاستيعاب للنص (5 أسئلة)',
+          descriptionAr: 'اختر الإجابة الصحيحة بناءً على النص:',
           questions: [
             {
-              id: 'q_u2_gr_1',
+              id: 'u2_t_q1',
               type: 'multiple-choice',
-              instruction: 'صفحة 38 (سؤال A-1): Ce document est une recette d\'un plat.',
-              prompt: 'Ce document est une recette d\'un plat.',
-              options: ['Vrai (صح)', 'Faux (خطأ)'],
-              correctAnswer: 'Vrai (صح)',
-              explanation: 'صحيح؛ الوثيقة عبارة عن وصفة إعداد طبق سمك.'
+              instruction: 'D\'après le texte :',
+              prompt: '1. Où a lieu la fête de mariage ?',
+              options: ['Au restaurant', 'Au club', 'À l\'école'],
+              correctAnswer: 'Au restaurant',
+              explanation: 'أقيم الحفل في مطعم "Le Bon Goût".'
             },
             {
-              id: 'q_u2_gr_2',
+              id: 'u2_t_q2',
               type: 'multiple-choice',
-              instruction: 'صفحة 38 (سؤال A-2): On peut acheter un rouget grondin à la boulangerie.',
-              prompt: 'On peut acheter un rouget grondin à la boulangerie.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ المخبز يبيع الخبز والحلوى وليس السمك (السمك نشتريه من poissonnerie أو le marché).'
+              instruction: 'D\'après le texte :',
+              prompt: '2. Combien de personnes Jean a-t-il réservé pour elles ?',
+              options: ['20 personnes', '14 personnes', '10 personnes'],
+              correctAnswer: '20 personnes',
+              explanation: 'حجز جان طاولة لـ 20 شخصاً (vingt personnes).'
             },
             {
-              id: 'q_u2_gr_3',
+              id: 'u2_t_q3',
               type: 'multiple-choice',
-              instruction: 'صفحة 38 (سؤال A-3): On met du concombre avec le poisson.',
-              prompt: 'On met du concombre avec le poisson.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ الوصفة تحتوي على بصل وطماطم وجزر، ولا يوجد خيار (concombre).'
+              instruction: 'D\'après le texte :',
+              prompt: '3. Que mangent les invités comme dessert ?',
+              options: ['De la glace et des fruits', 'Du fromage', 'De la salade'],
+              correctAnswer: 'De la glace et des fruits',
+              explanation: 'تناول المدعوون المثلجات (glace) والفواكه في التحلية.'
             },
             {
-              id: 'q_u2_gr_4',
+              id: 'u2_t_q4',
+              type: 'true-false',
+              instruction: 'Mets Vrai ou Faux :',
+              prompt: '4. Jean s\'est marié avec Suzanne.',
+              options: ['Vrai', 'Faux'],
+              correctAnswer: 'Faux',
+              explanation: 'خطأ؛ تزوج جان من مونيك (Monique).'
+            },
+            {
+              id: 'u2_t_q5',
               type: 'multiple-choice',
-              instruction: 'صفحة 38 (سؤال A-6): On arrose le poisson avec l\'huile d\'olive.',
-              prompt: 'On arrose le poisson avec l\'huile d\'olive.',
-              options: ['Vrai (صح)', 'Faux (خطأ)'],
-              correctAnswer: 'Vrai (صح)',
-              explanation: 'صحيح؛ نرش السمك بزيت الزيتون.'
+              instruction: 'D\'après le texte :',
+              prompt: '5. Qui apporte la carte du menu ?',
+              options: ['Le garçon', 'Jean', 'Monique'],
+              correctAnswer: 'Le garçon',
+              explanation: 'الجرسون هو من يحضر قائمة الطعام.'
             }
           ]
         },
         corriger: {
-          titleAr: 'تصحيح الفهم',
-          descriptionAr: 'تأكد من التفاصيل الرقمية للوصفة:',
+          titleAr: 'تنبيهات في مفردات المطعم',
+          descriptionAr: 'فرّق بين الوجبة (repas) وقائمة الطعام (menu) والحساب (addition):',
           commonMistakes: [
             {
-              mistake: 'الاعتقاد بأن السمك يطهى على 40 درجة (quarante degrés).',
-              correction: 'على 400 درجة (quatre cents degrés) لمدة 15 دقيقة.',
-              why: 'في الفرن الحراري 400 درجة فهرنهايت.'
+              mistake: 'Je mange le menu.',
+              correction: 'Je regarde le menu / Je mange le repas.',
+              why: 'قائمة الطعام تقرأ (le menu)، والوجبة هي التي تؤكل (le repas).'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_u2_gr_rem_1',
+              id: 'u2_t_rem',
               type: 'multiple-choice',
-              instruction: 'صفحة 38: كيف يُقدم الطبق؟',
-              prompt: 'On sert le grondin au four :',
-              options: ['chaud', 'froid', 'tiède'],
-              correctAnswer: 'chaud',
-              explanation: 'يُقدم ساخناً (chaud).'
+              instruction: 'Complète :',
+              prompt: 'Après avoir mangé, le client demande .......... au serveur.',
+              options: ['l\'addition', 'le menu', 'la table'],
+              correctAnswer: 'l\'addition',
+              explanation: 'بعد الانتهاء يطلب الزبون الفاتورة (l\'addition).'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي نص الجروندان',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي المطعم السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_u2_gr_1',
+              id: 'u2_t_def',
               type: 'multiple-choice',
-              instruction: 'كم ملعقة زيت زيتون بالوصفة؟',
-              prompt: 'Combien de cuillères à soupe d\'huile d\'olive ?',
-              options: ['deux cuillères', 'cinq cuillères', 'une cuillère'],
-              correctAnswer: 'deux cuillères',
-              explanation: 'ملعقتان كبيرتان.'
+              instruction: 'Choisis :',
+              prompt: 'Le poulet avec le riz est un ..........',
+              options: ['plat principal', 'dessert', 'boisson'],
+              correctAnswer: 'plat principal',
+              explanation: 'الدجاج مع الأرز طبق رئيسي.'
             }
           ]
         }
       }
     },
     {
-      id: 'u2-taguine',
+      id: 'u2-repas-partitifs',
       unitId: 'unite2',
-      unitTitle: 'Unité 2',
-      unitTitleAr: 'الوحدة الثانية',
+      unitTitle: 'Unité (2) - Repas & Restaurant',
+      unitTitleAr: 'الوحدة الثانية (الوجبات والمطعم)',
       order: 2,
-      title: 'Texte: Taguine de bamia à l\'agneau',
-      titleAr: 'نص الفهم والاستيعاب: طاجن بامية باللحم الضأن',
-      subtitleFr: 'Compréhension du texte & Recette égyptienne',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحة 39',
+      title: 'Les Repas & Les Articles Partitifs',
+      titleAr: 'وجبات اليوم الثلاث وأدوات التجزئة (du, de la, de l\', des)',
+      subtitleFr: 'Petit déjeuner, Déjeuner, Dîner + Je mange / Je bois (p. 41 - 44)',
+      estimatedMinutes: 18,
+      bookletPages: 'صفحة 41 - 44',
       stages: {
         comprendre: {
-          titleAr: 'نص طاجن البامية باللحم (صفحة 39)',
-          summaryAr: 'طريقة إعداد طاجن بامية بلحم الضأن، المقادير والخطوات بدقة.',
+          titleAr: 'الوجبات اليومية وقاعدة أدوات التجزئة',
+          summaryAr: 'تستخدم أدوات التجزئة للتعبير عن تناول كمية أو جزء غير محدد من الأطعمة والمشروبات مع أفعال (manger, boire, prendre, vouloir).',
           grammarPoints: [
             {
-              title: 'المقادير والخطوات (صفحة 39)',
-              ruleAr: 'Taguine de bamia à l\'agneau :\n• Les ingrédients : 1 kg de bamia, 1/2 kg de tomates, 1/2 kg de viande de mouton en morceaux, 100 grammes de beurre, 2 oignons, 5 gousses d\'ail, sel, poivre.\n• La recette : Préparez les légumes. Faites cuire la viande avec l\'oignon et le beurre pendant 30 minutes. Ajoutez les tomates écrasées, laissez bouillir puis ajoutez le bamia. Laissez cuire pendant 15 minutes, ajoutez l\'ail haché. Versez le tout dans un taguine et mettez-le au four pendant 15 minutes.',
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'الأوقات والمقادير الرئيسية',
-          descriptionAr: 'احفظ الأرقام الواردة بالنص:',
-          examples: [
-            { french: '1/2 kg de viande de mouton (لحم ضأن)', arabic: 'نصف كيلو لحم ضأن' },
-            { french: '2 oignons (بصلتان فقط)', arabic: '2 بصل' },
-            { french: '5 gousses d\'ail haché (5 فصوص ثوم)', arabic: '5 فصوص ثوم مفروم' },
-            { french: 'Au four pendant 15 minutes', arabic: 'في الفرن لمدة 15 دقيقة' }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 39 بالكتاب',
-          descriptionAr: 'اختر الإجابة الصحيحة وضع علامة صح أو خطأ:',
-          questions: [
-            {
-              id: 'q_u2_tag_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 39 (سؤال A-1): Pour faire ce taguine, il faut de la viande ..........',
-              prompt: 'Pour faire ce taguine, il faut de la viande :',
-              options: ['de mouton', 'de canard', 'de volaille'],
-              correctAnswer: 'de mouton',
-              explanation: 'لحم ضأن (viande de mouton).'
-            },
-            {
-              id: 'q_u2_tag_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 39 (سؤال A-2): Pour faire ce taguine, il faut ajouter ..........',
-              prompt: 'Il faut ajouter :',
-              options: ['l’ail haché', 'les pommes de terre', 'le poisson'],
-              correctAnswer: 'l’ail haché',
-              explanation: 'الثوم المفروم (l’ail haché).'
-            },
-            {
-              id: 'q_u2_tag_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 39 (سؤال A-3): Il faut mettre le taguine au four pendant .......... minutes.',
-              prompt: 'Au four pendant :',
-              options: ['quinze', 'trente', 'cinquante'],
-              correctAnswer: 'quinze',
-              explanation: '15 دقيقة في الفرن (quinze minutes).'
-            },
-            {
-              id: 'q_u2_tag_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 39 (سؤال B-2): Il faut cinq oignons pour faire ce taguine.',
-              prompt: 'Il faut cinq oignons pour faire ce taguine.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ الوصفة تطلب بصلتين فقط (2 oignons).'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'تثبيت خطوات الوصفة',
-          descriptionAr: 'انتبه للمكونات:',
-          commonMistakes: [
-            {
-              mistake: 'الاعتقاد بأنه يتم استخدام زيت بدلاً من الزبدة.',
-              correction: 'الوصفة تحدد 100 جرام زبدة (100 grammes de beurre).',
-              why: 'لتحمير اللحم والبصل.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u2_tag_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 39 (سؤال B-1): Pour faire ce taguine, il faut du beurre.',
-              prompt: 'هل العبارة صحيحة؟',
-              options: ['Vrai (صح)', 'Faux (خطأ)'],
-              correctAnswer: 'Vrai (صح)',
-              explanation: 'صحيح؛ 100 جرام زبدة.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي طاجن البامية',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
-          challengeQuestions: [
-            {
-              id: 'def_u2_tag_1',
-              type: 'multiple-choice',
-              instruction: 'كم كمية البامية المطلوبة؟',
-              prompt: 'Combien de bamia faut-il ?',
-              options: ['1 kg', '1/2 kg', '2 kg'],
-              correctAnswer: '1 kg',
-              explanation: '1 كجم بامية.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'u2-articles-partitifs',
-      unitId: 'unite2',
-      unitTitle: 'Unité 2',
-      unitTitleAr: 'الوحدة الثانية',
-      order: 3,
-      title: 'Les Articles Partitifs',
-      titleAr: 'أدوات التجزئة مع المأكولات والمشروبات وتحويلها بالنفي',
-      subtitleFr: 'Du, De la, De l\', Des & transformation en de/d\'',
-      estimatedMinutes: 20,
-      bookletPages: 'صفحات 41 و 42',
-      stages: {
-        comprendre: {
-          titleAr: 'جدول أدوات التجزئة الكامل (صفحة 41)',
-          summaryAr: 'تستخدم أدوات التجزئة للتعبير عن كمية غير محددة من الأطعمة والمشروبات مع أفعال (manger, boire, acheter, prendre, vouloir, mettre).',
-          grammarPoints: [
-            {
-              title: 'تصنيف أدوات التجزئة (صفحة 41)',
-              ruleAr: 'أدوات التجزئة والأطعمة المقررة في الكتاب:',
+              title: '1. وجبات اليوم في مصر وفرنسا (Les 3 repas)',
+              ruleAr: 'ثلاث وجبات رئيسية:',
               table: {
-                headers: ['الأداة', 'النوع والعدد', 'أمثلة من الكتاب'],
+                headers: ['الوجبة', 'الوقت التقريبي', 'ما نأكله ونشربه عادة'],
                 rows: [
-                  ['Du', 'مفرد مذكر', 'du pain, du fromage, du beurre, du riz, du sucre, du chocolat, du yaourt, du gâteau, du sel, du poivre, du poulet, du poisson, du veau, du vinaigre, du citron, du thé, du café, du jus, du coca, du lait'],
-                  ['De la', 'مفرد مؤنث', 'de la viande, de la salade, de la glace, de la confiture, de la crème, de la farine, de la limonade, de la crêpe, de la soupe'],
-                  ['De l\'', 'مفرد مبدوء بحرف متحرك', 'de l\'eau, de l\'huile, de l\'oignon, de l\'ail, de l\'agneau, de l\'escalope, de l\'orangeade'],
-                  ['Des', 'جمع بنوعيه', 'des fruits, des frites, des œufs, des pâtes, des pommes, des légumes, des tomates, des biftecks, des pommes de terre, des haricots verts, des pêches, des poires']
+                  ['Le petit déjeuner (الإفطار)', 'Le matin (8h)', 'Du pain, du fromage, de la confiture, du beurre, du lait, du thé'],
+                  ['Le déjeuner (الغداء)', 'L\'après-midi (14h)', 'Du poulet, de la viande, du poisson, du riz, de la salade, de l\'eau'],
+                  ['Le dîner (العشاء)', 'Le soir (21h)', 'Du yaourt, des fruits, du fromage, une tisane']
                 ]
               }
             },
             {
-              title: 'قاعدة النفي الهامة (Attention - صفحة 41)',
-              ruleAr: 'عند تحويل الجملة إلى النفي (ne ... pas)، تتحول كل أدوات التجزئة (du, de la, de l\', des) إلى (de) أو (d\') أمام الحرف المتحرك:',
+              title: '2. أدوات التجزئة (Les Articles Partitifs)',
+              ruleAr: 'تأتي قبل اسم الشيء القابل للتجزئة أو الشرب أو الأكل:',
+              table: {
+                headers: ['الأداة', 'النوع', 'أمثلة من الكتاب'],
+                rows: [
+                  ['du', 'مفرد مذكر يبدأ بساكن', 'du poulet, du riz, du fromage, du poisson, du thé, du café, du sucre'],
+                  ['de la', 'مفرد مؤنث يبدأ بساكن', 'de la viande, de la salade, de la confiture, de la soupe, de la glace'],
+                  ['de l\'', 'مفرد بنوعيه يبدأ بمتحرك', 'de l\'eau (ماء), de l\'huile (زيت), de l\'omelette'],
+                  ['des', 'جمع بنوعيه', 'des fruits, des légumes, des frites, des œufs']
+                ]
+              }
+            },
+            {
+              title: '3. قاعدة النفي مع أدوات التجزئة',
+              ruleAr: 'في النفي، تتحول أدوات التجزئة الأربعة (du, de la, de l\', des) إلى (de) أو (d\') بدون استثناء:',
               details: [
-                'Tu manges du poisson ? ⟶ Non, je ne mange pas de poisson.',
-                'Tu bois de l\'eau ? ⟶ Non, je ne bois pas d\'eau.'
+                'Je bois du café. -> Je ne bois pas de café.',
+                'Elle mange de la viande. -> Elle ne mange pas de viande.',
+                'Nous buvons de l\'eau. -> Nous ne buvons pas d\'eau.'
               ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة من تدريبات الكتاب (صفحة 42)',
-          descriptionAr: 'تطبيق عملي:',
+          titleAr: 'أمثلة المقارنة بين الإثبات والنفي',
+          descriptionAr: 'لاحظ تغير أداة التجزئة:',
           examples: [
-            { french: 'Elle achète des légumes, de l\'huile, du fromage et du riz.', arabic: 'هي تشتري خضراوات (جمع: des)، زيتاً (متحرك: de l\')، جبناً (مذكر: du)، وأرزاً (مذكر: du).' },
-            { french: 'Elle commande de la limonade avec des gâteaux.', arabic: 'هي تطلب ليمونادة مع كعك.' },
-            { french: 'Mais elle n\'achète pas de beurre.', arabic: 'لكنها لا تشتري زبدة (تحولت du إلى de بسبب النفي).' }
+            { french: 'Le matin, je prends du lait.', arabic: 'في الصباح، أتناول حليباً.', note: 'lait مذكر -> du' },
+            { french: 'Il ne mange pas de poisson.', arabic: 'هو لا يأكل سمكاً.', note: 'في النفي du تحولت إلى de' },
+            { french: 'Suzanne boit de l\'eau minérale.', arabic: 'سوزان تشرب ماءً معدنياً.', note: 'eau يبدأ بمتحرك -> de l\'' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 42 بالكتاب',
-          descriptionAr: 'اختر أداة التجزئة الصحيحة أو de عند النفي:',
+          titleAr: 'تمارين الوجبات وأدوات التجزئة (10 أسئلة تفاعلية)',
+          descriptionAr: 'اختر أداة التجزئة أو الكلمة الصحيحة:',
           questions: [
             {
-              id: 'q_u2_art_1',
+              id: 'u2_par_1',
               type: 'multiple-choice',
-              instruction: 'صفحة 42: Elle achète .......... fromage.',
-              prompt: 'Elle achète .......... fromage.',
-              options: ['du', 'de la', 'des'],
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '1. Mon père boit .......... thé chaque matin.',
+              options: ['du', 'de la', 'de l\'', 'le'],
               correctAnswer: 'du',
-              explanation: 'fromage مفرد مذكر ⟶ du.'
+              explanation: 'thé اسم مفرد مذكر يأخذ du.'
             },
             {
-              id: 'q_u2_art_2',
+              id: 'u2_par_2',
               type: 'multiple-choice',
-              instruction: 'صفحة 42: Elle achète .......... huile.',
-              prompt: 'Elle achète .......... huile.',
-              options: ['de l\'', 'du', 'de la'],
-              correctAnswer: 'de l\'',
-              explanation: 'huile مفرد مبدوء بحرف متحرك (h) ⟶ de l\'.'
-            },
-            {
-              id: 'q_u2_art_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 42: Elle n\'achète pas .......... beurre.',
-              prompt: 'Mais elle n\'achète pas .......... beurre.',
-              options: ['de', 'du', 'des'],
-              correctAnswer: 'de',
-              explanation: 'بسبب النفي ne ... pas تتحول du إلى de.'
-            },
-            {
-              id: 'q_u2_art_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 42 (حوار السوبرماركت): Le vendeur : On n\'a pas .......... beurre.',
-              prompt: 'On n\'a pas .......... beurre.',
-              options: ['de', 'du', 'de la'],
-              correctAnswer: 'de',
-              explanation: 'نفي n\'a pas ⟶ de.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'تجنب خطأ التجزئة في النفي',
-          descriptionAr: 'قاعدة أساسية للامتحان:',
-          commonMistakes: [
-            {
-              mistake: 'ترك du أو de la في الجملة المنفية (مثل: Je ne mange pas du poisson).',
-              correction: 'Je ne mange pas de poisson.',
-              why: 'أدوات التجزئة تصبح de / d\' دائماً بعد النفي.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u2_art_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 42: Je ne bois pas .......... eau.',
-              prompt: 'Je ne bois pas .......... eau.',
-              options: ['d\'', 'de l\'', 'de'],
-              correctAnswer: 'd\'',
-              explanation: 'في النفي أمام حرف متحرك ⟶ d\'.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي أدوات التجزئة',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
-          challengeQuestions: [
-            {
-              id: 'def_u2_art_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 42: Au restaurant, on peut manger .......... salade.',
-              prompt: 'on peut manger .......... salade.',
-              options: ['de la', 'du', 'des'],
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '2. Suzanne mange .......... confiture avec du pain.',
+              options: ['de la', 'du', 'de l\'', 'des'],
               correctAnswer: 'de la',
-              explanation: 'salade مفرد مؤنث ⟶ de la.'
+              explanation: 'confiture (مربى) اسم مفرد مؤنث يأخذ de la.'
+            },
+            {
+              id: 'u2_par_3',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '3. En été, nous buvons beaucoup .......... eau fraîche.',
+              options: ['d\'', 'de l\'', 'de la', 'du'],
+              correctAnswer: 'd\'',
+              explanation: 'بعد ظرف الكمية beaucoup يأتي دائماً de أو d\'.'
+            },
+            {
+              id: 'u2_par_4',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '4. Gamal commande .......... riz et du poulet.',
+              options: ['du', 'de la', 'des', 'de'],
+              correctAnswer: 'du',
+              explanation: 'riz مفرد مذكر يأخذ du.'
+            },
+            {
+              id: 'u2_par_5',
+              type: 'multiple-choice',
+              instruction: 'Attention à la négation :',
+              prompt: '5. Ali ne mange pas .......... viande.',
+              options: ['de', 'de la', 'du', 'des'],
+              correctAnswer: 'de',
+              explanation: 'في الجملة المنفية تتحول أداة التجزئة إلى de.'
+            },
+            {
+              id: 'u2_par_6',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '6. Comme dessert, je prends .......... glace.',
+              options: ['de la', 'du', 'de', 'le'],
+              correctAnswer: 'de la',
+              explanation: 'glace اسم مفرد مؤنث يأخذ de la.'
+            },
+            {
+              id: 'u2_par_7',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '7. Au marché, la mère achète .......... fruits frais.',
+              options: ['des', 'du', 'de la', 'les'],
+              correctAnswer: 'des',
+              explanation: 'fruits اسم جمع يأخذ des.'
+            },
+            {
+              id: 'u2_par_8',
+              type: 'multiple-choice',
+              instruction: 'Choisis le verbe convenable :',
+              prompt: '8. Qu\'est-ce que tu .......... au petit déjeuner ?',
+              options: ['manges', 'mange', 'mangez', 'mangent'],
+              correctAnswer: 'manges',
+              explanation: 'مع Tu ينتهي فعل manger بـ -es.'
+            },
+            {
+              id: 'u2_par_9',
+              type: 'multiple-choice',
+              instruction: 'Vocabulaire des repas :',
+              prompt: '9. Le repas que l\'on prend le matin s\'appelle ..........',
+              options: ['le petit déjeuner', 'le dîner', 'le déjeuner'],
+              correctAnswer: 'le petit déjeuner',
+              explanation: 'وجبة الصباح هي الإفطار (le petit déjeuner).'
+            },
+            {
+              id: 'u2_par_10',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'article partitif :',
+              prompt: '10. Pour le petit déjeuner, il y a .......... fromage.',
+              options: ['du', 'de la', 'de l\'', 'des'],
+              correctAnswer: 'du',
+              explanation: 'fromage اسم مفرد مذكر يأخذ du.'
+            }
+          ]
+        },
+        corriger: {
+          titleAr: 'تنبيه: أفعال الميول لا تأخذ تجزئة',
+          descriptionAr: 'مع أفعال الحب والتفضيل (aimer, adorer, préférer, détester) نستخدم أداة معرفة (le, la, l\', les) وليس تجزئة:',
+          commonMistakes: [
+            {
+              mistake: 'J\'aime du poisson.',
+              correction: 'J\'aime le poisson.',
+              why: 'أفعال الميول تصف الشيء بشكل عام وتأخذ أداة معرفة دائماً.'
+            }
+          ],
+          remedialQuestions: [
+            {
+              id: 'u2_par_rem',
+              type: 'multiple-choice',
+              instruction: 'Choisis :',
+              prompt: 'Suzanne adore .......... chocolat.',
+              options: ['le', 'du', 'de', 'un'],
+              correctAnswer: 'le',
+              explanation: 'مع فعل adorer نستخدم أداة المعرفة le.'
+            }
+          ]
+        },
+        defi: {
+          titleAr: 'تحدي التجزئة السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
+          challengeQuestions: [
+            {
+              id: 'u2_par_def',
+              type: 'multiple-choice',
+              instruction: 'Attention au piège :',
+              prompt: 'Tu bois du café ? - Non, je ne bois pas .......... café.',
+              options: ['de', 'du', 'le', 'un'],
+              correctAnswer: 'de',
+              explanation: 'في النفي تتحول du إلى de مباشرة.'
             }
           ]
         }
       }
     },
     {
-      id: 'u2-pronoms-relatifs',
+      id: 'u2-interrogation-prod',
       unitId: 'unite2',
-      unitTitle: 'Unité 2',
-      unitTitleAr: 'الوحدة الثانية',
-      order: 4,
-      title: 'Les Pronoms Relatifs (Qui - Que - Où)',
-      titleAr: 'ضمائر الوصل: Qui (فاعل) و Que (مفعول) و Où (مكان)',
-      subtitleFr: 'Relier les phrases par un pronom relatif',
-      estimatedMinutes: 20,
-      bookletPages: 'صفحات 43، 44، 45، 56، 57',
+      unitTitle: 'Unité (2) - Repas & Restaurant',
+      unitTitleAr: 'الوحدة الثانية (الوجبات والمطعم)',
+      order: 3,
+      title: 'Mots Interrogatifs & Production au restaurant',
+      titleAr: 'أدوات الاستفهام (Où, Quand, Comment, Pourquoi...) وموضوع المطعم',
+      subtitleFr: 'L\'interrogation & Composition "Un déjeuner en famille au restaurant" (p. 45 - 50)',
+      estimatedMinutes: 16,
+      bookletPages: 'صفحة 45 - 50',
       stages: {
         comprendre: {
-          titleAr: 'قواعد ضمائر الوصل بالتفصيل (صفحة 43)',
-          summaryAr: 'تربط ضمائر الوصل بين جملتين لحذف الكلمة المكررة في الجملة الثانية دون تكرار.',
+          titleAr: 'أدوات الاستفهام وموضوع الغداء في المطعم',
+          summaryAr: 'إتقان أدوات الاستفهام للإجابة على أسئلة الامتحان، مع تدريب كتابي متكامل عن الغداء العائلي في المطعم.',
           grammarPoints: [
             {
-              title: '1. الضمير Qui (الذي / التي للفاعل)',
-              ruleAr: 'يحل محل كلمة مكررة في الجملة الثانية تقع فاعلاً (Sujet) أو ضميراً يعود عليه (il, elle, ils, elles). ويأتي بعده فعل مباشرة.',
-              details: [
-                'L\'orange est un fruit. Ce fruit donne du jus.',
-                '⟶ L\'orange est un fruit qui donne du jus. (البرتقال فاكهة تعطي عصيراً)'
-              ]
+              title: '1. أدوات الاستفهام المقررة (Les Mots Interrogatifs)',
+              ruleAr: 'جدول أدوات الاستفهام ودلالاتها:',
+              table: {
+                headers: ['الأداة', 'المعنى', 'تسأل عن', 'مثال من الكتاب'],
+                rows: [
+                  ['Où', 'أين', 'المكان (Lieu)', 'Où vas-tu pour déjeuner ? - Au restaurant.'],
+                  ['Quand', 'متى', 'الزمان والوقت (Temps)', 'Quand prends-tu le dîner ? - À 21h.'],
+                  ['Comment', 'كيف / ما', 'الحال أو وسيلة المواصلات أو الاسم', 'Comment vas-tu au restaurant ? - En taxi.'],
+                  ['Pourquoi', 'لماذا', 'السبب (Cause)', 'Pourquoi vas-tu au restaurant ? - Pour manger.'],
+                  ['Que / Qu\'est-ce que', 'ماذا', 'مفعول به غير عاقل', 'Que manges-tu ? - Du poulet.'],
+                  ['Qui', 'مَن', 'الفاعل أو المفعول العاقل', 'Qui a réservé la table ? - Jean.'],
+                  ['Combien de', 'كم عدد', 'العدد والكمية', 'Combien de personnes ? - 20 personnes.']
+                ]
+              }
             },
             {
-              title: '2. الضمير Que / Qu\' (الذي / التي للمفعول المباشر)',
-              ruleAr: 'يحل محل كلمة مكررة في الجملة الثانية تقع مفعولاً به مباشراً (C.O.D) غير مسبوق بحرف جر. ويأتي بعده فاعل + فعل.',
+              title: '2. موضوع التعبير: غداء في المطعم (Un déjeuner au restaurant)',
+              ruleAr: 'موضوع امتحان متكرر: تحدث عن وجبة غداء مع أسرتك في المطعم:',
               details: [
-                'Les enfants aiment le gâteau. La mère prépare ce gâteau.',
-                '⟶ Les enfants aiment le gâteau que la mère prépare. (يحب الأطفال الكعكة التي تعدها الأم)'
-              ]
-            },
-            {
-              title: '3. الضمير Où (حيث / الذي فيه للمكان أو الزمان)',
-              ruleAr: 'يحل محل مفعول غير مباشر للمكان مسبوق بحرف جر (à, au, aux, dans, en...).',
-              details: [
-                'Voilà l\'usine. Mon père travaille dans cette usine.',
-                '⟶ Voilà l\'usine où mon père travaille. (ها هو المصنع حيث يعمل أبي)'
+                'Vendredi dernier, je suis allé au restaurant avec ma famille.',
+                'Mon père a réservé une table près de la fenêtre.',
+                'Le garçon nous a apporté le menu.',
+                'Comme plat principal, nous avons mangé du poulet avec du riz.',
+                'Comme dessert, nous avons pris des glaces au chocolat.',
+                'Nous avons passé un moment très agréable.'
               ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة محلولة من تدريبات الكتاب (صفحة 44 و 45)',
-          descriptionAr: 'شاهد كيفية ربط الجملتين:',
+          titleAr: 'نماذج أسئلة وإجابات الاستفهام',
+          descriptionAr: 'لاحظ الربط بين السؤال والإجابة:',
           examples: [
-            { french: 'Mon frère aime les fruits. Maman achète ces fruits. ⟶ Mon frère aime les fruits que maman achète.', arabic: 'أخي يحب الفواكه التي تشتريها أمي (Que مفعول).' },
-            { french: 'C\'est ma ville. J\'habite dans cette ville. ⟶ C\'est ma ville où j\'habite.', arabic: 'هذه مدينتي حيث أعيش (Où مكان).' },
-            { french: 'Voilà le cahier. Le cahier est carré. ⟶ Voilà le cahier qui est carré.', arabic: 'ها هو الكشكول الذي يكون مربعاً (Qui فاعل).' },
-            { french: 'Paris est une belle ville. Cette ville est jolie. ⟶ Paris est une belle ville qui est jolie.', arabic: 'باريس مدينة جميلة التي تكون لطيفة (Qui فاعل).' }
+            { french: 'Pourquoi vas-tu au restaurant ? - Pour fêter le mariage.', arabic: 'لماذا تذهب للمطعم؟ - للاحتفال بالزفاف.', note: 'Pour + Verbe à l\'infinitif (لتوضيح الهدف)' },
+            { french: 'Comment vas-tu au club ? - En bus.', arabic: 'كيف تذهب للنادي؟ - بالأوتوبيس.', note: 'وسيلة المواصلات' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 44 و 45 و 56 بالكتاب',
-          descriptionAr: 'اختر ضمير الوصل المناسب (qui / que / où):',
+          titleAr: 'تدريبات أدوات الاستفهام وموضوع التعبير (8 أسئلة)',
+          descriptionAr: 'اختر أداة الاستفهام أو الجملة الصحيحة:',
           questions: [
             {
-              id: 'q_u2_rel_1',
+              id: 'u2_int_1',
               type: 'multiple-choice',
-              instruction: 'صفحة 44 (سؤال 1): Mon frère aime les fruits, maman achète les fruits.',
-              prompt: 'Mon frère aime les fruits .......... maman achète.',
-              options: ['que', 'qui', 'où'],
-              correctAnswer: 'que',
-              explanation: 'les fruits مفعول به مباشر في الجملة الثانية ⟶ que.'
+              instruction: 'Choisis le mot interrogatif :',
+              prompt: '1. .......... est la fête ? - Vendredi soir.',
+              options: ['Quand', 'Où', 'Pourquoi', 'Comment'],
+              correctAnswer: 'Quand',
+              explanation: 'الإجابة زمن (Vendredi soir) فنسأل بـ Quand (متى).'
             },
             {
-              id: 'q_u2_rel_2',
+              id: 'u2_int_2',
               type: 'multiple-choice',
-              instruction: 'صفحة 44 (سؤال 2): C\'est ma ville, j\'habite dans cette ville.',
-              prompt: 'C\'est ma ville .......... j\'habite.',
-              options: ['où', 'que', 'qui'],
-              correctAnswer: 'où',
-              explanation: 'dans cette ville تدل على مكان مسبوق بحرف جر ⟶ où.'
+              instruction: 'Choisis le mot interrogatif :',
+              prompt: '2. .......... coûte ce repas ? - 150 L.E.',
+              options: ['Combien', 'Comment', 'Où', 'Qui'],
+              correctAnswer: 'Combien',
+              explanation: 'السؤال عن السعر أو التكلفة: Combien coûte... ?'
             },
             {
-              id: 'q_u2_rel_3',
+              id: 'u2_int_3',
               type: 'multiple-choice',
-              instruction: 'صفحة 44 (سؤال 4): Voilà le cahier, le cahier est carré.',
-              prompt: 'Voilà le cahier .......... est carré.',
-              options: ['qui', 'que', 'où'],
-              correctAnswer: 'qui',
-              explanation: 'le cahier فاعل في الجملة الثانية ويتبعه فعل est ⟶ qui.'
+              instruction: 'Choisis le mot interrogatif :',
+              prompt: '3. .......... vas-tu au marché ? - Pour acheter des fruits.',
+              options: ['Pourquoi', 'Où', 'Quand', 'Comment'],
+              correctAnswer: 'Pourquoi',
+              explanation: 'الإجابة تبدأ بـ Pour + مصدر (لشراء الفواكه) فالسؤال بـ Pourquoi (لماذا).'
             },
             {
-              id: 'q_u2_rel_4',
+              id: 'u2_int_4',
               type: 'multiple-choice',
-              instruction: 'صفحة 45 (سؤال 9): Je préfère le gâteau. Ce gâteau est délicieux.',
-              prompt: 'Je préfère le gâteau .......... est délicieux.',
-              options: ['qui', 'que', 'où'],
-              correctAnswer: 'qui',
-              explanation: 'يحل محل فاعل ويليه فعل ⟶ qui.'
+              instruction: 'Choisis le mot interrogatif :',
+              prompt: '4. .......... prépare le repas ? - C\'est la mère.',
+              options: ['Qui', 'Que', 'Où', 'Comment'],
+              correctAnswer: 'Qui',
+              explanation: 'الإجابة شخص عاقل (La mère) فنسأل بـ Qui (مَن).'
             },
             {
-              id: 'q_u2_rel_5',
+              id: 'u2_int_5',
               type: 'multiple-choice',
-              instruction: 'صفحة 45 (سؤال 10): Ma mère a acheté une robe. Je n\'aime pas cette robe.',
-              prompt: 'Ma mère a acheté une robe .......... je n\'aime pas.',
-              options: ['que', 'qui', 'où'],
-              correctAnswer: 'que',
-              explanation: 'cette robe مفعول به مباشر ⟶ que.'
+              instruction: 'Choisis le mot interrogatif :',
+              prompt: '5. .......... vas-tu au restaurant ? - En voiture.',
+              options: ['Comment', 'Quand', 'Pourquoi', 'Qui'],
+              correctAnswer: 'Comment',
+              explanation: 'الإجابة وسيلة مواصلات (En voiture) فنسأل بـ Comment (كيف).'
+            },
+            {
+              id: 'u2_int_6',
+              type: 'multiple-choice',
+              instruction: 'Qui parle ?',
+              prompt: '6. "Donnez-moi du poulet avec de la salade, s\'il vous plaît." Qui dit cette phrase ?',
+              options: ['Le client', 'Le garçon', 'Le médecin'],
+              correctAnswer: 'Le client',
+              explanation: 'الزبون (le client) هو الذي يطلب طعامه في المطعم.'
+            },
+            {
+              id: 'u2_int_7',
+              type: 'multiple-choice',
+              instruction: 'Où vas-tu pour... ?',
+              prompt: '7. Où vas-tu pour acheter de la viande ?',
+              options: ['À la boucherie', 'À la pharmacie', 'À la boulangerie'],
+              correctAnswer: 'À la boucherie',
+              explanation: 'نشتري اللحم من محل الجزارة (à la boucherie).'
+            },
+            {
+              id: 'u2_int_8',
+              type: 'multiple-choice',
+              instruction: 'Production écrite :',
+              prompt: '8. Pour commencer le repas en famille, on dit :',
+              options: ['Bon appétit !', 'Bon voyage !', 'Bonne nuit !'],
+              correctAnswer: 'Bon appétit !',
+              explanation: 'عند بداية تناول الطعام نقول: Bon appétit ! (شهية طيبة).'
             }
           ]
         },
         corriger: {
-          titleAr: 'كيف تفرق بين Qui و Que في الامتحان؟',
-          descriptionAr: 'علامة سريعة ومضمونة 100%:',
+          titleAr: 'تنبيه: التفرقة بين Qui و Que',
+          descriptionAr: 'Qui للعاقل (مَن)، بينما Que لغير العاقل (ماذا):',
           commonMistakes: [
             {
-              mistake: 'وضع que بدلاً من qui قبل الفعل.',
-              correction: 'انظر لما بعد النقط: إذا جاء بعد النقط فعل (Verbe) ⟶ اختر Qui، وإذا جاء بعد النقط فاعل (اسم أو ضمير مثل je, tu, il...) ⟶ اختر Que.',
-              why: 'لأن Qui تحل محل فاعل فيأتي بعدها الفعل، بينما Que تحل محل مفعول فيأتي بعدها الفاعل والفعل.'
+              mistake: 'Que parle ?',
+              correction: 'Qui parle ?',
+              why: 'للسؤال عن الشخص المتحدث (عاقل) نستخدم Qui.'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_u2_rel_rem_1',
+              id: 'u2_int_rem',
               type: 'multiple-choice',
-              instruction: 'صفحة 56 (سؤال 8): Je mange dans ce restaurant. Ce restaurant sert de bons repas.',
-              prompt: 'Je mange dans ce restaurant .......... sert de bons repas.',
-              options: ['qui', 'que', 'où'],
-              correctAnswer: 'qui',
-              explanation: 'بعد النقط يوجد فعل (sert) ⟶ qui.'
+              instruction: 'Choisis :',
+              prompt: '.......... désirez-vous manger ? - Du poisson.',
+              options: ['Que', 'Qui', 'Où'],
+              correctAnswer: 'Que',
+              explanation: 'السؤال عن الشيء الذي ترغب بأكله (غير عاقل) يكون بـ Que.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي ضمائر الوصل',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي الاستفهام السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_u2_rel_1',
+              id: 'u2_int_def',
               type: 'multiple-choice',
-              instruction: 'صفحة 57 (سؤال 11): Voici l\'école. Je vais à l\'école pour étudier.',
-              prompt: 'Voici l\'école .......... je vais pour étudier.',
-              options: ['où', 'que', 'qui'],
-              correctAnswer: 'où',
-              explanation: 'مكان مسبوق بحرف جر à l\'école ⟶ où.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'u2-situations',
-      unitId: 'unite2',
-      unitTitle: 'Unité 2',
-      unitTitleAr: 'الوحدة الثانية',
-      order: 5,
-      title: 'Situations de l\'Unité 2',
-      titleAr: 'مواقف الوحدة الثانية: المطعم والمشتريات والطهي',
-      subtitleFr: 'Au café, chez le fruitier, chez l\'épicier, au restaurant',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 46، 47، 60',
-      stages: {
-        comprendre: {
-          titleAr: 'مواقف الوحدة الثانية المقررة (صفحات 46-47)',
-          summaryAr: 'مواقف طلب المشروبات والمأكولات في المقهى وعند بائع الفاكهة والبقال والمطعم.',
-          grammarPoints: [
-            {
-              title: 'المواقف الأساسية وإجاباتها النموذجية',
-              ruleAr: 'نماذج مقررة بالكتاب:',
-              details: [
-                'Dans un café, tu demandes ta boisson préférée ⟶ "Un jus d\'orange, s\'il vous plaît!"',
-                'Tu es chez le fruitier ⟶ "Donnez-moi un kilo de bananes!"',
-                'Tu es chez l\'épicier ⟶ "Donnez-moi un paquet de thé et un kilo de sucre."',
-                'Au restaurant, tu demandes au garçon le menu ⟶ "Apportez-moi le menu S.V.P."',
-                'Ton ami te demande combien de repas tu prends par jour ⟶ "Je prends trois repas."',
-                'La mère veut faire des gâteaux, elle dit à sa fille ⟶ "Apporte-moi de la farine, des œufs et de la crème."'
-              ]
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'نماذج المواقف',
-          descriptionAr: 'لاحظ السياق والمكان:',
-          examples: [
-            { french: 'Chez le fruitier : "Donnez-moi un kilo de bananes!"', arabic: 'عند بائع الفاكهة: "أعطني كيلو موز!"' },
-            { french: 'Au restaurant : "Apportez-moi le menu S.V.P."', arabic: 'في المطعم: "أحضر لي قائمة الطعام من فضلك."' },
-            { french: 'Nombre de repas : "Je prends trois repas par jour."', arabic: 'عدد الوجبات: "أتناول ثلاث وجبات يومياً."' }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 46 و 47 بالكتاب',
-          descriptionAr: 'اختر الإجابة الصحيحة:',
-          questions: [
-            {
-              id: 'q_u2_sit_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 46 (سؤال 1): Dans un café, tu demandes ta boisson préférée ; tu dis :',
-              prompt: 'Dans un café, tu demandes ta boisson préférée ; tu dis :',
-              options: ['Un jus d\'orange, s\'il vous plaît !', 'Je voudrais du riz, s\'il vous plaît !', 'Qu\'est-ce que vous voulez boire ?'],
-              correctAnswer: 'Un jus d\'orange, s\'il vous plaît !',
-              explanation: 'تطلب مشروبك المفضل في المقهى: عصير برتقال من فضلك.'
-            },
-            {
-              id: 'q_u2_sit_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 46 (سؤال 2): Tu es chez le fruitier ; tu dis :',
-              prompt: 'Tu es chez le fruitier ; tu dis :',
-              options: ['Donnez-moi un kilo de bananes !', 'Combien coûte un kilo de Pois ?', 'Je voudrais de la salade verte.'],
-              correctAnswer: 'Donnez-moi un kilo de bananes !',
-              explanation: 'عند بائع الفواكه تطلب فواكه مثل الموز (bananes).'
-            },
-            {
-              id: 'q_u2_sit_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 47 (سؤال 6): Au restaurant, tu demandes au garçon le menu : tu lui dis :',
-              prompt: 'Au restaurant, tu demandes au garçon le menu : tu lui dis :',
-              options: ['Apportez-moi le menu S.V.P.', 'Voilà le menu.', 'Que voulez-vous ?'],
-              correctAnswer: 'Apportez-moi le menu S.V.P.',
-              explanation: 'تطلب قائمة الطعام بأدب: أحضر لي المنيو من فضلك.'
-            },
-            {
-              id: 'q_u2_sit_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 47 (سؤال 8): La mère veut faire des gâteaux, elle dit à sa fille :',
-              prompt: 'La mère veut faire des gâteaux, elle dit à sa fille :',
-              options: ['Apporte-moi de la farine, des œufs et de la crème.', 'Apporte-moi des tomates et des concombres.', 'Apporte-moi du poivre et du sel.'],
-              correctAnswer: 'Apportez-moi de la farine, des œufs et de la crème.',
-              explanation: 'لصنع الكعك نحتاج دقيقاً وبيضا وكريمة.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'تثبيت مواقف الأماكن',
-          descriptionAr: 'تذكر البائع والسلعة:',
-          commonMistakes: [
-            {
-              mistake: 'طلب خضراوات عند بائع الفواكه (fruitier).',
-              correction: 'عند الفكهاني نطلب bananes / pommes / pêches / poires.',
-              why: 'لأن البائع مخصص للفواكه.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u2_sit_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 46 (سؤال 3): Tu es chez l\'épicier; tu lui dis :',
-              prompt: 'Tu es chez l\'épicier; tu lui dis :',
-              options: ['Donnez-moi un paquet de thé et un kilo de sucre.', 'Je voudrais deux kilos d\'oranges.', 'Combien coûte un kilo de tomates?'],
-              correctAnswer: 'Donnez-moi un paquet de thé et un kilo de sucre.',
-              explanation: 'عند البقال (l\'épicier) نشتري الشاي والسكر.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي مواقف الوحدة الثانية',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
-          challengeQuestions: [
-            {
-              id: 'def_u2_sit_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 47 (سؤال 7): Ton ami te demande combien de repas tu prends par jour, tu dis :',
-              prompt: 'Tu dis :',
-              options: ['Je prends trois repas.', 'Combien coûte ce repas ?', 'J\'aime les fruits.'],
-              correctAnswer: 'Je prends trois repas.',
-              explanation: 'أتناول ثلاث وجبات.'
+              instruction: 'Choisis vite :',
+              prompt: '.......... de personnes y a-t-il à la fête ? - 20 personnes.',
+              options: ['Combien', 'Comment', 'Quand'],
+              correctAnswer: 'Combien',
+              explanation: 'Combien de تسأل عن العدد.'
             }
           ]
         }

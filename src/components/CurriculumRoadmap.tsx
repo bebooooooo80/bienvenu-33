@@ -25,13 +25,13 @@ export const CurriculumRoadmap: React.FC<CurriculumRoadmapProps> = ({
             <span />
             <span />
           </div>
-          <span>Parcours Pédagogique · BIENVENUE 3</span>
+          <span>Parcours Pédagogique · BIENVENU 2</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] font-ar-display">
           خريطة رحلة المنهج الدراسي
         </h1>
         <p className="text-xs sm:text-sm text-slate-500 mt-1">
-          منهج الصف الثالث الإعدادي (الفصل الدراسي الأول) مرتباً بالتسلسل الدقيق للكتاب المدرسي المعتمد
+          منهج الصف الثاني الإعدادي (الفصل الدراسي الأول) - مع ميسو سعيد صالح
         </p>
       </div>
 

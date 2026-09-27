@@ -48,25 +48,25 @@ export const Dashboard: React.FC<DashboardProps> = ({
             Plateforme Officielle de Français
           </span>
           <span className="text-slate-300">·</span>
-          <span className="font-ar text-[11px] text-slate-600">الصف الثالث الإعدادي</span>
+          <span className="font-ar text-[11px] text-slate-600">الصف الثاني الإعدادي</span>
         </div>
 
         {/* HERO BRAND STATEMENT (CENTERPIECE OF THE VISUAL COMPOSITION) */}
         <div className="space-y-2 select-none">
-          {/* Main Title: BIENVENUE 3 */}
+          {/* Main Title: BIENVENU 2 */}
           <div className="flex items-center justify-center gap-3">
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[#0B1F3A] font-fr-title uppercase drop-shadow-xs">
-              BIENVENUE
+              BIENVENU
             </h1>
             <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-[#EF4135] font-fr-title">
-              3
+              2
             </span>
           </div>
 
-          {/* Subtitle: AVEC MONSIEUR SAID */}
+          {/* Subtitle: منصة ميسو سعيد صالح التعليمية */}
           <div className="relative inline-block">
-            <div className="text-lg sm:text-2xl lg:text-3xl font-bold tracking-widest text-[#0055A4] font-fr uppercase">
-              AVEC MONSIEUR SAID
+            <div className="text-lg sm:text-2xl lg:text-3xl font-bold tracking-widest text-[#0055A4] font-ar">
+              منصة ميسو سعيد صالح التعليمية
             </div>
 
             {/* Premium French Tricolor Fine Brush / Ribbon Accent */}

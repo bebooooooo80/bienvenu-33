@@ -149,23 +149,23 @@ export function App() {
                   Plateforme Officielle de Français
                 </span>
                 <span className="text-slate-300">·</span>
-                <span className="font-ar text-[11px] text-slate-600">الصف الثالث الإعدادي · الفصل الأول</span>
+                <span className="font-ar text-[11px] text-slate-600">الصف الثاني الإعدادي · الفصل الأول</span>
               </div>
               
               {/* HERO BRAND STATEMENT */}
               <div className="space-y-2 select-none">
                 <div className="flex items-center justify-center gap-3">
                   <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[#0B1F3A] font-fr-title uppercase drop-shadow-xs">
-                    BIENVENUE
+                    BIENVENU
                   </h1>
                   <span className="text-5xl sm:text-7xl lg:text-8xl font-black text-[#EF4135] font-fr-title">
-                    3
+                    2
                   </span>
                 </div>
 
                 <div className="relative inline-block">
-                  <div className="text-lg sm:text-2xl lg:text-3xl font-bold tracking-widest text-[#0055A4] font-fr uppercase">
-                    AVEC MONSIEUR SAID
+                  <div className="text-lg sm:text-2xl lg:text-3xl font-bold tracking-widest text-[#0055A4] font-ar">
+                    منصة ميسو سعيد صالح التعليمية
                   </div>
 
                   {/* Fine French Tricolor Underline */}
@@ -180,10 +180,10 @@ export function App() {
               {/* Sub-Description */}
               <div className="space-y-3 max-w-2xl mx-auto">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#0B1F3A] font-ar">
-                  المنصة التعليمية التفاعلية المعتمدة للغة الفرنسية
+                  المنصة التفاعلية الرسمية للغة الفرنسية - الصف الثاني الإعدادي
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-ar">
-                  شرح تفاعلي شامل لكتاب <span className="font-fr font-bold text-[#0055A4]">Bienvenue 3</span>: نصوص قراءة صوتية، قواعد ناطقة، بنك أخطاء ذكي، وامتحانات رسمية من 20 درجة.
+                  شرح تفاعلي متكامل لمنهج <span className="font-fr font-bold text-[#0055A4]">Bienvenu 2</span> (الفصل الدراسي الأول): نصوص الدعوة وحفل الزواج والمستشفى، نطق صوتي أصلي فرنسي، قواعد ناطقة، بنك أخطاء ذكي، وامتحانات رسمية شاملة.
                 </p>
               </div>
 
@@ -219,9 +219,9 @@ export function App() {
                   <div className="w-12 h-12 rounded-2xl bg-[#0055A4]/10 text-[#0055A4] flex items-center justify-center shadow-2xs">
                     <Landmark className="w-6 h-6" />
                   </div>
-                  <h3 className="text-base font-bold text-[#0B1F3A]">نصوص الكتاب الأصلية</h3>
+                  <h3 className="text-base font-bold text-[#0B1F3A]">نصوص الكتاب المقررة</h3>
                   <p className="text-xs text-slate-500 leading-relaxed font-ar">
-                    متحف اللوفر، قصر باريس، والمطاعم الفرنسية مع نطق صوتي فرنسي دقيق وترجمة سياقية.
+                    عيد ميلاد جمال، حفل زواج جان والمطعم، وحادث سمير وزيارة المستشفى مع نطق صوتي وترجمة تفاعلية.
                   </p>
                 </div>
 
@@ -229,9 +229,9 @@ export function App() {
                   <div className="w-12 h-12 rounded-2xl bg-[#0055A4]/10 text-[#0055A4] flex items-center justify-center shadow-2xs">
                     <Headphones className="w-6 h-6" />
                   </div>
-                  <h3 className="text-base font-bold text-[#0B1F3A]">تأسيس القواعد والأزمنة</h3>
+                  <h3 className="text-base font-bold text-[#0B1F3A]">قواعد Bienvenu 2 الشاملة</h3>
                   <p className="text-xs text-slate-500 leading-relaxed font-ar">
-                    شرح شامل للماضي المركب، ضمائر المفعول، وحروف الجر مع تدريبات تفاعلية فورية.
+                    صفات الملكية وقاعدة المتحرك، ضمائر المفعول COD و COI، أدوات التجزئة، وأعضاء الجسم للتعبير عن الألم.
                   </p>
                 </div>
 
@@ -241,7 +241,7 @@ export function App() {
                   </div>
                   <h3 className="text-base font-bold text-[#0B1F3A]">بنك أخطاء وامتحانات رسمية</h3>
                   <p className="text-xs text-slate-500 leading-relaxed font-ar">
-                    رصد تلقائي لنقاط الضعف لتصفيرها، مع نماذج امتحانات نصف العام الشاملة من 20 درجة.
+                    نماذج امتحانات الوحدات ونصف العام الرسمي المطابق للمواصفات من 20 درجة مع تصحيح ذكي فوري.
                   </p>
                 </div>
               </div>

@@ -69,13 +69,13 @@ export const VocabularyBank: React.FC = () => {
               <span />
               <span />
             </div>
-            <span>Lexique & Vocabulaire · BIENVENUE 3</span>
+            <span>Lexique & Vocabulaire · BIENVENU 2</span>
           </div>
           <h1 className="text-2xl font-black text-[#0B1F3A] font-ar-display flex items-center gap-2">
             <span>بطاقات المفردات والكلمات التفاعلية</span>
           </h1>
           <p className="text-xs text-slate-500 mt-0.5">
-            جميع مفردات وأفعال وأطعمة الوحدتين الأولى والثانية مع النطق الصوتي الفوري
+            جميع مفردات وأفعال وأطعمة ومصطلحات Bienvenu 2 مع النطق الصوتي الفرنسي الفوري
           </p>
         </div>
 

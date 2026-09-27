@@ -1,295 +1,169 @@
 import { Lesson, OfficialExam, UnitSection, VocabularyWord } from '../types';
 
 export const unite1Vocabulary: VocabularyWord[] = [
-  { id: 'u1_w1', french: 'un musée', arabic: 'متحف', category: 'masculin', exampleFr: 'Le musée du Louvre est à Paris.', exampleAr: 'متحف اللوفر في باريس.' },
-  { id: 'u1_w2', french: 'un touriste', arabic: 'سائح', category: 'masculin', exampleFr: 'Beaucoup de touristes visitent l\'Égypte.', exampleAr: 'الكثير من السياح يزورون مصر.' },
-  { id: 'u1_w3', french: 'un monument', arabic: 'مبنى أثري / أثر', category: 'masculin', exampleFr: 'Il y a beaucoup de monuments au Caire.', exampleAr: 'يوجد العديد من الآثار في القاهرة.' },
-  { id: 'u1_w4', french: 'un pays', arabic: 'بلد / دولة', category: 'masculin', exampleFr: 'L\'Égypte est un pays intéressant.', exampleAr: 'مصر بلد شيق.' },
-  { id: 'u1_w5', french: 'une œuvre d\'art', arabic: 'عمل فني', category: 'feminin', exampleFr: 'Ce musée est riche en œuvres d\'art.', exampleAr: 'هذا المتحف غني بالأعمال الفنية.' },
-  { id: 'u1_w6', french: 'une sculpture', arabic: 'عمل نحتي / تمثال منحوت', category: 'feminin', exampleFr: 'Pour voir des sculptures, je vais au musée.', exampleAr: 'لرؤية المنحوتات، أذهب إلى المتحف.' },
-  { id: 'u1_w7', french: 'un bâtiment', arabic: 'مبنى / عمارة', category: 'masculin', exampleFr: 'Le bâtiment actuel est construit en 1902.', exampleAr: 'المبنى الحالي شُيّد عام 1902.' },
-  { id: 'u1_w8', french: 'un égyptologue', arabic: 'عالم مصريات', category: 'masculin', exampleFr: 'Auguste Mariette est un égyptologue français.', exampleAr: 'أوجست مارييت عالم مصريات فرنسي.' },
-  { id: 'u1_w9', french: 'un trésor', arabic: 'كنز', category: 'masculin', exampleFr: 'Les trésors de Tout Ank-Amon.', exampleAr: 'كنوز توت عنخ آمون.' },
-  { id: 'u1_w10', french: 'le verre', arabic: 'الزجاج', category: 'masculin', exampleFr: 'La pyramide du Louvre est en verre.', exampleAr: 'هرم اللوفر من الزجاج.' },
-  { id: 'u1_w11', french: 'un tour', arabic: 'جولة سياحية', category: 'masculin', exampleFr: 'Le tour commence à 10 heures.', exampleAr: 'الجولة تبدأ في العاشرة.' },
-  { id: 'u1_w12', french: 'consacrer', arabic: 'يخصص / يكرس', category: 'verbe', exampleFr: 'consacrer du temps', exampleAr: 'يخصص وقتاً' },
-  { id: 'u1_w13', french: 'construire', arabic: 'يشيد / يبني', category: 'verbe', exampleFr: 'construire un musée', exampleAr: 'يشيد متحفاً' },
-  { id: 'u1_w14', french: 'fonder', arabic: 'يؤسس', category: 'verbe', exampleFr: 'Il a été fondé en 1858.', exampleAr: 'تأسس عام 1858.' },
-  { id: 'u1_w15', french: 'se reposer', arabic: 'يستريح', category: 'verbe', exampleFr: 'Elle se repose après le déjeuner.', exampleAr: 'هي تستريح بعد الغداء.' },
-  { id: 'u1_w16', french: 'se promener', arabic: 'يتنزه', category: 'verbe', exampleFr: 'Je me promène dans le jardin.', exampleAr: 'أتنزه في الحديقة.' },
-  { id: 'u1_w17', french: 'renfermer', arabic: 'يضم / يحتوي على', category: 'verbe', exampleFr: 'Ce musée renferme la momie de Ramsès II.', exampleAr: 'يضم هذا المتحف مومياء رمسيس الثاني.' },
-  { id: 'u1_w18', french: 'rappeler', arabic: 'يذكّر بـ', category: 'verbe', exampleFr: 'La pyramide de verre rappelle les pyramides d\'Égypte.', exampleAr: 'الهرم الزجاجي يذكرنا بأهرامات مصر.' }
+  { id: 'u1_v1', french: 'une invitation', arabic: 'دعوة', category: 'feminin', exampleFr: 'Gamal envoie une invitation à ses amis.', exampleAr: 'جمال يرسل دعوة إلى أصدقائه.' },
+  { id: 'u1_v2', french: 'un anniversaire', arabic: 'عيد ميلاد', category: 'masculin', exampleFr: 'C\'est l\'anniversaire de Suzanne.', exampleAr: 'إنه عيد ميلاد سوزان.' },
+  { id: 'u1_v3', french: 'une fête', arabic: 'حفلة', category: 'feminin', exampleFr: 'La fête commence à huit heures.', exampleAr: 'الحفلة تبدأ في الثامنة.' },
+  { id: 'u1_v4', french: 'un cadeau', arabic: 'هدية', category: 'masculin', exampleFr: 'Jean offre un beau cadeau à Gamal.', exampleAr: 'جان يقدم هدية جميلة لجمال.' },
+  { id: 'u1_v5', french: 'un gâteau', arabic: 'تورتة / كعكة', category: 'masculin', exampleFr: 'La maman prépare un grand gâteau.', exampleAr: 'الأم تعد تورتة كبيرة.' },
+  { id: 'u1_v6', french: 'une bougie', arabic: 'شمعة', category: 'feminin', exampleFr: 'Il y a 14 bougies sur le gâteau.', exampleAr: 'توجد 14 شمعة على التورتة.' },
+  { id: 'u1_v7', french: 'les vacances', arabic: 'الإجازة', category: 'feminin', exampleFr: 'Les vacances sont vite passées.', exampleAr: 'الإجازة مرت سريعاً.' },
+  { id: 'u1_v8', french: 'un ami / une amie', arabic: 'صديق / صديقة', category: 'masculin', exampleFr: 'Mon amie française s\'appelle Suzanne.', exampleAr: 'صديقتي الفرنسية اسمها سوزان.' },
+  { id: 'u1_v9', french: 'un salon', arabic: 'صالون / غرفة معيشة', category: 'masculin', exampleFr: 'Les amis sont réunis dans le salon.', exampleAr: 'الأصدقاء مجتمعون في الصالون.' },
+  { id: 'u1_v10', french: 'une famille', arabic: 'عائلة / أسرة', category: 'feminin', exampleFr: 'Je présente ma famille.', exampleAr: 'أنا أقدم أسرتي.' },
+  { id: 'u1_v11', french: 'inviter', arabic: 'يدعو', category: 'verbe', exampleFr: 'J\'invite mes camarades à la maison.', exampleAr: 'أدعو زملائي إلى المنزل.' },
+  { id: 'u1_v12', french: 'accepter', arabic: 'يقبل (دعوة)', category: 'verbe', exampleFr: 'Avec plaisir, j\'accepte l\'invitation.', exampleAr: 'بكل سرور، أقبل الدعوة.' },
+  { id: 'u1_v13', french: 'refuser', arabic: 'يرفض / يعتذر عن', category: 'verbe', exampleFr: 'Pardon, je refuse car je suis occupé.', exampleAr: 'عذراً، أعتذر لأنني مشغول.' },
+  { id: 'u1_v14', french: 'souffler', arabic: 'يطفئ (الشموع)', category: 'verbe', exampleFr: 'Gamal souffle les bougies.', exampleAr: 'جمال يطفئ الشموع.' },
+  { id: 'u1_v15', french: 'souhaiter', arabic: 'يتمنى / يهنئ', category: 'verbe', exampleFr: 'Je te souhaite un bon anniversaire !', exampleAr: 'أتمنى لك عيد ميلاد سعيد!' },
+  { id: 'u1_v16', french: 'chanter', arabic: 'يغني', category: 'verbe', exampleFr: 'Les enfants chantent ensemble.', exampleAr: 'الأطفال يغنون معاً.' },
+  { id: 'u1_v17', french: 'danser', arabic: 'يرقص', category: 'verbe', exampleFr: 'On danse avec la musique.', exampleAr: 'نرقص على أنغام الموسيقى.' },
+  { id: 'u1_v18', french: 'apporter', arabic: 'يحضر معه', category: 'verbe', exampleFr: 'Suzanne apporte des fleurs.', exampleAr: 'سوزان تحضر معها زهوراً.' }
 ];
 
-export const examMiTerme2018: OfficialExam = {
-  id: 'exam_miterme_2018',
-  title: 'Examen de Mi-Terme 2018',
-  titleAr: 'امتحان منتصف الفصل الدراسي الأول 2018 - الرسمي',
-  academicYear: '2018 - 3ème Préparatoire',
+export const examMiTermeU1: OfficialExam = {
+  id: 'exam_unite1_bienvenu2',
+  title: 'Examen de l\'Unité 1 (Bienvenu 2)',
+  titleAr: 'امتحان الوحدة الأولى - دعوة واحتفال (20 درجة)',
+  academicYear: 'Bienvenu 2 - 2ème Préparatoire',
   totalMarks: 20,
   timeLimitMinutes: 30,
-  bookletPages: 'صفحات 33، 34، 35',
+  bookletPages: 'صفحات 32 - 33 من كتاب Bienvenu 2',
   questions: [
     {
-      id: 'ex1_q1',
+      id: 'u1_ex_q1',
       section: 'comprehension',
       sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب (8 درجات)',
-      passage: `Village Touristique "Cheraton"\nÀ Charm El-Cheikh au bord de la mer rouge. 500 L.E. la nuit par personne en chambre double pendant les vacances de mi-année.\nBuffet ouvert: petit déjeuner, déjeuner et diner.\nRestaurants Égyptiens et Français.\nBoissons chaudes et froides. Deux piscines, mini zoo et un grand marché.\nRéservation.\nLe Caire: Tél.: 022575531 – 023382691`,
+      sectionTitleAr: 'أولاً: فهم النص (6 درجات)',
+      passage: `Vendredi 15 octobre, Gamal fête son anniversaire à la maison. Il a 14 ans. Il invite ses amis de classe : Jean Morelle, Suzanne et Moustafa. Les invités arrivent à 18 heures. Suzanne apporte un beau bouquet de fleurs et Jean offre un livre de français. La maman de Gamal prépare un délicieux gâteau avec 14 bougies. Tous les amis chantent "Joyeux anniversaire" et Gamal souffle les bougies.`,
       instructionFr: 'A) Choisis la bonne réponse :',
       instructionAr: 'اختر الإجابة الصحيحة:',
       type: 'mcq',
-      prompt: '1- Ce document est ....................',
-      options: ['une publicité', 'une lettre', 'un dialogue'],
-      correctAnswer: 'une publicité',
-      points: 1
+      prompt: '1. Ce texte parle ....................',
+      options: ['d\'un anniversaire', 'd\'un accident', 'd\'un voyage à Paris'],
+      correctAnswer: 'd\'un anniversaire',
+      points: 2
     },
     {
-      id: 'ex1_q2',
+      id: 'u1_ex_q2',
       section: 'comprehension',
       sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
+      sectionTitleAr: 'أولاً: فهم النص',
       instructionFr: 'A) Choisis la bonne réponse :',
       instructionAr: 'اختر الإجابة الصحيحة:',
       type: 'mcq',
-      prompt: '2- Ce village se trouve ....................',
-      options: ['à Charm El-Cheikh', 'à Guizèh', 'à Tanta'],
-      correctAnswer: 'à Charm El-Cheikh',
-      points: 1
+      prompt: '2. Gamal a .................... ans.',
+      options: ['quatorze', 'treize', 'quinze'],
+      correctAnswer: 'quatorze',
+      points: 2
     },
     {
-      id: 'ex1_q3',
+      id: 'u1_ex_q3',
       section: 'comprehension',
       sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'A) Choisis la bonne réponse :',
-      instructionAr: 'اختر الإجابة الصحيحة:',
-      type: 'mcq',
-      prompt: '3- Ce village offre .................... "Buffet ouvert".',
-      options: ['trois repas', 'deux repas', 'un repas'],
-      correctAnswer: 'trois repas',
-      points: 1
-    },
-    {
-      id: 'ex1_q4',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
+      sectionTitleAr: 'أولاً: فهم النص',
+      instructionFr: 'B) Mets Vrai (✓) ou Faux (✗) :',
+      instructionAr: 'ضع صح أو خطأ:',
       type: 'true_false',
-      prompt: '1- Dans ce village, il n\'y a pas de boissons chaudes.',
+      prompt: '3. La fête a lieu au restaurant.',
       options: ['Vrai (صح)', 'Faux (خطأ)'],
       correctAnswer: 'Faux (خطأ)',
-      points: 1
+      points: 2
     },
     {
-      id: 'ex1_q5',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
-      type: 'true_false',
-      prompt: '2- Ce village se trouve au bord de la mer rouge.',
-      options: ['Vrai (صح)', 'Faux (خطأ)'],
-      correctAnswer: 'Vrai (صح)',
-      points: 1
-    },
-    {
-      id: 'ex1_q6',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'B) Mets (vrai) ou (faux) :',
-      instructionAr: 'ضع علامة صح أو خطأ:',
-      type: 'true_false',
-      prompt: '3- Dans ce village, il y a un restaurant français seulement.',
-      options: ['Vrai (صح)', 'Faux (خطأ)'],
-      correctAnswer: 'Faux (خطأ)',
-      points: 1
-    },
-    {
-      id: 'ex1_q7',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'C) Complète par un mot pris du texte :',
-      instructionAr: 'أكمل بكلمة من النص:',
+      id: 'u1_ex_q4',
+      section: 'situations',
+      sectionTitleFr: '2) Situations de communication',
+      sectionTitleAr: 'ثانياً: مواقف التواصل اليومية (4 درجات)',
+      instructionFr: 'Choisis la bonne réponse :',
+      instructionAr: 'اختر الإجابة المناسبة للموقف:',
       type: 'mcq',
-      prompt: '1- Au village touristique "Cheraton", il y a deux piscines, .................... et grand marché.',
-      options: ['mini zoo', 'restaurant', 'cinéma'],
-      correctAnswer: 'mini zoo',
-      points: 1
+      prompt: '4. Ton ami t\'invite à sa fête et tu acceptes, tu dis :',
+      options: ['Avec grand plaisir !', 'Désolé, je suis malade.', 'Au revoir.'],
+      correctAnswer: 'Avec grand plaisir !',
+      points: 2
     },
     {
-      id: 'ex1_q8',
-      section: 'comprehension',
-      sectionTitleFr: '1) Compréhension',
-      sectionTitleAr: 'أولاً: قطعة الفهم والاستيعاب',
-      instructionFr: 'C) Complète par un mot pris du texte :',
-      instructionAr: 'أكمل بكلمة من النص:',
+      id: 'u1_ex_q5',
+      section: 'situations',
+      sectionTitleFr: '2) Situations de communication',
+      sectionTitleAr: 'ثانياً: مواقف التواصل',
+      instructionFr: 'Choisis la bonne réponse :',
+      instructionAr: 'اختر الرد المناسب:',
       type: 'mcq',
-      prompt: '2- La nuit par personne en chambre double pendant les vacances de .................... est 500 L.E.',
-      options: ['mi-année', 'été', 'printemps'],
-      correctAnswer: 'mi-année',
-      points: 1
+      prompt: '5. Pour féliciter ton ami pour son anniversaire, tu dis :',
+      options: ['Joyeux anniversaire !', 'Bonne nuit !', 'Bon appétit !'],
+      correctAnswer: 'Joyeux anniversaire !',
+      points: 2
     },
     {
-      id: 'ex1_q9',
+      id: 'u1_ex_q6',
       section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية (8 درجات)',
-      instructionFr: 'Fais comme indiqué entre parenthèses :',
-      instructionAr: 'أجب كما هو مطلوب بين القوسين:',
+      sectionTitleFr: '3) Grammaire',
+      sectionTitleAr: 'ثالثاً: القواعد والضمائر (6 درجات)',
+      instructionFr: 'Choisis la bonne réponse :',
+      instructionAr: 'اختر الإجابة القواعدية الصحيحة:',
       type: 'mcq',
-      prompt: '1- Hier, elle (arriver) .................... tôt. [Corrige le verbe]',
-      options: ['est arrivée', 'a arrivé', 'est arrivé'],
-      correctAnswer: 'est arrivée',
-      points: 1
+      prompt: '6. C\'est .......... amie française.',
+      options: ['mon', 'ma', 'mes'],
+      correctAnswer: 'mon',
+      points: 2
     },
     {
-      id: 'ex1_q10',
+      id: 'u1_ex_q7',
       section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Fais comme indiqué entre parenthèses :',
-      instructionAr: 'أجب كما هو مطلوب بين القوسين:',
+      sectionTitleFr: '3) Grammaire',
+      sectionTitleAr: 'ثالثاً: القواعد والضمائر',
+      instructionFr: 'Choisis le pronom convenable :',
+      instructionAr: 'اختر الضمير المناسب:',
       type: 'mcq',
-      prompt: '2- Nous (acheter) .................... ce livre. [Corrige le verbe au présent]',
-      options: ['achetons', 'achetez', 'achetent'],
-      correctAnswer: 'achetons',
-      points: 1
+      prompt: '7. Les invitations ? Gamal .......... envoie à ses amis.',
+      options: ['les', 'la', 'lui'],
+      correctAnswer: 'les',
+      points: 2
     },
     {
-      id: 'ex1_q11',
+      id: 'u1_ex_q8',
       section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Remplace les mots soulignés par un pronom personnel :',
-      instructionAr: 'استبدل الكلمة التي تحتها خط بضمير شخصي:',
+      sectionTitleFr: '3) Grammaire',
+      sectionTitleAr: 'ثالثاً: القواعد والضمائر',
+      instructionFr: 'Choisis le pronom C.O.I :',
+      instructionAr: 'اختر ضمير المفعول غير المباشر:',
       type: 'mcq',
-      prompt: '3- Ali téléphone à sa mère. ⟶ Ali .................... téléphone.',
+      prompt: '8. Je téléphone à Suzanne -> Je .......... téléphone.',
       options: ['lui', 'la', 'leur'],
       correctAnswer: 'lui',
-      points: 1
+      points: 2
     },
     {
-      id: 'ex1_q12',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Choisis la bonne réponse :',
-      instructionAr: 'اختر الإجابة الصحيحة:',
-      type: 'mcq',
-      prompt: '4- Ali .................... ce livre. (choisir)',
-      options: ['choisit', 'choisis', 'choisissons'],
-      correctAnswer: 'choisit',
-      points: 1
-    },
-    {
-      id: 'ex1_q13',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Choisis la bonne réponse :',
-      instructionAr: 'اختر صفة الملكية الصحيحة:',
-      type: 'mcq',
-      prompt: '5- Je fais .................... devoirs.',
-      options: ['mes', 'mon', 'ma'],
-      correctAnswer: 'mes',
-      points: 1
-    },
-    {
-      id: 'ex1_q14',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Remplace les mots soulignés par un pronom personnel :',
-      instructionAr: 'استبدل الكلمات (à l\'école) بضمير شخصي مناسب:',
-      type: 'mcq',
-      prompt: '6- Les élèves vont à l\'école. ⟶ Les élèves .................... vont.',
-      options: ['y', 'les', 'lui'],
-      correctAnswer: 'y',
-      points: 1
-    },
-    {
-      id: 'ex1_q15',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Choisis la bonne réponse :',
-      instructionAr: 'اختر صفة الملكية المناسبة:',
-      type: 'mcq',
-      prompt: '7- Nous lisons .................... leçon.',
-      options: ['notre', 'votre', 'nos'],
-      correctAnswer: 'notre',
-      points: 1
-    },
-    {
-      id: 'ex1_q16',
-      section: 'grammaire',
-      sectionTitleFr: '2) Grammaire',
-      sectionTitleAr: 'ثانياً: القواعد اللغوية',
-      instructionFr: 'Remplace les mots soulignés par un pronom personnel :',
-      instructionAr: 'استبدل الكلمات (ces gâteaux) بضمير مفعول مباشر:',
-      type: 'mcq',
-      prompt: '8- La mère prépare ces gâteaux. ⟶ La mère .................... prépare.',
-      options: ['les', 'leur', 'en'],
-      correctAnswer: 'les',
-      points: 1
-    },
-    {
-      id: 'ex1_q17',
+      id: 'u1_ex_q9',
       section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف (4 درجات)',
-      instructionFr: 'A) Qui parle :',
-      instructionAr: 'من المتحدث:',
-      type: 'mcq',
-      prompt: '1- "Va au tableau."',
-      options: ['Un professeur', 'Un médecin', 'Un client'],
-      correctAnswer: 'Un professeur',
-      points: 1
+      sectionTitleFr: '4) Production',
+      sectionTitleAr: 'رابعاً: التعبير والإنتاج اللغوي (4 درجات)',
+      instructionFr: 'Complète la phrase :',
+      instructionAr: 'أكمل الجملة بالكلمة المناسبة:',
+      type: 'fill',
+      prompt: '9. Pour l\'anniversaire, la maman prépare un grand ..........',
+      options: ['gâteau', 'stylo', 'train'],
+      correctAnswer: 'gâteau',
+      points: 2
     },
     {
-      id: 'ex1_q18',
+      id: 'u1_ex_q10',
       section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'A) Qui parle :',
-      instructionAr: 'من المتحدث:',
+      sectionTitleFr: '4) Production',
+      sectionTitleAr: 'رابعاً: التعبير والإنتاج اللغوي',
+      instructionFr: 'Fais une phrase avec (inviter) :',
+      instructionAr: 'اختر الجملة الصحيحة لغوياً:',
       type: 'mcq',
-      prompt: '2- "Docteur! J\'ai mal à l\'estomac."',
-      options: ['Un malade', 'Un guide', 'Un voyageur'],
-      correctAnswer: 'Un malade',
-      points: 1
-    },
-    {
-      id: 'ex1_q19',
-      section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'B) Choisis la bonne réponse :',
-      instructionAr: 'اختر الموقف المناسب:',
-      type: 'mcq',
-      prompt: '3- Tu demandes à un passant le lieu de la gare, tu dis :',
-      options: ['Où est la gare?', 'La gare est grande.', 'La gare est près du musée.'],
-      correctAnswer: 'Où est la gare?',
-      points: 1
-    },
-    {
-      id: 'ex1_q20',
-      section: 'production',
-      sectionTitleFr: '3) Production & Situations',
-      sectionTitleAr: 'ثالثاً: الإنتاج والمواقف',
-      instructionFr: 'B) Choisis la bonne réponse :',
-      instructionAr: 'اختر الموقف المناسب:',
-      type: 'mcq',
-      prompt: '4- Tu donnes à ton ami une information sur les pyramides, tu dis :',
-      options: ['Les pyramides sont à Guizèh.', 'Où se trouvent les pyramides?', 'Je veux aller aux pyramides.'],
-      correctAnswer: 'Les pyramides sont à Guizèh.',
-      points: 1
+      prompt: '10. (inviter - amis) :',
+      options: [
+        'J\'invite mes amis à mon anniversaire.',
+        'Les amis inviter moi.',
+        'Inviter à la maison.'
+      ],
+      correctAnswer: 'J\'invite mes amis à mon anniversaire.',
+      points: 2
     }
   ]
 };
@@ -297,953 +171,677 @@ export const examMiTerme2018: OfficialExam = {
 export const unite1Section: UnitSection = {
   id: 'unite1',
   order: 2,
-  titleFr: 'Unité (1) : Balade',
-  titleAr: 'الوحدة الأولى: جولة ونزهة سياحية',
-  descriptionAr: 'نصوص الفهم القرائي (متحف اللوفر والمتحف المصري)، الضمائر الشخصية (Sujet, C.O.D, C.O.I, Y)، صفات الملكية، الأفعال ذات الضميرين، المواقف، والأماكن والشخصيات.',
-  badgeIcon: '🏛️',
+  titleFr: 'Module 1 : Unité (1) - Invitation',
+  titleAr: 'الوحدة الأولى : دعوة واحتفال (Invitation)',
+  descriptionAr: 'منهج Bienvenu 2 (الصفحات 11 - 34): نص الأصدقاء عند جمال، مواقف قبول ورفض الدعوة، صفات الملكية وشرط المتحرك، الضمير On، ضمائر المفعول المباشر وغير المباشر (COD & COI)، وموضوع قدّم عائلتك.',
+  badgeIcon: '✉️',
   vocabulary: unite1Vocabulary,
-  exam: examMiTerme2018,
+  exam: examMiTermeU1,
   lessons: [
     {
-      id: 'u1-louvre',
+      id: 'u1-texte',
       unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
+      unitTitle: 'Unité (1) - Invitation',
+      unitTitleAr: 'الوحدة الأولى (دعوة)',
       order: 1,
-      title: 'Texte: Le Musée du Louvre',
-      titleAr: 'نص الفهم والاستيعاب: متحف اللوفر بباريس',
-      subtitleFr: 'Compréhension du texte & Pyramide de verre',
+      title: 'Texte : Les amis chez Gamal',
+      titleAr: 'نص القراءة : الأصدقاء في منزل جمال (انقضاء الإجازة)',
+      subtitleFr: 'Compréhension du texte & Personnages (p. 11 - 13)',
       estimatedMinutes: 15,
-      bookletPages: 'صفحات 12 و 13',
+      bookletPages: 'صفحة 11 - 13',
       readingPassage: {
-        imageSrc: '0012.jpg',
-        imagePageNumber: 12,
-        imageCaptionFr: 'Unité (1) - Balade : Le Musée du Louvre',
-        imageCaptionAr: 'صورة الصفحة 12 الأصلية من الكتاب المدرسي: نص متحف اللوفر والهرم الزجاجي',
-        fullFrenchText: "Voici le Louvre à Paris, c'est un grand musée. Devant le Louvre, on voit des touristes de toutes les nationalités : des Égyptiens, des Japonais, des Espagnols, des Américains ... Beaucoup de touristes aiment visiter la section des antiquités égyptiennes. Pour entrer au Louvre, on passe sous la pyramide de verre qui rappelle les grandes pyramides d'Égypte.",
-        fullArabicTranslation: "هذا هو متحف اللوفر في باريس، وهو متحف كبير. أمام اللوفر، نرى سياحاً من جميع الجنسيات: مصريين، يابانيين، إسبان، أمريكيين... الكثير من السياح يحبون زيارة قسم الآثار المصرية. للدخول إلى اللوفر، نمر تحت الهرم الزجاجي الذي يذكرنا بأهرامات مصر الكبرى.",
+        imageSrc: '',
+        imagePageNumber: 11,
+        imageCaptionFr: 'Les amis réunis chez Gamal pour fêter son anniversaire.',
+        imageCaptionAr: 'الأصدقاء مجتمعون في منزل جمال للاحتفال بعيد ميلاده.',
+        fullFrenchText: `Les vacances sont vite passées. C'est la rentrée scolaire. Aujourd'hui, les amis sont réunis chez Gamal pour fêter son anniversaire. Gamal a invité ses camarades : Jean Morelle, Suzanne et Moustafa. Dans le salon, il y a de la musique et des lumières. Suzanne apporte un beau bouquet de fleurs et Jean offre un livre à Gamal. Moustafa apporte des ballons colorés. La mère de Gamal a préparé un délicieux gâteau avec quatorze bougies. Tout le monde chante et passe une soirée formidable.`,
+        fullArabicTranslation: `مرت الإجازة سريعاً. إنها العودة المدرسية. اليوم يجتمع الأصدقاء في منزل جمال للاحتفال بعيد ميلاده. دعا جمال زملاءه: جان موريل، سوزان، ومصطفى. في الصالون، توجد موسيقى وأضواء احتفالية. سوزان تحضر باقة زهور جميلة، وجان يقدم كتاباً لجمال. مصطفى يحضر بالونات ملونة. أعدت والدة جمال كعكة شهية عليها 14 شمعة. الجميع يغني ويقضي سهرة رائعة.`,
         sentences: [
-          {
-            id: 'u1_s1',
-            french: "Voici le Louvre à Paris, c'est un grand musée.",
-            arabic: "هذا هو متحف اللوفر في باريس، وهو متحف كبير."
-          },
-          {
-            id: 'u1_s2',
-            french: "Devant le Louvre, on voit des touristes de toutes les nationalités : des Égyptiens, des Japonais, des Espagnols, des Américains ...",
-            arabic: "أمام اللوفر، نرى سياحاً من جميع الجنسيات: مصريين، يابانيين، إسبان، أمريكيين..."
-          },
-          {
-            id: 'u1_s3',
-            french: "Beaucoup de touristes aiment visiter la section des antiquités égyptiennes.",
-            arabic: "الكثير من السياح يحبون زيارة قسم الآثار المصرية."
-          },
-          {
-            id: 'u1_s4',
-            french: "Pour entrer au Louvre, on passe sous la pyramide de verre qui rappelle les grandes pyramides d'Égypte.",
-            arabic: "للدخول إلى اللوفر، نمر تحت الهرم الزجاجي الذي يذكرنا بأهرامات مصر الكبرى."
-          }
+          { id: 's1', french: 'Les vacances sont vite passées.', arabic: 'مرت الإجازة سريعاً.' },
+          { id: 's2', french: 'Aujourd\'hui, les amis sont réunis chez Gamal pour fêter son anniversaire.', arabic: 'اليوم، يجتمع الأصدقاء في منزل جمال للاحتفال بعيد ميلاده.' },
+          { id: 's3', french: 'Gamal a invité ses camarades : Jean Morelle, Suzanne et Moustafa.', arabic: 'دعا جمال زملاءه: جان موريل، سوزان، ومصطفى.' },
+          { id: 's4', french: 'Suzanne apporte un beau bouquet de fleurs.', arabic: 'سوزان تحضر باقة زهور جميلة.' },
+          { id: 's5', french: 'Jean offre un livre à Gamal.', arabic: 'جان يقدم كتاباً لجمال.' },
+          { id: 's6', french: 'La mère a préparé un gâteau avec quatorze bougies.', arabic: 'أعدت الأم كعكة عليها 14 شمعة.' }
         ],
         keyVocabulary: [
-          { french: 'un musée', arabic: 'متحف', partOfSpeech: 'n.m.' },
-          { french: 'un touriste', arabic: 'سائح', partOfSpeech: 'n.m.' },
-          { french: 'une nationalité', arabic: 'جنسية', partOfSpeech: 'n.f.' },
-          { french: 'antiquités égyptiennes', arabic: 'آثار مصرية', partOfSpeech: 'loc.' },
-          { french: 'la pyramide de verre', arabic: 'الهرم الزجاجي', partOfSpeech: 'loc.' },
-          { french: 'rappeler', arabic: 'يذكر بـ', partOfSpeech: 'v.' }
+          { french: 'les vacances', arabic: 'الإجازة', partOfSpeech: 'n.f.pl' },
+          { french: 'fêter', arabic: 'يحتفل بـ', partOfSpeech: 'v.' },
+          { french: 'un bouquet de fleurs', arabic: 'باقة زهور', partOfSpeech: 'n.m.' },
+          { french: 'souffler les bougies', arabic: 'يطفئ الشموع', partOfSpeech: 'exp.' }
         ]
       },
       stages: {
         comprendre: {
-          titleAr: 'اقرأ النص واستوعب الأفكار الرئيسية',
-          summaryAr: 'النص يتناول متحف اللوفر الكبير بباريس، زواره من كل الجنسيات، قسم الآثار المصرية، والهرم الزجاجي الشهير.',
+          titleAr: 'تحليل نص القراءة والشخصيات (Bienvenu 2)',
+          summaryAr: 'يدور النص حول احتفال عيد ميلاد جمال في منزله بحضور أصدقائه الفرنسيين والمصريين وما قدموه من هدايا.',
           grammarPoints: [
             {
-              title: 'نص الوحدة الأولى (صفحة 12)',
-              ruleAr: 'Voici le Louvre à Paris, c\'est un grand musée. Devant le Louvre, on voit des touristes de toutes les nationalités : des Égyptiens, des Japonais, des Espagnols, des Américains ... Beaucoup de touristes aiment visiter la section des antiquités égyptiennes. Pour entrer au Louvre, on passe sous la pyramide de verre qui rappelle les grandes pyramides d\'Égypte.',
+              title: 'شخصيات النص (Les Personnages)',
+              ruleAr: 'Gamal (صاحب عيد الميلاد - 14 سنة)، Jean Morelle (الصديق الفرنسي)، Suzanne (الصديقة الفرنسية)، Moustafa (الصديق المصري).',
               details: [
-                'نوع الوثيقة: مقال (un article) يعرف بمتحف اللوفر.',
-                'الزوار: سياح من مختلف الجنسيات.',
-                'القسم المفضل: قسم الآثار المصرية (la section des antiquités égyptiennes).',
-                'المدخل: الهرم الزجاجي (la pyramide de verre) الذي يذكرنا بأهرامات مصر.'
+                'Lieu (المكان): Chez Gamal (في منزل جمال)',
+                'Occasion (المناسبة): L\'anniversaire de Gamal (عيد ميلاد جمال)',
+                'Cadeaux (الهدايا): Suzanne offre des fleurs, Jean offre un livre.'
               ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أبرز الأسئلة والتعبيرات',
-          descriptionAr: 'ترجمة ونماذج إجابات الأسئلة المقالية (صفحة 13):',
+          titleAr: 'جمل مفتاحية من النص',
+          descriptionAr: 'استمع وركز في معاني الكلمات:',
           examples: [
-            {
-              french: 'Où se trouve le musée du Louvre ? ⟶ Le musée du Louvre se trouve à Paris.',
-              arabic: 'أين يقع متحف اللوفر؟ ⟶ يقع متحف اللوفر في باريس.'
-            },
-            {
-              french: 'Quelle section les touristes aiment-ils visiter ? ⟶ Ils aiment visiter la section des antiquités égyptiennes.',
-              arabic: 'أي قسم يحب السياح زيارته؟ ⟶ يحبون زيارة قسم الآثار المصرية.'
-            },
-            {
-              french: 'Qu\'est-ce que la pyramide de verre nous rappelle ? ⟶ Elle rappelle les grandes pyramides d\'Égypte.',
-              arabic: 'ماذا تذكرنا به الهرم الزجاجي؟ ⟶ يذكرنا بأهرامات مصر العظيمة.'
-            }
+            { french: 'Chez qui sont les amis ? - Chez Gamal.', arabic: 'عند من يجتمع الأصدقاء؟ - عند جمال.', note: 'Chez + Nom = في بيت أو مكان الشخص' },
+            { french: 'Quel âge a Gamal ? - Il a 14 ans.', arabic: 'كم عمر جمال؟ - 14 سنة.', note: 'مع العمر نستخدم فعل Avoir' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 12 و 13 بالكتاب',
-          descriptionAr: 'أجب عن أسئلة الفهم القرائي:',
+          titleAr: 'تمارين الفهم والاستيعاب (5 أسئلة تفاعلية)',
+          descriptionAr: 'أجب بحسب ما قرأت في النص:',
           questions: [
             {
-              id: 'q_u1_louvre_1',
+              id: 'u1_t_q1',
               type: 'multiple-choice',
-              instruction: 'صفحة 12 (سؤال A-1): Ce document est ..........',
-              prompt: 'Ce document est :',
-              options: ['un article', 'un dialogue', 'une conversation téléphonique'],
-              correctAnswer: 'un article',
-              explanation: 'النص عبارة عن مقال وصفي تعريفي.'
+              instruction: 'D\'après le texte :',
+              prompt: '1. Pourquoi les amis sont-ils réunis chez Gamal ?',
+              options: ['Pour étudier', 'Pour fêter son anniversaire', 'Pour regarder un match'],
+              correctAnswer: 'Pour fêter son anniversaire',
+              explanation: 'اجتمع الأصدقاء في منزل جمال للاحتفال بعيد ميلاده.'
             },
             {
-              id: 'q_u1_louvre_2',
+              id: 'u1_t_q2',
               type: 'multiple-choice',
-              instruction: 'صفحة 12 (سؤال A-2): Ce texte parle du ..........',
-              prompt: 'Ce texte parle du :',
-              options: ['musée du Louvre', 'musée égyptien', 'musée El Mountazah'],
-              correctAnswer: 'musée du Louvre',
-              explanation: 'النص يتحدث عن متحف اللوفر بباريس.'
+              instruction: 'D\'après le texte :',
+              prompt: '2. Qu\'est-ce que Suzanne apporte ?',
+              options: ['Un gâteau', 'Un bouquet de fleurs', 'Une montre'],
+              correctAnswer: 'Un bouquet de fleurs',
+              explanation: 'أحضرت سوزان باقة زهور جميلة لجمال.'
             },
             {
-              id: 'q_u1_louvre_3',
+              id: 'u1_t_q3',
               type: 'multiple-choice',
-              instruction: 'صفحة 13 (سؤال B-1): Mets Vrai ou Faux :',
-              prompt: 'Le musée du Louvre n\'est pas grand.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ فالنص يذكر "c\'est un grand musée".'
+              instruction: 'D\'après le texte :',
+              prompt: '3. Quel âge a Gamal ?',
+              options: ['12 ans', '14 ans', '16 ans'],
+              correctAnswer: '14 ans',
+              explanation: 'عمر جمال 14 سنة كما ورد في النص (quatorze bougies).'
             },
             {
-              id: 'q_u1_louvre_4',
+              id: 'u1_t_q4',
+              type: 'true-false',
+              instruction: 'Mets Vrai ou Faux :',
+              prompt: '4. La fête a lieu au club.',
+              options: ['Vrai', 'Faux'],
+              correctAnswer: 'Faux',
+              explanation: 'خطأ؛ الحفلة أقيمت في منزل جمال (chez Gamal / à la maison).'
+            },
+            {
+              id: 'u1_t_q5',
               type: 'multiple-choice',
-              instruction: 'صفحة 13 (سؤال B-4): Mets Vrai ou Faux :',
-              prompt: 'Les grandes pyramides d\'Égypte sont en verre.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ أهرامات مصر من الحجارة، بينما هرم اللوفر هو الذي من الزجاج.'
+              instruction: 'D\'après le texte :',
+              prompt: '5. Qui a préparé le gâteau d\'anniversaire ?',
+              options: ['Suzanne', 'La mère de Gamal', 'Jean'],
+              correctAnswer: 'La mère de Gamal',
+              explanation: 'والدة جمال هي من أعدت الكعكة الشهية.'
             }
           ]
         },
         corriger: {
-          titleAr: 'تصحيح الفهم',
-          descriptionAr: 'تأكد من عدم الخلط بين هرم مصر وهرم اللوفر:',
+          titleAr: 'تصحيح الأخطاء الشائعة في الفهم',
+          descriptionAr: 'انتبه للتفاصيل التالية:',
           commonMistakes: [
             {
-              mistake: 'الاعتقاد بأن جميع زوار اللوفر مصريون فقط.',
-              correction: 'On voit des touristes de toutes les nationalités.',
-              why: 'يزور اللوفر سياح من مختلف دول العالم (مصر، اليابان، إسبانيا، أمريكا).'
+              mistake: 'Gamal est invité.',
+              correction: 'Gamal invite ses amis.',
+              why: 'جمال هو الداعي وصاحب عيد الميلاد وليس المدعو.'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_u1_louvre_rem_1',
+              id: 'u1_t_rem',
               type: 'multiple-choice',
-              instruction: 'صفحة 13 (سؤال B-5): On passe sous une pyramide de verre pour entrer au musée du Louvre.',
-              prompt: 'هل العبارة صحيحة أم خاطئة؟',
-              options: ['Vrai (صح)', 'Faux (خطأ)'],
-              correctAnswer: 'Vrai (صح)',
-              explanation: 'صحيح؛ يمر الزوار تحت الهرم الزجاجي للدخول.'
+              instruction: 'Choisis :',
+              prompt: 'Chez qui les amis passent-ils la soirée ?',
+              options: ['Chez Gamal', 'Chez Jean', 'Au restaurant'],
+              correctAnswer: 'Chez Gamal',
+              explanation: 'السهرة كانت في منزل جمال.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي استيعاب النص',
-          descriptionAr: 'أجب خلال 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي الفهم السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_u1_louvre_1',
+              id: 'u1_t_def',
               type: 'multiple-choice',
-              instruction: 'ما هو القسم الأكثر زيارة باللوفر؟',
-              prompt: 'La section la plus aimée par les touristes est :',
-              options: ['la section des antiquités égyptiennes', 'la section romaine', 'la section moderne'],
-              correctAnswer: 'la section des antiquités égyptiennes',
-              explanation: 'قسم الآثار المصرية.'
+              instruction: 'Cadeau de Jean :',
+              prompt: 'Jean offre .......... à Gamal.',
+              options: ['un livre', 'des fleurs', 'un ballon'],
+              correctAnswer: 'un livre',
+              explanation: 'قدم جان كتاب لغة فرنسية هدية لجمال.'
             }
           ]
         }
       }
     },
     {
-      id: 'u1-musee-egyptien',
+      id: 'u1-situations-prod',
       unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
+      unitTitle: 'Unité (1) - Invitation',
+      unitTitleAr: 'الوحدة الأولى (دعوة)',
       order: 2,
-      title: 'Texte: Le Musée Égyptien',
-      titleAr: 'نص الفهم والاستيعاب: المتحف المصري بالقاهرة',
-      subtitleFr: 'Compréhension du texte & Auguste Mariette',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحة 14',
+      title: 'Situations & Présente ta famille',
+      titleAr: 'مواقف قبول ورفض الدعوة والتعبير الكتابي: قدّم أسرتك',
+      subtitleFr: 'Accepter / Refuser une invitation & Production écrite (p. 15 - 16)',
+      estimatedMinutes: 16,
+      bookletPages: 'صفحة 15 - 16',
       stages: {
         comprendre: {
-          titleAr: 'اقرأ واستوعب نص المتحف المصري (صفحة 14)',
-          summaryAr: 'تاريخ المتحف المصري: تأسيسه عام 1858 ببولاق على يد عالم المصريات أوجست مارييت، وانتقاله لميدان التحرير 1902، واحتواؤه على 100,000 قطعة أثرية ومومياء رمسيس الثاني وكنوز توت عنخ آمون.',
+          titleAr: 'تعبيرات قبول ورفض الدعوة وموضوع الأسرة',
+          summaryAr: 'تعلم كيف تدعو شخصاً، وكيف تقبل الدعوة أو ترفضها بلباقة، مع كتابة موضوع متكامل لتقديم أفراد الأسرة ومهنهم.',
           grammarPoints: [
             {
-              title: 'النص الأصلي (صفحة 14)',
-              ruleAr: 'L\'Égypte est un pays intéressant pour les touristes. Il y a beaucoup de monuments à visiter au Caire : les musées, les pyramides, le sphinx, la citadelle, l\'opéra et la Tour du Caire. Aussi on peut visiter le musée Gréco-romain à Alexandrie. On prend comme exemple le musée Égyptien ; C\'est un musée très riche en œuvres d\'art. Il a été fondé en 1858 à Boulak par l\'égyptologue français Auguste Mariette. Le bâtiment actuel, construit en 1902, se trouve à la place El Tahrir près du Nil. Les livres d\'histoires disent que ce musée est un monde fascinant. On y trouve cent mille (100,000) objets qui nous parlent de la civilisation de l\'Egypte des pharaons : des statues, des sculptures, des peintures. Ce musée renferme la momie de Ramsès II, les trésors de Tout Ank-Amon, ainsi que d\'autres trésors qui racontent comment se déroulait la vie quotidienne des pharaons au bord du Nil.',
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'أهم التواريخ والشخصيات',
-          descriptionAr: 'احفظ هذه الحقائق للامتحان:',
-          examples: [
-            { french: '1858 : Fondation à Boulak par Auguste Mariette', arabic: '1858: التأسيس في بولاق على يد أوجست مارييت' },
-            { french: '1902 : Le bâtiment actuel à la place El Tahrir', arabic: '1902: المبنى الحالي بميدان التحرير' },
-            { french: '100 000 objets de la civilisation pharaonique', arabic: '100 ألف قطعة من الحضارة الفرعونية' },
-            { french: 'La momie de Ramsès II et les trésors de Tout Ank-Amon', arabic: 'مومياء رمسيس الثاني وكنوز توت عنخ آمون' }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 14 بالكتاب',
-          descriptionAr: 'أجب عن أسئلة صح وخطأ والتوصيل:',
-          questions: [
-            {
-              id: 'q_u1_egy_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 14 (سؤال 1-a): Mets Vrai ou Faux :',
-              prompt: 'C\'est un Égyptien qui a fondé le musée du Caire.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ الذي أسسه هو عالم المصريات الفرنسي أوجست مارييت (Auguste Mariette).'
-            },
-            {
-              id: 'q_u1_egy_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 14 (سؤال 1-b): Mets Vrai ou Faux :',
-              prompt: 'Le musée Égyptien se trouve à la place El Tahrir.',
-              options: ['Vrai (صح)', 'Faux (خطأ)'],
-              correctAnswer: 'Vrai (صح)',
-              explanation: 'صحيح؛ يقع بميدان التحرير قرب النيل.'
-            },
-            {
-              id: 'q_u1_egy_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 14 (سؤال 1-c): Mets Vrai ou Faux :',
-              prompt: 'Le Musée Gréco-romain renferme la momie de Ramsès II.',
-              options: ['Faux (خطأ)', 'Vrai (صح)'],
-              correctAnswer: 'Faux (خطأ)',
-              explanation: 'خطأ؛ المتحف المصري بالقاهرة هو الذي يضم مومياء رمسيس الثاني.'
-            },
-            {
-              id: 'q_u1_egy_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 14 (سؤال II-Associe): En 1902, le musée actuel ..........',
-              prompt: 'En 1902, le musée actuel :',
-              options: ['a été installé à la place El Tahrir.', 'beaucoup d\'œuvres d\'art.', 'montrent la vie des égyptiens.'],
-              correctAnswer: 'a été installé à la place El Tahrir.',
-              explanation: 'تم تشييده بميدان التحرير في عام 1902.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'تأكيد المعلومات التاريخية',
-          descriptionAr: 'فرق بين تاريخ التأسيس وتاريخ مبنى التحرير:',
-          commonMistakes: [
-            {
-              mistake: 'الاعتقاد بأن المتحف تأسس في ميدان التحرير عام 1858.',
-              correction: 'تأسس في بولاق عام 1858 ثم انتقل لمبنى التحرير عام 1902.',
-              why: 'أوجست مارييت بدأ المتحف في بولاق أولاً.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u1_egy_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 14: أين يوجد المتحف اليوناني الروماني؟',
-              prompt: 'Le musée Gréco-romain se trouve à :',
-              options: ['Alexandrie', 'Le Caire', 'Louxor'],
-              correctAnswer: 'Alexandrie',
-              explanation: 'يقع في الإسكندرية (Alexandrie).'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي معلومات المتحف المصري',
-          descriptionAr: 'أجب خلال 45 ثانية:',
-          timeLimitSeconds: 45,
-          challengeQuestions: [
-            {
-              id: 'def_u1_egy_1',
-              type: 'multiple-choice',
-              instruction: 'كم عدد القطع الأثرية في المتحف المصري؟',
-              prompt: 'Combien d\'objets trouve-t-on dans le musée ?',
-              options: ['Cent mille (100,000)', 'Dix mille (10,000)', 'Un million'],
-              correctAnswer: 'Cent mille (100,000)',
-              explanation: '100,000 قطعة أثرية.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'u1-pronoms-personnels',
-      unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
-      order: 3,
-      title: 'Les Pronoms Personnels',
-      titleAr: 'الضمائر الشخصية: الفاعل، المفعول المباشر وغير المباشر، وضمير المكان Y',
-      subtitleFr: 'Sujet, C.O.D (le/la/l\'/les), C.O.I (lui/leur), Lieu (Y)',
-      estimatedMinutes: 20,
-      bookletPages: 'صفحات 15، 16، 17، 18، 19، 51، 52',
-      stages: {
-        comprendre: {
-          titleAr: 'قاعدة الضمائر الشخصية بالكامل (صفحات 15-17)',
-          summaryAr: 'تستخدم الضمائر الشخصية لتجنب تكرار الكلمات في الجملة.',
-          grammarPoints: [
-            {
-              title: '1. ضمائر الفاعل (Pronoms Sujets - صفحة 15)',
-              ruleAr: 'Il (مفرد مذكر: Ali, le sac)، Elle (مفرد مؤنث: Alice, une gomme)، Nous (اسم + moi: Ali et moi)، Vous (اسم + toi: Ali et toi)، Ils (جمع مذكر: Les garçons)، Elles (جمع مؤنث: Les filles).',
-            },
-            {
-              title: '2. ضمائر المفعول المباشر (C.O.D - صفحة 16)',
-              ruleAr: 'مفعول مباشر غير مسبوق بحرف جر:',
-              details: [
-                'Le ⟶ مفرد مذكر (Il regarde le match ⟶ Il le regarde)',
-                'La ⟶ مفرد مؤنث (Il regarde la télé ⟶ Il la regarde)',
-                'L\' ⟶ مفرد مذكر/مؤنث أمام فعل يبدأ بحرف متحرك (Tu aimes ton frère ⟶ Tu l\'aimes)',
-                'Les ⟶ جمع بنوعيه (Elle donne les fleurs ⟶ Elle les donne)'
-              ]
-            },
-            {
-              title: '3. ضمائر المفعول غير المباشر العاقل (C.O.I - صفحة 17)',
-              ruleAr: 'مسبوق بحرف الجر (à, au, à la, aux) + شخص / عاقل:',
-              details: [
-                'lui ⟶ للمفرد المذكر أو المؤنث (Je parle à mon ami ⟶ Je lui parle / à sa mère ⟶ lui)',
-                'leur ⟶ للجمع بنوعيه (Il téléphone à ses amis ⟶ Il leur téléphone / aux professeurs ⟶ leur)'
-              ]
-            },
-            {
-              title: '4. ضمير المكان (Y - C.C.L - صفحة 17)',
-              ruleAr: 'يعوض مفعول مكان مسبوق بـ (à, au, aux, dans, chez, en):',
-              details: [
-                'Je vais à l\'école ⟶ J\'y vais.',
-                'Nous partons à Paris ⟶ Nous y partons.',
-                'Les filles jouent dans la cour ⟶ Les filles y jouent.'
-              ]
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'أمثلة توضيحية من تدريبات الكتاب',
-          descriptionAr: 'شاهد تحويل المفعول إلى ضمير:',
-          examples: [
-            { french: 'Ali téléphone à son ami. ⟶ Ali lui téléphone.', arabic: 'علي يتصل بصديقه. ⟶ علي يتصل به (lui).' },
-            { french: 'Je regarde ce film. ⟶ Je le regarde.', arabic: 'أنا أشاهد هذا الفيلم. ⟶ أنا أشاهده (le).' },
-            { french: 'Ali et moi allons à l\'école. ⟶ Nous y allons.', arabic: 'علي وأنا نذهب للمدرسة. ⟶ نحن نذهب إليها.' },
-            { french: 'Mona va écrire à ses parents. ⟶ Mona va leur écrire.', arabic: 'منى ستكتب لوالديها. ⟶ منى ستكتب لهما (leur).' }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 18 و 19 و 51 بالكتاب',
-          descriptionAr: 'استبدل الكلمات المحددة بالضمير المناسب:',
-          questions: [
-            {
-              id: 'q_u1_pr_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 18 (سؤال 1): استبدل (à son ami) بضمير:',
-              prompt: 'Ali téléphone à son ami. ⟶ Ali .......... téléphone.',
-              options: ['lui', 'le', 'y'],
-              correctAnswer: 'lui',
-              explanation: 'à + شخص مفرد ⟶ lui.'
-            },
-            {
-              id: 'q_u1_pr_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 18 (سؤال 2): استبدل (ce film) بضمير:',
-              prompt: 'Je regarde ce film. ⟶ Je .......... regarde.',
-              options: ['le', 'lui', 'la'],
-              correctAnswer: 'le',
-              explanation: 'ce film مفعول مباشر مفرد مذكر ⟶ le.'
-            },
-            {
-              id: 'q_u1_pr_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 18 (سؤال 4): استبدل (au club) بضمير:',
-              prompt: 'Nous allons au club. ⟶ Nous .......... allons.',
-              options: ['y', 'le', 'lui'],
-              correctAnswer: 'y',
-              explanation: 'au club اسم مكان مسبوق بحرف جر ⟶ Y.'
-            },
-            {
-              id: 'q_u1_pr_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 18 (سؤال 6): استبدل (à ses parents) بضمير:',
-              prompt: 'Mona va écrire à ses parents. ⟶ Mona va .......... écrire.',
-              options: ['leur', 'les', 'lui'],
-              correctAnswer: 'leur',
-              explanation: 'à + اسم جمع عاقل ⟶ leur.'
-            },
-            {
-              id: 'q_u1_pr_5',
-              type: 'multiple-choice',
-              instruction: 'صفحة 19 (سؤال 12): استبدل (Karim / la citadelle):',
-              prompt: 'Karim visite la citadelle. ⟶ Il .......... visite.',
-              options: ['la', 'lui', 'l\''],
-              correctAnswer: 'la',
-              explanation: 'la citadelle مفرد مؤنث مباشر ⟶ la.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'الفرق بين le/la و lui/leur',
-          descriptionAr: 'قاعدة ذهبية لعدم الخلط:',
-          commonMistakes: [
-            {
-              mistake: 'استخدام les بدلاً من leur مع الأفعال التي تأخذ حرف الجر à (مثل téléphoner à, parler à).',
-              correction: 'Je leur parle (وليس Je les parle).',
-              why: 'أفعال الحديث والاتصال تأخذ حرف الجر à + شخص، لذا نستخدم lui أو leur.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u1_pr_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 51 (سؤال 6): Ils parlent aux parents.',
-              prompt: 'Ils .......... parlent.',
-              options: ['leur', 'les', 'lui'],
-              correctAnswer: 'leur',
-              explanation: 'parler à + جمع عاقل ⟶ leur.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي الضمائر الشخصية',
-          descriptionAr: 'أجب خلال 60 ثانية:',
-          timeLimitSeconds: 60,
-          challengeQuestions: [
-            {
-              id: 'def_u1_pr_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 18 (سؤال 9): Mona est allée aux pyramides.',
-              prompt: 'Mona .......... est allée.',
-              options: ['y', 'les', 'leur'],
-              correctAnswer: 'y',
-              explanation: 'aux pyramides مكان ⟶ Y.'
-            },
-            {
-              id: 'def_u1_pr_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 19 (سؤال 13): Mona prend ses cahiers.',
-              prompt: 'Mona .......... prend.',
-              options: ['les', 'leur', 'des'],
-              correctAnswer: 'les',
-              explanation: 'ses cahiers مفعول به جمع مباشر ⟶ les.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'u1-adjectifs-possessifs',
-      unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
-      order: 4,
-      title: 'Les Adjectifs Possessifs',
-      titleAr: 'صفات الملكية وقاعدة الاسم المؤنث البادئ بمتحرك',
-      subtitleFr: 'Mon/Ma/Mes, Ton/Ta/Tes, Son/Sa/Ses, Notre, Votre, Leur',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 20 و 21',
-      stages: {
-        comprendre: {
-          titleAr: 'جدول صفات الملكية (صفحة 20)',
-          summaryAr: 'تحدد صفة الملكية حسب المالك (الضمير الفاعل) والمملوك (مذكر / مؤنث / جمع).',
-          grammarPoints: [
-            {
-              title: 'جدول صفات الملكية الكامل (صفحة 20)',
-              ruleAr: 'صفات الملكية بحسب الفاعل:',
+              title: '1. توجيه وقبول ورفض الدعوة (L\'invitation)',
+              ruleAr: 'تعبيرات أساسية مقررة في امتحانات الصف الثاني:',
               table: {
-                headers: ['الضمير (المالك)', 'مفرد مذكر + مبدوء بمتحرك', 'مفرد مؤنث', 'جمع بنوعيه'],
+                headers: ['الموقف', 'التعبير الفرنسي', 'المعنى بالعربية'],
                 rows: [
-                  ['Je', 'Mon', 'Ma', 'Mes'],
-                  ['Tu', 'Ton', 'Ta', 'Tes'],
-                  ['Il / Elle', 'Son', 'Sa', 'Ses'],
-                  ['Nous', 'Notre', 'Notre', 'Nos'],
-                  ['Vous', 'Votre', 'Votre', 'Vos'],
-                  ['Ils / Elles', 'Leur', 'Leur', 'Leurs']
+                  ['Pour inviter (للدعوة)', 'Je t\'invite à mon anniversaire.', 'أدعوك لحضور عيد ميلادي.'],
+                  ['Pour accepter (لقبول الدعوة)', 'Avec grand plaisir ! / D\'accord, je viens.', 'بكل سرور! / موافق، سآتي.'],
+                  ['Pour refuser (لرفض والاعتذار)', 'Pardon, je ne peux pas, je suis occupé/malade.', 'عذراً، لا أستطيع، أنا مشغول/مريض.'],
+                  ['Pour féliciter (للتهنئة)', 'Joyeux anniversaire ! / Bon anniversaire !', 'عيد ميلاد سعيد!']
                 ]
               }
             },
             {
-              title: 'ملاحظة هامة جداً (N.B - صفحة 20)',
-              ruleAr: 'إذا كان الاسم المفرد المؤنث يبدأ بحرف متحرك، نستخدم (Mon, Ton, Son) بدلاً من (Ma, Ta, Sa) لمنع التقاء حرفين متحركين:',
+              title: '2. موضوع التعبير: قدّم أسرتك (Présente ta famille)',
+              ruleAr: 'عناصر الموضوع: الاسم، الأب ومهنته، الأم ومهنتها، الإخوة والأخوات.',
               details: [
-                'école (مؤنث) ⟶ Mon école / Ton école / Son école',
-                'amie (مؤنث) ⟶ Mon amie / Ton amie / Son amie'
+                'Je m\'appelle Gamal, j\'ai 14 ans.',
+                'Mon père s\'appelle Ali, il est médecin à l\'hôpital.',
+                'Ma mère s\'appelle Mona, elle est professeur de français.',
+                'J\'ai un frère (Sami) et une sœur (Sara).',
+                'Nous habitons au Caire dans un bel appartement.'
               ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أمثلة من تدريبات صفحة 21 بالكتاب',
-          descriptionAr: 'لاحظ مطابقة صفة الملكية:',
+          titleAr: 'نماذج مواقف واقعية',
+          descriptionAr: 'لاحظ كيف تختار الرد الأنسب بحسب المطلوب:',
           examples: [
-            { french: 'Je donne ma gomme à mon frère.', arabic: 'أنا أعطي ممحاتي (مؤنث: ma) لأخي (مذكر: mon).' },
-            { french: 'Il montre son cahier à son professeur.', arabic: 'هو يري كشكوله لمعلمه.' },
-            { french: 'Nous aimons notre professeur et nos parents.', arabic: 'نحن نحب معلمنا (مفرد: notre) ووالدينا (جمع: nos).' },
-            { french: 'Il va à son école avec sa sœur.', arabic: 'هو يذهب إلى مدرسته (son école لأنها تبدأ بمتحرك) مع أخته (sa sœur).' }
+            { french: 'Ton ami t\'invite et tu refuses, tu dis : Désolé, je suis malade.', arabic: 'صديقك يدعوك وأنت ترفض: عذراً، أنا مريض.', note: 'Refuser = عذر أو اعتذار' },
+            { french: 'Tu félicites ton ami : Bon anniversaire !', arabic: 'تهنئ صديقك: عيد ميلاد سعيد!', note: 'Féliciter = تهنئة' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 21 بالكتاب',
-          descriptionAr: 'اختر صفة الملكية الصحيحة:',
-          questions: [
-            {
-              id: 'q_u1_adj_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 21 (سؤال 2): Tu dois prendre .......... veste, il fait froid.',
-              prompt: 'Tu dois prendre .......... veste.',
-              options: ['ta', 'ton', 'tes'],
-              correctAnswer: 'ta',
-              explanation: 'veste مفرد مؤنث مع Tu ⟶ ta.'
-            },
-            {
-              id: 'q_u1_adj_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 21 (سؤال 3): Vous respectez .......... professeur.',
-              prompt: 'Vous respectez .......... professeur.',
-              options: ['votre', 'vos', 'leur'],
-              correctAnswer: 'votre',
-              explanation: 'professeur مفرد مع Vous ⟶ votre.'
-            },
-            {
-              id: 'q_u1_adj_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 21 (سؤال 14): Il va à .......... école avec .......... sœur.',
-              prompt: 'Il va à .......... école.',
-              options: ['son', 'sa', 'ses'],
-              correctAnswer: 'son',
-              explanation: 'école مفرد مؤنث يبدأ بمتحرك ⟶ son.'
-            },
-            {
-              id: 'q_u1_adj_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 21 (سؤال 8): Les amis ont pris .......... billets.',
-              prompt: 'Les amis ont pris .......... billets.',
-              options: ['leurs', 'leur', 'ses'],
-              correctAnswer: 'leurs',
-              explanation: 'Les amis = Ils + billets جمع ⟶ leurs.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'تجنب خطأ Ma école و Sa amie',
-          descriptionAr: 'انتبه للنقطة الأكثر تكراراً في الامتحانات:',
-          commonMistakes: [
-            {
-              mistake: 'كتابة ma école أو sa amie.',
-              correction: 'mon école / son amie.',
-              why: 'لأن الكلمتين تبدآن بحرف متحرك (é / a) فتتحول ma/ta/sa إلى mon/ton/son.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u1_adj_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 21: C\'est mon amie.',
-              prompt: 'Ali parle à .......... amie.',
-              options: ['son', 'sa', 'ses'],
-              correctAnswer: 'son',
-              explanation: 'amie مؤنث مبدوء بحرف متحرك ⟶ son.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي صفات الملكية',
-          descriptionAr: 'أجب خلال 45 ثانية:',
-          timeLimitSeconds: 45,
-          challengeQuestions: [
-            {
-              id: 'def_u1_adj_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 21 (سؤال 10): Nous prenons .......... petit-déjeuner avec .......... parents.',
-              prompt: 'avec .......... parents.',
-              options: ['nos', 'notre', 'vos'],
-              correctAnswer: 'nos',
-              explanation: 'parents جمع مع nous ⟶ nos.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'u1-verbes-pronominaux',
-      unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
-      order: 5,
-      title: 'Les Verbes Pronominaux',
-      titleAr: 'الأفعال ذات الضميرين وتصريفها ونفيها',
-      subtitleFr: 'Se + verbe (se lever, se coucher, s\'habiller...)',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 22 و 23',
-      stages: {
-        comprendre: {
-          titleAr: 'تصريف الأفعال ذات الضميرين (صفحة 22)',
-          summaryAr: 'الفعل ذو الضميرين يسبق مصدره بالضمير (se / s\') ويتغير ضمير المفعول حسب الفاعل.',
-          grammarPoints: [
-            {
-              title: 'ضمائر المفعول المنعكسة مع الفاعل',
-              ruleAr: 'Je ⟶ me (m\') | Tu ⟶ te (t\') | Il/Elle/On ⟶ se (s\') | Nous ⟶ nous | Vous ⟶ vous | Ils/Elles ⟶ se (s\')',
-              table: {
-                headers: ['الضمير', 'تصريف Se promener (يتنزه)'],
-                rows: [
-                  ['Je', 'me promène'],
-                  ['Tu', 'te promènes'],
-                  ['Il / Elle / On', 'se promène'],
-                  ['Nous', 'nous promenons'],
-                  ['Vous', 'vous promenez'],
-                  ['Ils / Elles', 'se promènent']
-                ]
-              }
-            },
-            {
-              title: 'صيغة النفي للأفعال ذات الضميرين (صفحة 22)',
-              ruleAr: 'نضع ضمير المفعول والفعل معاً بين طرفي النفي ne ... pas:',
-              details: [
-                'Ex: Les filles ne se promènent pas seules. (البنات لا يتنزهن بمفردهن)'
-              ]
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'أمثلة الأفعال من الكتاب (صفحة 22)',
-          descriptionAr: 'أشهر الأفعال المقررة:',
-          examples: [
-            { french: 's\'appeler (يُسمى / يُدعى)', arabic: 'Je m\'appelle Ali.' },
-            { french: 'se lever (يستيقظ / ينهض)', arabic: 'Chaque jour, je me lève tôt.' },
-            { french: 's\'habiller (يرتدي ملابسه)', arabic: 'Je m\'habille, puis je prends le petit-déjeuner.' },
-            { french: 'se tromper (يخطئ)', arabic: 'Vous vous trompez de numéro.' },
-            { french: 'se coucher (ينام)', arabic: 'Mon frère se couche à 9h du soir.' }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 23 بالكتاب',
-          descriptionAr: 'اختر التصريف الصحيح:',
-          questions: [
-            {
-              id: 'q_u1_vp_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 23 (سؤال 1): Chaque jour, je .......... tôt.',
-              prompt: 'Chaque jour, je .......... tôt.',
-              options: ['me lève', 'se lève', 'se lever'],
-              correctAnswer: 'me lève',
-              explanation: 'مع Je نأخذ me lève.'
-            },
-            {
-              id: 'q_u1_vp_2',
-              type: 'multiple-choice',
-              instruction: 'صفحة 23 (سؤال 2): Vous .......... de numéro.',
-              prompt: 'Vous .......... de numéro.',
-              options: ['vous trompez', 'me trompe', 'nous trompons'],
-              correctAnswer: 'vous trompez',
-              explanation: 'مع Vous نأخذ vous trompez.'
-            },
-            {
-              id: 'q_u1_vp_3',
-              type: 'multiple-choice',
-              instruction: 'صفحة 23 (سؤال 4): Je .......... , puis je prends le petit-déjeuner.',
-              prompt: 'Je .......... , puis je prends le petit-déjeuner.',
-              options: ['m’habille', 't’habilles', 's’habille'],
-              correctAnswer: 'm’habille',
-              explanation: 'مع Je أمام متحرك ⟶ m’habille.'
-            },
-            {
-              id: 'q_u1_vp_4',
-              type: 'multiple-choice',
-              instruction: 'صفحة 23 (سؤال 6): Tu .......... les dents chaque matin?',
-              prompt: 'Tu .......... les dents chaque matin?',
-              options: ['te brosses', 'me brosse', 'vous brossez'],
-              correctAnswer: 'te brosses',
-              explanation: 'مع Tu نأخذ te brosses.'
-            }
-          ]
-        },
-        corriger: {
-          titleAr: 'تجنب خلط الضمير المنعكس',
-          descriptionAr: 'انتبه لتوافق الفاعل والضمير المنعكس:',
-          commonMistakes: [
-            {
-              mistake: 'قول Je se lève أو Ali te couche.',
-              correction: 'Je me lève / Ali se couche.',
-              why: 'يجب أن يتطابق الضمير المنعكس دائماً مع فاعل الجملة.'
-            }
-          ],
-          remedialQuestions: [
-            {
-              id: 'q_u1_vp_rem_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 23 (سؤال 8): Nous .......... de route.',
-              prompt: 'Nous .......... de route.',
-              options: ['nous trompons', 'vous trompez', 'se trompent'],
-              correctAnswer: 'nous trompons',
-              explanation: 'مع Nous نكرر الضمير ⟶ nous nous trompons.'
-            }
-          ]
-        },
-        defi: {
-          titleAr: 'تحدي الأفعال ذات الضميرين',
-          descriptionAr: 'أجب خلال 45 ثانية:',
-          timeLimitSeconds: 45,
-          challengeQuestions: [
-            {
-              id: 'def_u1_vp_1',
-              type: 'multiple-choice',
-              instruction: 'صفحة 23 (سؤال 5): Aujourd’hui, Ali .......... au directeur.',
-              prompt: 'Ali .......... au directeur de l\'école.',
-              options: ['se présente', 'se présenter', 'se présentent'],
-              correctAnswer: 'se présente',
-              explanation: 'Ali = Il ⟶ se présente.'
-            }
-          ]
-        }
-      }
-    },
-    {
-      id: 'u1-situations',
-      unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
-      order: 6,
-      title: 'Situations de l\'Unité 1',
-      titleAr: 'مواقف الحياة اليومية والتواصل - الوحدة الأولى',
-      subtitleFr: 'Choisis la bonne réponse (Demander, proposer, quitter...)',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 24 و 25',
-      stages: {
-        comprendre: {
-          titleAr: 'كيف تجيب عن سؤال المواقف في الامتحان؟ (صفحات 24-25)',
-          summaryAr: 'انتبه للمتحدث والمطلوب: هل أنت من تسأل (Tu demandes) وماذا تقول (Tu dis) أو ماذا يرد الطرف الآخر (Il dit)؟',
-          grammarPoints: [
-            {
-              title: 'مفاتيح حل سؤال المواقف',
-              ruleAr: 'مفاهيم هامة:',
-              details: [
-                'Tu demandes le lieu de la gare ⟶ Où est la gare? (سؤال عن المكان)',
-                'Tu demandes à ton ami pourquoi il va à Paris ⟶ Pour visiter les monuments (إجابة بالسبب)',
-                'Tu proposes de visiter le musée ⟶ Si on visitait le musée? (اقتراح)',
-                'Pour quitter quelqu\'un ⟶ Au revoir monsieur! (وداع / انصراف)',
-                'Tu demandes la nationalité ⟶ Quelle est votre nationalité? (سؤال عن الجنسية)',
-                'Pour voir des sculptures ⟶ Je vais au musée (الغرض من الذهاب للمتحف)'
-              ]
-            }
-          ]
-        },
-        exemple: {
-          titleAr: 'أمثلة المواقف المحلولة',
-          descriptionAr: 'نماذج من امتحانات سابقة:',
-          examples: [
-            { french: 'Tu demandes à un passant le lieu de la gare, tu dis : "Où est la gare?"', arabic: 'تسأل عابراً عن مكان المحطة: "أين المحطة؟"' },
-            { french: 'Tu proposes à ton ami français de visiter le musée : "Si on visitait le musée?"', arabic: 'تقترح على صديقك زيارة المتحف: "ما رأيك لو زرنا المتحف؟"' },
-            { french: 'Pour quitter quelqu\'un tu dis : "Au revoir monsieur!"', arabic: 'لتوديع شخص ما تقول: "إلى اللقاء سيدي!"' }
-          ]
-        },
-        pratiquer: {
-          titleAr: 'تدريبات صفحة 24 و 25 بالكتاب',
+          titleAr: 'تدريبات المواقف والتعبير (7 أسئلة تفاعلية)',
           descriptionAr: 'اختر الإجابة الصحيحة لكل موقف:',
           questions: [
             {
-              id: 'q_u1_sit_1',
+              id: 'u1_sit_1',
               type: 'multiple-choice',
-              instruction: 'صفحة 24 (سؤال 1): Tu demandes à un passant le lieu de la gare , tu dis :',
-              prompt: 'Tu demandes à un passant le lieu de la gare , tu dis :',
-              options: ['Où est la gare?', 'La gare est grande.', 'La gare est près du musée.'],
-              correctAnswer: 'Où est la gare?',
-              explanation: 'لأنك أنت السائل (tu dis) فتطرح سؤالاً عن المكان: Où est la gare?'
+              instruction: 'Choisis la bonne réponse :',
+              prompt: '1. Tu invites ton ami français à visiter l\'Égypte, tu dis :',
+              options: [
+                'Je t\'invite à visiter mon pays l\'Égypte.',
+                'Pourquoi tu visites Paris ?',
+                'L\'Égypte est loin.'
+              ],
+              correctAnswer: 'Je t\'invite à visiter mon pays l\'Égypte.',
+              explanation: 'لتوجيه الدعوة نستخدم صيغة Je t\'invite à...'
             },
             {
-              id: 'q_u1_sit_2',
+              id: 'u1_sit_2',
               type: 'multiple-choice',
-              instruction: 'صفحة 24 (سؤال 2): Tu demandes à ton ami pourquoi il va à Paris , il dit :',
-              prompt: 'Tu demandes à ton ami pourquoi il va à Paris , il dit :',
-              options: ['Pour visiter les monuments, je les aime.', 'Je suis Italien.', 'J\'habite avec ma famille au Caire.'],
-              correctAnswer: 'Pour visiter les monuments, je les aime.',
-              explanation: 'الصديق يجيب بالسبب (il dit): Pour visiter les monuments.'
+              instruction: 'Choisis la bonne réponse :',
+              prompt: '2. Ton ami accepte ton invitation, il te dit :',
+              options: ['Avec plaisir, je viens.', 'Non, j\'ai un examen.', 'C\'est trop tard.'],
+              correctAnswer: 'Avec plaisir, je viens.',
+              explanation: 'تعبير القبول الشهير: Avec plaisir (بكل سرور).'
             },
             {
-              id: 'q_u1_sit_3',
+              id: 'u1_sit_3',
               type: 'multiple-choice',
-              instruction: 'صفحة 24 (سؤال 3): Tu proposes à ton ami français de visiter le musée, tu lui dis :',
-              prompt: 'Tu proposes à ton ami français de visiter le musée, tu lui dis :',
-              options: ['Si on visitait le musée ?', 'Où se trouve le musée ?', 'En Égypte, il y a plusieurs musées.'],
-              correctAnswer: 'Si on visitait le musée ?',
-              explanation: 'صيغة الاقتراح المشهورة: Si on + imparfait ⟶ Si on visitait le musée ?'
+              instruction: 'Choisis la bonne réponse :',
+              prompt: '3. Tu t\'excuses de ne pas aller à la fête, tu dis :',
+              options: [
+                'Pardon, je suis malade.',
+                'D\'accord, à quelle heure ?',
+                'Bonne fête !'
+              ],
+              correctAnswer: 'Pardon, je suis malade.',
+              explanation: 'للاعتذار والرفض تقدم سبباً: Pardon, je suis malade.'
             },
             {
-              id: 'q_u1_sit_4',
+              id: 'u1_sit_4',
               type: 'multiple-choice',
-              instruction: 'صفحة 25 (سؤال 7): Pour voir des sculptures, on dit :',
-              prompt: 'Pour voir des sculptures, on dit :',
-              options: ['Je vais au musée .', 'Je vais à l\'Opéra.', 'Je vais au stade .'],
-              correctAnswer: 'Je vais au musée .',
-              explanation: 'المنحوتات والآثار توجد في المتحف (au musée).'
+              instruction: 'Présentation de la famille :',
+              prompt: '4. Pour présenter la profession de ton père, tu dis :',
+              options: ['Mon père est médecin.', 'Mon père a 45 ans.', 'Mon père s\'appelle Samir.'],
+              correctAnswer: 'Mon père est médecin.',
+              explanation: 'السؤال عن المهنة (la profession) فنقول: il est médecin.'
+            },
+            {
+              id: 'u1_sit_5',
+              type: 'multiple-choice',
+              instruction: 'Complète la phrase de production :',
+              prompt: '5. Ma mère travaille au lycée, elle est ..........',
+              options: ['professeur', 'médecin', 'pharmacien'],
+              correctAnswer: 'professeur',
+              explanation: 'العمل في المدرسة الثانوية (au lycée) يدل على مهنة معلم (professeur).'
+            },
+            {
+              id: 'u1_sit_6',
+              type: 'multiple-choice',
+              instruction: 'Choisis le bon souhait :',
+              prompt: '6. C\'est le 1er janvier, tu dis à tes amis :',
+              options: ['Bonne année !', 'Bon appétit !', 'Bon voyage !'],
+              correctAnswer: 'Bonne année !',
+              explanation: 'في بداية العام الجديد في الأول من يناير نقول: Bonne année !'
+            },
+            {
+              id: 'u1_sit_7',
+              type: 'multiple-choice',
+              instruction: 'Fais une phrase avec (offrir - cadeau) :',
+              prompt: '7. Choisis la phrase correcte :',
+              options: [
+                'J\'offre un beau cadeau à mon ami.',
+                'Un cadeau offrir.',
+                'Moi offrir cadeau fête.'
+              ],
+              correctAnswer: 'J\'offre un beau cadeau à mon ami.',
+              explanation: 'الجملة الصحيحة نحوياً وتركيبياً: أقدم هدية جميلة لصديقي.'
             }
           ]
         },
         corriger: {
-          titleAr: 'الفرق بين Tu dis و Il dit',
-          descriptionAr: 'انتبه لمن يتحدث في نهاية الموقف:',
+          titleAr: 'تنبيهات أسئلة المواقف في الامتحان',
+          descriptionAr: 'حدد دائماً من المتحدث: هل أنت من تسأل (Tu demandes) أم أنت من تقول الإجابة (Tu dis)؟',
           commonMistakes: [
             {
-              mistake: 'اختيار جملة خبرية عندما ينتهي الموقف بـ tu demandes... tu dis (المطلوب سؤال).',
-              correction: 'انظر لآخر كلمتين في الموقف دائماً.',
-              why: 'إذا طلب tu dis ⟶ سؤال، وإذا طلب il dit ⟶ إجابة.'
+              mistake: 'Tu invites un ami, tu dis : Avec plaisir.',
+              correction: 'Tu invites un ami, tu dis : Je t\'invite chez moi.',
+              why: 'Avec plaisir يقولها الصديق المدعو عند القبول وليس الداعي.'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_u1_sit_rem_1',
+              id: 'u1_sit_rem',
               type: 'multiple-choice',
-              instruction: 'صفحة 25 (سؤال 8): Pour quitter quelqu’un tu dis :',
-              prompt: 'Pour quitter quelqu’un tu dis :',
-              options: ['Au revoir monsieur!', 'Attendez monsieur !', 'Merci monsieur !'],
-              correctAnswer: 'Au revoir monsieur!',
-              explanation: 'عند الانصراف والاستئذان نقول: Au revoir.'
+              instruction: 'Précise l\'action :',
+              prompt: 'Tu demandes à ton ami son âge, tu dis :',
+              options: ['Quel âge as-tu ?', 'J\'ai 14 ans.', 'Il a 15 ans.'],
+              correctAnswer: 'Quel âge as-tu ?',
+              explanation: 'أنت تسأله عن عمره فتسأله: Quel âge as-tu ?'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي المواقف السريع',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي الموقف السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_u1_sit_1',
+              id: 'u1_sit_def',
               type: 'multiple-choice',
-              instruction: 'صفحة 24 (سؤال 4): Un touriste demande à son guide à quelle heure le tour commence, le guide dit :',
-              prompt: 'Le guide dit :',
-              options: ['Le tour commence à 10 heures .', 'À quelle heure commence le tour ?', 'Le tour coûte 150 L.E.'],
-              correctAnswer: 'Le tour commence à 10 heures .',
-              explanation: 'المرشد يجيب عن موعد البداية.'
+              instruction: 'Réaction rapide :',
+              prompt: 'Ton ami t\'offre un cadeau, tu lui dis :',
+              options: ['Merci beaucoup !', 'Pardon.', 'Au revoir.'],
+              correctAnswer: 'Merci beaucoup !',
+              explanation: 'عند تلقي هدية تشكره وتقول: Merci beaucoup !'
             }
           ]
         }
       }
     },
     {
-      id: 'u1-lieux-personnages',
+      id: 'u1-grammaire-adjectifs-on',
       unitId: 'unite1',
-      unitTitle: 'Unité 1',
-      unitTitleAr: 'الوحدة الأولى',
-      order: 7,
-      title: 'Les Lieux et Les Personnages',
-      titleAr: 'الأماكن والشخصيات والمهن - أسئلة الإنتاج',
-      subtitleFr: 'Qui parle? Où vas-tu pour...? Qui peut faire ce travail?',
-      estimatedMinutes: 15,
-      bookletPages: 'صفحات 26 و 27',
+      unitTitle: 'Unité (1) - Invitation',
+      unitTitleAr: 'الوحدة الأولى (دعوة)',
+      order: 3,
+      title: 'Grammaire : Adjectifs Possessifs & Le Pronom "On"',
+      titleAr: 'صفات الملكية (وشرط المتحرك) + الضمير On',
+      subtitleFr: 'mon/ton/son, ma/ta/sa, mes/tes/ses + Règle de voyelle (p. 17 - 19)',
+      estimatedMinutes: 18,
+      bookletPages: 'صفحة 17 - 19',
       stages: {
         comprendre: {
-          titleAr: 'جدول الشخصيات والأماكن المقررة (صفحة 26)',
-          summaryAr: 'جدول شامل يربط كل شخصية بالمكان المرتبط بها وبالوظيفة التي تؤديها.',
+          titleAr: 'جدول صفات الملكية والقاعدة الذهبية للمتحرك',
+          summaryAr: 'تتبع صفة الملكية في الفرنسية الاسم المملوك من حيث التذكير والتأنيث والعدد، مع قاعدة هامة للمفرد المؤنث المبدوء بمتحرك.',
           grammarPoints: [
             {
-              title: 'جدول الشخصيات والأماكن (صفحة 26)',
-              ruleAr: 'الأزواج الأساسية المقررة:',
+              title: '1. جدول صفات الملكية (Les Adjectifs Possessifs)',
+              ruleAr: 'حسب المالك والمملوك:',
               table: {
-                headers: ['الشخصية (Le personnage)', 'المكان (Le lieu)'],
+                headers: ['المالك (Sujet)', 'مفرد مذكر (Masculin)', 'مفرد مؤنث (Féminin)', 'جمع بنوعيه (Pluriel)'],
                 rows: [
-                  ['un client (زبون) / un serveur', 'au restaurant / au café'],
-                  ['un guide (مرشد سياحي)', 'au musée'],
-                  ['un élève (تلميذ) / un professeur (معلم)', 'à l\'école / en classe'],
-                  ['un médecin (طبيب) / une infirmière / un malade', 'à l\'hôpital'],
-                  ['un pilote (طيار) / une hôtesse', 'à l\'aéroport'],
-                  ['un pharmacien (صيدلي)', 'à la pharmacie'],
-                  ['un guichetier (موظف شباك التذاكر)', 'au guichet / au cinéma / à la gare'],
-                  ['un mécanicien (ميكانيكي)', 'au garage'],
-                  ['un journaliste (صحفي)', 'au journal']
+                  ['Je (أنا)', 'mon (mon père, mon livre)', 'ma (ma mère, ma maison)', 'mes (mes parents, mes amis)'],
+                  ['Tu (أنتَ/أنتِ)', 'ton (ton frère, ton stylo)', 'ta (ta sœur, ta classe)', 'tes (tes cahiers)'],
+                  ['Il / Elle (هو/هي)', 'son (son oncle, son sac)', 'sa (sa tante, sa fête)', 'ses (ses invitations)'],
+                  ['Nous (نحن)', 'notre', 'notre', 'nos (nos amis)'],
+                  ['Vous (أنتم/حضرتك)', 'votre', 'votre', 'vos (vos devoirs)'],
+                  ['Ils / Elles (هم/هن)', 'leur', 'leur', 'leurs (leurs cadeaux)']
                 ]
               }
+            },
+            {
+              title: '2. القاعدة الذهبية لحرف المتحرك (Règle Fondamentale)',
+              ruleAr: 'إذا كان الاسم مفرد مؤنث يبدأ بحرف متحرك (a, e, i, o, u, y) أو h صامتة، نستخدم (mon / ton / son) بدلاً من (ma / ta / sa) لتفادي التقاء ساكنين:',
+              details: [
+                'amie (صديقة - مؤنث): نقول mon amie وليس ma amie.',
+                'école (مدرسة - مؤنث): نقول ton école وليس ta école.',
+                'adresse (عنوان - مؤنث): نقول son adresse وليس sa adresse.'
+              ]
+            },
+            {
+              title: '3. قاعدة الضمير "On"',
+              ruleAr: 'الضمير On يعني (نحن) أو (الناس) من حيث المعنى، ولكنه يُصرف دائماً مثل الضمير المفرد (Il / Elle):',
+              details: [
+                'On va au cinéma. (معناه نحن ذاهبون للسينما، وفعل va مصرف مع المفرد)',
+                'On mange le gâteau ensemble. (نأكل الكعكة معاً)'
+              ]
             }
           ]
         },
         exemple: {
-          titleAr: 'أنماط أسئلة الإنتاج في الامتحان (صفحة 27)',
-          descriptionAr: 'تعرف على الأسئلة الكلاسيكية:',
+          titleAr: 'أمثلة عملية لصفات الملكية والضمير On',
+          descriptionAr: 'دقق في مطابقة صفة الملكية:',
           examples: [
-            { french: 'Où vas-tu pour voir un film ? ⟶ Au cinéma.', arabic: 'أين تذهب لمشاهدة فيلم؟ ⟶ إلى السينما.' },
-            { french: 'Où vas-tu pour consulter le médecin ? ⟶ À l\'hôpital.', arabic: 'أين تذهب لاستشارة الطبيب؟ ⟶ إلى المستشفى.' },
-            { french: 'Qui parle : "Va au tableau" ? ⟶ Le professeur.', arabic: 'من المتحدث: "اذهب إلى السبورة"؟ ⟶ المعلم.' },
-            { french: 'Qui peut faire ce travail : Conduire l\'avion ? ⟶ Le pilote.', arabic: 'من يمكنه قيادة الطائرة؟ ⟶ الطيار.' }
+            { french: 'C\'est mon amie Suzanne.', arabic: 'هذه صديقتي سوزان.', note: 'استخدمنا mon لأن amie تبدأ بحرف متحرك a' },
+            { french: 'Gamal fête son anniversaire.', arabic: 'جمال يحتفل بعيد ميلاده.', note: 'anniversaire مذكر ومملوك لجمال (Il)' },
+            { french: 'À la fête, on chante tous.', arabic: 'في الحفلة، نغني جميعاً.', note: 'On أخذ تصريف المفرد chante (-e)' }
           ]
         },
         pratiquer: {
-          titleAr: 'تدريبات صفحة 27 بالكتاب',
-          descriptionAr: 'أجب عن أسئلة الشخصيات والأماكن:',
+          titleAr: 'تدريبات صفات الملكية والضمير On (8 أسئلة)',
+          descriptionAr: 'اختر صفة الملكية أو التصريف الصحيح:',
           questions: [
             {
-              id: 'q_u1_lp_1',
+              id: 'u1_pos_1',
               type: 'multiple-choice',
-              instruction: 'صفحة 27 (1-1): Où vas-tu pour voir un match ?',
-              prompt: 'Où vas-tu pour voir un match ?',
-              options: ['Au stade', 'Au cinéma', 'Au restaurant'],
-              correctAnswer: 'Au stade',
-              explanation: 'لمشاهدة مباراة نذهب إلى الاستاد (Au stade).'
+              instruction: 'Choisis l\'adjectif possessif :',
+              prompt: '1. Gamal invite .......... amie française.',
+              options: ['son', 'sa', 'ses', 'leur'],
+              correctAnswer: 'son',
+              explanation: 'amie مفرد مؤنث تبدأ بمتحرك فيتحول sa إلى son.'
             },
             {
-              id: 'q_u1_lp_2',
+              id: 'u1_pos_2',
               type: 'multiple-choice',
-              instruction: 'صفحة 27 (2-4): Qui parle: "Désolé l\'hôtel est complet." ?',
-              prompt: 'Qui parle: "Désolé l\'hôtel est complet." ?',
-              options: ['Le réceptionniste', 'Le médecin', 'Le professeur'],
-              correctAnswer: 'Le réceptionniste',
-              explanation: 'موظف الاستقبال في الفندق (Le réceptionniste).'
+              instruction: 'Choisis l\'adjectif possessif :',
+              prompt: '2. J\'écris .......... devoirs de français.',
+              options: ['mes', 'mon', 'ma', 'son'],
+              correctAnswer: 'mes',
+              explanation: 'devoirs اسم جمع، ومع المالك Je نستخدم mes.'
             },
             {
-              id: 'q_u1_lp_3',
+              id: 'u1_pos_3',
               type: 'multiple-choice',
-              instruction: 'صفحة 27 (3-3): Qui peut faire ce travail: Réparer la voiture ?',
-              prompt: 'Qui peut faire ce travail: Réparer la voiture ?',
-              options: ['Le mécanicien', 'Le pilote', 'Le pharmacien'],
-              correctAnswer: 'Le mécanicien',
-              explanation: 'الميكانيكي (Le mécanicien) هو من يصلح السيارات.'
+              instruction: 'Choisis l\'adjectif possessif :',
+              prompt: '3. Tu téléphones à .......... père ce soir ?',
+              options: ['ton', 'ta', 'tes', 'son'],
+              correctAnswer: 'ton',
+              explanation: 'père مفرد مذكر، ومع المالك Tu نستخدم ton.'
+            },
+            {
+              id: 'u1_pos_4',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'adjectif possessif :',
+              prompt: '4. Suzanne va à .......... école en bus.',
+              options: ['son', 'sa', 'ses', 'leur'],
+              correctAnswer: 'son',
+              explanation: 'école مفرد مؤنث يبدأ بمتحرك é فيأخذ son بدلاً من sa.'
+            },
+            {
+              id: 'u1_pos_5',
+              type: 'multiple-choice',
+              instruction: 'Conjugue avec le pronom On :',
+              prompt: '5. En Égypte, on .......... l\'arabe.',
+              options: ['parle', 'parlent', 'parlons', 'parlez'],
+              correctAnswer: 'parle',
+              explanation: 'الضمير On يأخذ تصريف المفرد الغائب (Il/Elle) وينتهي بـ -e.'
+            },
+            {
+              id: 'u1_pos_6',
+              type: 'multiple-choice',
+              instruction: 'Conjugue avec le pronom On :',
+              prompt: '6. Aujourd\'hui, on .......... au restaurant.',
+              options: ['va', 'vont', 'allons', 'vais'],
+              correctAnswer: 'va',
+              explanation: 'فعل Aller مع On يصرف: On va.'
+            },
+            {
+              id: 'u1_pos_7',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'adjectif possessif :',
+              prompt: '7. Les élèves écoutent .......... professeur.',
+              options: ['leur', 'leurs', 'ses', 'sa'],
+              correctAnswer: 'leur',
+              explanation: 'المالك جمع (Les élèves) والمملوك مفرد (professeur) فنأخذ leur بدون s.'
+            },
+            {
+              id: 'u1_pos_8',
+              type: 'multiple-choice',
+              instruction: 'Choisis l\'adjectif possessif :',
+              prompt: '8. Nous aimons .......... maison.',
+              options: ['notre', 'nos', 'mon', 'votre'],
+              correctAnswer: 'notre',
+              explanation: 'مع Nous والمملوك مفرد مؤنث نستخدم notre.'
             }
           ]
         },
         corriger: {
-          titleAr: 'تثبيت الأماكن والمهن',
-          descriptionAr: 'لا تخلط بين المهن المتشابهة:',
+          titleAr: 'أبرز فخاخ صفات الملكية',
+          descriptionAr: 'احذر من كتابة ma amie أو sa école:',
           commonMistakes: [
             {
-              mistake: 'الخلط بين un pilote (يقود طائرة) و un mécanicien (يصلح سيارات).',
-              correction: 'Le pilote conduit l\'avion / Le mécanicien répare la voiture.',
-              why: 'كل مهنة لها فعل مميز يحددها.'
+              mistake: 'C\'est ma amie.',
+              correction: 'C\'est mon amie.',
+              why: 'يلتقي حرفان متحركان (a + a)، لذلك نستبدل ma بـ mon دائماً.'
             }
           ],
           remedialQuestions: [
             {
-              id: 'q_u1_lp_rem_1',
+              id: 'u1_pos_rem',
               type: 'multiple-choice',
-              instruction: 'صفحة 27: Qui peut examiner les malades ?',
-              prompt: 'Qui peut examiner les malades ?',
-              options: ['Le médecin', 'Le guide', 'Le vendeur'],
-              correctAnswer: 'Le médecin',
-              explanation: 'الطبيب (Le médecin) هو من يفحص المرضى.'
+              instruction: 'Corrige :',
+              prompt: 'Elle prend .......... adresse pour envoyer la lettre.',
+              options: ['son', 'sa', 'ses'],
+              correctAnswer: 'son',
+              explanation: 'adresse تبدأ بمتحرك فتأخذ son.'
             }
           ]
         },
         defi: {
-          titleAr: 'تحدي المهن والأماكن',
-          descriptionAr: 'أجب في 45 ثانية:',
-          timeLimitSeconds: 45,
+          titleAr: 'تحدي الملكية والمتحرك',
+          descriptionAr: 'حل في 20 ثانية:',
+          timeLimitSeconds: 20,
           challengeQuestions: [
             {
-              id: 'def_u1_lp_1',
+              id: 'u1_pos_def',
               type: 'multiple-choice',
-              instruction: 'صفحة 27 (2-2): Qui parle: "Fais le devoir et va au lit." ?',
-              prompt: 'Qui parle: "Fais le devoir et va au lit." ?',
-              options: ['Le père / La mère', 'Le guide', 'Le médecin'],
-              correctAnswer: 'Le père / La mère',
-              explanation: 'الأب أو الأم (Le père / La mère).'
+              instruction: 'Choisis vite :',
+              prompt: 'Tu aimes .......... nouvelle école ?',
+              options: ['ta', 'ton', 'tes'],
+              correctAnswer: 'ta',
+              explanation: 'انتبه: nouvelle تبدأ بحرف ساكن n وليس متحركاً، فتعود لأصلها المؤنث ta.'
+            }
+          ]
+        }
+      }
+    },
+    {
+      id: 'u1-grammaire-pronoms-cod-coi',
+      unitId: 'unite1',
+      unitTitle: 'Unité (1) - Invitation',
+      unitTitleAr: 'الوحدة الأولى (دعوة)',
+      order: 4,
+      title: 'Grammaire : Pronoms Personnels C.O.D & C.O.I',
+      titleAr: 'ضمائر المفعول المباشر وغير المباشر (le, la, l\', les / lui, leur)',
+      subtitleFr: 'Complément d\'objet direct et indirect (p. 20 - 23)',
+      estimatedMinutes: 20,
+      bookletPages: 'صفحة 20 - 23',
+      stages: {
+        comprendre: {
+          titleAr: 'شرح شامل لضمائر المفعول المباشر وغير المباشر',
+          summaryAr: 'تستخدم الضمائر الشخصية لتفادي تكرار الاسم في الجملة. ويوضع الضمير دائماً قبل الفعل المصرف.',
+          grammarPoints: [
+            {
+              title: '1. ضمائر المفعول به المباشر (C.O.D) - بدون حرف جر',
+              ruleAr: 'تحل محل مفعول به مباشر غير مسبوق بحرف جر:',
+              table: {
+                headers: ['الضمير', 'الاستخدام', 'مثال من الكتاب'],
+                rows: [
+                  ['le (l\')', 'مفرد مذكر', 'Tu regardes le match ? - Oui, je le regarde.'],
+                  ['la (l\')', 'مفرد مؤنث', 'Tu manges la pomme ? - Oui, je la mange.'],
+                  ['l\'', 'مفرد بنوعيه قبل فعل يبدأ بمتحرك', 'Tu invites Suzanne ? - Oui, je l\'invite.'],
+                  ['les', 'جمع بنوعيه', 'Tu écris les invitations ? - Oui, je les écris.']
+                ]
+              }
+            },
+            {
+              title: '2. ضمائر المفعول به غير المباشر (C.O.I) - العاقل المسبوق بـ (à)',
+              ruleAr: 'تحل محل اسم شخص أو عاقل مسبوق بحرف الجر (à / au / à la / aux):',
+              table: {
+                headers: ['الضمير', 'الاستخدام', 'أمثلة هامة من Bienvenu 2'],
+                rows: [
+                  ['lui', 'مفرد عاقل (مذكر أو مؤنث)', 'Je parle à Gamal -> Je lui parle.\nJe téléphone à Suzanne -> Je lui téléphone.'],
+                  ['leur', 'جمع عاقل (مذكر أو مؤنث) بدون s', 'J\'envoie des cadeaux aux amis -> Je leur envoie des cadeaux.']
+                ]
+              }
+            },
+            {
+              title: '3. مكان وضع الضمير',
+              ruleAr: 'يوضع الضمير دائماً قبل الفعل المصرف (Je lui parle / Je ne lui parle pas). وإذا كان هناك فعلان (مصرف + مصدر)، يوضع الضمير قبل المصدر (Je vais lui parler).'
+            }
+          ]
+        },
+        exemple: {
+          titleAr: 'مقارنة مباشرة بين COD و COI',
+          descriptionAr: 'لاحظ وجود أو غياب حرف الجر à:',
+          examples: [
+            { french: 'Je vois Gamal. -> Je le vois.', arabic: 'مفعول مباشر (لا يوجد حرف جر) -> le' },
+            { french: 'Je parle à Gamal. -> Je lui parle.', arabic: 'مفعول غير مباشر عاقل بحرف الجر à -> lui' },
+            { french: 'J\'écris aux amis. -> Je leur écris.', arabic: 'جمع عاقل مع حرف الجر aux -> leur' }
+          ]
+        },
+        pratiquer: {
+          titleAr: 'تدريبات ضمائر المفعول (8 أسئلة)',
+          descriptionAr: 'اختر الضمير الشخصي المناسب لكل جملة:',
+          questions: [
+            {
+              id: 'u1_prn_1',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '1. Tu écoutes le professeur ? - Oui, je .......... écoute.',
+              options: ['le', 'l\'', 'lui', 'les'],
+              correctAnswer: 'l\'',
+              explanation: 'المفعول le professeur مذكر، وفعل écoute يبدأ بمتحرك فيتحول le إلى l\'.'
+            },
+            {
+              id: 'u1_prn_2',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '2. Gamal écrit à ses camarades ? - Oui, il .......... écrit.',
+              options: ['les', 'leur', 'lui', 'des'],
+              correctAnswer: 'leur',
+              explanation: 'à ses camarades هو مفعول غير مباشر عاقل جمع مسبوق بـ à فيعوض عنه بـ leur.'
+            },
+            {
+              id: 'u1_prn_3',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '3. Tu offres ce cadeau à ta mère ? - Oui, je .......... offre ce cadeau.',
+              options: ['la', 'lui', 'leur', 'l\''],
+              correctAnswer: 'lui',
+              explanation: 'à ta mère مفرد عاقل مسبوق بـ à، والضمير العائد عليه هو lui.'
+            },
+            {
+              id: 'u1_prn_4',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '4. Suzanne mange la tarte ? - Oui, elle .......... mange.',
+              options: ['la', 'le', 'lui', 'les'],
+              correctAnswer: 'la',
+              explanation: 'la tarte مفعول مباشر مفرد مؤنث، يعوض عنه بالضمير la.'
+            },
+            {
+              id: 'u1_prn_5',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '5. Tu envoies les invitations ? - Oui, je .......... envoie.',
+              options: ['les', 'leur', 'des', 'l\''],
+              correctAnswer: 'les',
+              explanation: 'les invitations مفعول به مباشر جمع (بدون حرف جر)، يعوض عنه بـ les.'
+            },
+            {
+              id: 'u1_prn_6',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '6. Ali téléphone à son ami Samir ? - Oui, il .......... téléphone.',
+              options: ['le', 'lui', 'l\'', 'la'],
+              correctAnswer: 'lui',
+              explanation: 'فعل téléphoner à يأخذ مفعول غير مباشر عاقل مفرد فيعوض عنه بـ lui.'
+            },
+            {
+              id: 'u1_prn_7',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '7. Les gâteaux ? La mère .......... prépare dans la cuisine.',
+              options: ['les', 'leur', 'la', 'des'],
+              correctAnswer: 'les',
+              explanation: 'Les gâteaux جمع مباشر يعوض عنه بـ les.'
+            },
+            {
+              id: 'u1_prn_8',
+              type: 'multiple-choice',
+              instruction: 'Remplace par le bon pronom :',
+              prompt: '8. Tu souhaites bonne fête à Suzanne ? - Oui, je .......... souhaite bonne fête.',
+              options: ['la', 'lui', 'leur', 'l\''],
+              correctAnswer: 'lui',
+              explanation: 'à Suzanne مفرد عاقل مؤنث مسبوق بحرف الجر à، الضمير هو lui.'
+            }
+          ]
+        },
+        corriger: {
+          titleAr: 'تنبيه: leur لا تأخذ s أبداً كضمير مفعول',
+          descriptionAr: 'انتبه للفرق بين صفة الملكية وضمير المفعول:',
+          commonMistakes: [
+            {
+              mistake: 'Je leurs parle.',
+              correction: 'Je leur parle.',
+              why: 'ضمير المفعول غير المباشر leur لا يضاف له حرف s أبداً عندما يأتي قبل الفعل.'
+            }
+          ],
+          remedialQuestions: [
+            {
+              id: 'u1_prn_rem',
+              type: 'multiple-choice',
+              instruction: 'Choisis :',
+              prompt: 'Je parle aux élèves -> Je .......... parle.',
+              options: ['leur', 'leurs', 'les'],
+              correctAnswer: 'leur',
+              explanation: 'ضمير المفعول هو leur بدون s.'
+            }
+          ]
+        },
+        defi: {
+          titleAr: 'تحدي الضمائر السريع',
+          descriptionAr: 'أجب في 20 ثانية:',
+          timeLimitSeconds: 20,
+          challengeQuestions: [
+            {
+              id: 'u1_prn_def',
+              type: 'multiple-choice',
+              instruction: 'Choisis vite :',
+              prompt: 'Ce film est formidable, je .......... regarde ce soir.',
+              options: ['le', 'la', 'lui', 'l\''],
+              correctAnswer: 'le',
+              explanation: 'film مفرد مذكر، وفعل regarde يبدأ بساكن r فيأخذ le.'
             }
           ]
         }
